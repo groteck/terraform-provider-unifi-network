@@ -1,0 +1,1333 @@
+[2026-02-20T19:26:12,279Z] [0:0:0:0:0:0:0:1 -> webapi-1  ] GET   200 86ms   /status
+[2026-02-20T19:26:13,467Z] [0:0:0:0:0:0:0:1 -> webapi-2  ] GET   200 1ms    /status
+[2026-02-20T19:26:14,615Z] [0:0:0:0:0:0:0:1 -> webapi-2  ] GET   200 0ms    /status
+[2026-02-20T19:26:15,784Z] [0:0:0:0:0:0:0:1 -> webapi-2  ] GET   200 0ms    /status
+[2026-02-20T19:26:16,897Z] [0:0:0:0:0:0:0:1 -> webapi-1  ] GET   200 3ms    /status
+[2026-02-20T19:26:18,025Z] [0:0:0:0:0:0:0:1 -> webapi-2  ] GET   200 0ms    /status
+[2026-02-20T19:26:19,084Z] [0:0:0:0:0:0:0:1 -> webapi-2  ] GET   200 14ms   /status
+[2026-02-20T19:27:51,833Z] [     172.20.0.1 -> webapi-2  ] GET   400 47ms   /api/auth/login
+[2026-02-20T19:28:03,935Z] [     172.20.0.1 -> webapi-2  ] POST  404 12ms   /proxy/network/api/s/default/rest/firewallrule
+[2026-02-20T19:28:04,408Z] [     172.20.0.1 -> webapi-2  ] POST  404 0ms    /proxy/network/api/s/default/rest/networkconf
+[2026-02-20T19:28:04,877Z] [     172.20.0.1 -> webapi-2  ] POST  404 0ms    /proxy/network/api/s/default/rest/portconf
+[2026-02-20T19:28:05,339Z] [     172.20.0.1 -> webapi-2  ] POST  404 0ms    /proxy/network/api/s/default/rest/usergroup
+[2026-02-20T19:28:12,913Z] [     172.20.0.1 -> webapi-2  ] GET   200 44ms   /api/s/default/rest/networkconf
+[2026-02-20T22:11:00,853Z] [     172.20.0.1 -> webapi-1  ] POST  400 33ms   /api/s/default/rest/firewallrule
+[2026-02-20T22:11:01,359Z] [     172.20.0.1 -> webapi-1  ] POST  200 54ms   /api/s/default/rest/networkconf
+[2026-02-20T22:11:01,672Z] [     172.20.0.1 -> webapi-1  ] GET   200 4ms    /api/s/default/rest/networkconf/6998dbf5e26d48c5855c37a6
+[2026-02-20T22:11:01,821Z] [     172.20.0.1 -> webapi-2  ] GET   200 4ms    /api/s/default/rest/networkconf/6998dbf5e26d48c5855c37a6
+[2026-02-20T22:11:01,966Z] [     172.20.0.1 -> webapi-2  ] PUT   200 9ms    /api/s/default/rest/networkconf/6998dbf5e26d48c5855c37a6
+[2026-02-20T22:11:02,242Z] [     172.20.0.1 -> webapi-2  ] GET   200 2ms    /api/s/default/rest/networkconf/6998dbf5e26d48c5855c37a6
+[2026-02-20T22:11:02,483Z] [     172.20.0.1 -> webapi-2  ] DELETE 200 45ms   /api/s/default/rest/networkconf/6998dbf5e26d48c5855c37a6
+[2026-02-20T22:11:02,878Z] [     172.20.0.1 -> webapi-2  ] POST  200 11ms   /api/s/default/rest/portconf
+[2026-02-20T22:11:03,147Z] [     172.20.0.1 -> webapi-2  ] GET   200 3ms    /api/s/default/rest/portconf/6998dbf6e26d48c5855c37a7
+[2026-02-20T22:11:03,462Z] [     172.20.0.1 -> webapi-2  ] DELETE 200 5ms    /api/s/default/rest/portconf/6998dbf6e26d48c5855c37a7
+[2026-02-20T22:11:03,885Z] [     172.20.0.1 -> webapi-2  ] POST  200 9ms    /api/s/default/rest/usergroup
+[2026-02-20T22:11:04,169Z] [     172.20.0.1 -> webapi-2  ] GET   200 4ms    /api/s/default/rest/usergroup/6998dbf7e26d48c5855c37a8
+[2026-02-20T22:11:04,364Z] [     172.20.0.1 -> webapi-2  ] DELETE 200 3ms    /api/s/default/rest/usergroup/6998dbf7e26d48c5855c37a8
+[2026-02-20T22:12:13,417Z] [     172.20.0.1 -> webapi-1  ] POST  400 17ms   /api/s/default/rest/firewallrule
+[2026-02-20T22:12:13,892Z] [     172.20.0.1 -> webapi-1  ] POST  200 22ms   /api/s/default/rest/networkconf
+[2026-02-20T22:12:14,176Z] [     172.20.0.1 -> webapi-1  ] GET   200 2ms    /api/s/default/rest/networkconf/6998dc3de26d48c5855c37a9
+[2026-02-20T22:12:14,329Z] [     172.20.0.1 -> webapi-1  ] GET   200 2ms    /api/s/default/rest/networkconf/6998dc3de26d48c5855c37a9
+[2026-02-20T22:12:14,484Z] [     172.20.0.1 -> webapi-4  ] PUT   200 13ms   /api/s/default/rest/networkconf/6998dc3de26d48c5855c37a9
+[2026-02-20T22:12:14,786Z] [     172.20.0.1 -> webapi-4  ] GET   200 3ms    /api/s/default/rest/networkconf/6998dc3de26d48c5855c37a9
+[2026-02-20T22:12:14,998Z] [     172.20.0.1 -> webapi-4  ] DELETE 200 12ms   /api/s/default/rest/networkconf/6998dc3de26d48c5855c37a9
+[2026-02-20T22:12:15,384Z] [     172.20.0.1 -> webapi-1  ] POST  200 8ms    /api/s/default/rest/networkconf
+[2026-02-20T22:12:15,409Z] [     172.20.0.1 -> webapi-4  ] POST  400 12ms   /api/s/default/rest/portconf
+[2026-02-20T22:12:15,570Z] [     172.20.0.1 -> webapi-4  ] DELETE 200 20ms   /api/s/default/rest/networkconf/6998dc3fe26d48c5855c37aa
+[2026-02-20T22:12:15,977Z] [     172.20.0.1 -> webapi-4  ] POST  200 2ms    /api/s/default/rest/usergroup
+[2026-02-20T22:12:16,256Z] [     172.20.0.1 -> webapi-4  ] GET   200 2ms    /api/s/default/rest/usergroup/6998dc3fe26d48c5855c37ab
+[2026-02-20T22:12:16,457Z] [     172.20.0.1 -> webapi-4  ] DELETE 200 3ms    /api/s/default/rest/usergroup/6998dc3fe26d48c5855c37ab
+[2026-02-20T22:13:01,359Z] [     172.20.0.1 -> webapi-1  ] POST  400 29ms   /api/s/default/rest/firewallrule
+[2026-02-20T22:13:01,854Z] [     172.20.0.1 -> webapi-1  ] POST  200 43ms   /api/s/default/rest/networkconf
+[2026-02-20T22:13:02,150Z] [     172.20.0.1 -> webapi-1  ] GET   200 3ms    /api/s/default/rest/networkconf/6998dc6de26d48c5855c37ac
+[2026-02-20T22:13:02,296Z] [     172.20.0.1 -> webapi-1  ] GET   200 10ms   /api/s/default/rest/networkconf/6998dc6de26d48c5855c37ac
+[2026-02-20T22:13:02,450Z] [     172.20.0.1 -> webapi-1  ] PUT   200 19ms   /api/s/default/rest/networkconf/6998dc6de26d48c5855c37ac
+[2026-02-20T22:13:02,730Z] [     172.20.0.1 -> webapi-1  ] GET   200 3ms    /api/s/default/rest/networkconf/6998dc6de26d48c5855c37ac
+[2026-02-20T22:13:02,938Z] [     172.20.0.1 -> webapi-1  ] DELETE 200 11ms   /api/s/default/rest/networkconf/6998dc6de26d48c5855c37ac
+[2026-02-20T22:13:03,320Z] [     172.20.0.1 -> webapi-4  ] POST  200 9ms    /api/s/default/rest/networkconf
+[2026-02-20T22:13:03,330Z] [     172.20.0.1 -> webapi-1  ] POST  400 1ms    /api/s/default/rest/portconf
+[2026-02-20T22:13:03,489Z] [     172.20.0.1 -> webapi-1  ] DELETE 200 9ms    /api/s/default/rest/networkconf/6998dc6fe26d48c5855c37ad
+[2026-02-20T22:13:03,880Z] [     172.20.0.1 -> webapi-4  ] POST  200 3ms    /api/s/default/rest/usergroup
+[2026-02-20T22:13:04,185Z] [     172.20.0.1 -> webapi-4  ] GET   200 2ms    /api/s/default/rest/usergroup/6998dc6fe26d48c5855c37ae
+[2026-02-20T22:13:04,385Z] [     172.20.0.1 -> webapi-4  ] DELETE 200 4ms    /api/s/default/rest/usergroup/6998dc6fe26d48c5855c37ae
+[2026-02-20T22:13:12,885Z] [     172.20.0.1 -> webapi-4  ] POST  400 4ms    /api/s/default/rest/firewallrule
+[2026-02-20T22:13:17,992Z] [     172.20.0.1 -> webapi-9  ] POST  400 3ms    /api/s/default/rest/firewallrule
+[2026-02-20T22:13:22,882Z] [     172.20.0.1 -> webapi-1  ] GET   200 5ms    /api/s/default/rest/firewallrule
+[2026-02-20T22:13:28,582Z] [     172.20.0.1 -> webapi-1  ] GET   200 4ms    /api/s/default/rest/networkconf
+[2026-02-20T22:13:35,424Z] [     172.20.0.1 -> webapi-1  ] POST  200 38ms   /api/s/default/rest/firewallrule
+[2026-02-20T22:13:44,329Z] [     172.20.0.1 -> webapi-1  ] POST  200 13ms   /api/s/default/rest/portconf
+[2026-02-20T22:14:17,304Z] [     172.20.0.1 -> webapi-9  ] POST  400 22ms   /api/s/default/rest/firewallrule
+[2026-02-20T22:14:17,772Z] [     172.20.0.1 -> webapi-9  ] POST  200 18ms   /api/s/default/rest/networkconf
+[2026-02-20T22:14:18,059Z] [     172.20.0.1 -> webapi-9  ] GET   200 2ms    /api/s/default/rest/networkconf/6998dcb9e26d48c5855c37b1
+[2026-02-20T22:14:18,206Z] [     172.20.0.1 -> webapi-1  ] GET   200 3ms    /api/s/default/rest/networkconf/6998dcb9e26d48c5855c37b1
+[2026-02-20T22:14:18,350Z] [     172.20.0.1 -> webapi-9  ] PUT   200 6ms    /api/s/default/rest/networkconf/6998dcb9e26d48c5855c37b1
+[2026-02-20T22:14:18,639Z] [     172.20.0.1 -> webapi-9  ] GET   200 2ms    /api/s/default/rest/networkconf/6998dcb9e26d48c5855c37b1
+[2026-02-20T22:14:18,871Z] [     172.20.0.1 -> webapi-9  ] DELETE 200 17ms   /api/s/default/rest/networkconf/6998dcb9e26d48c5855c37b1
+[2026-02-20T22:14:19,274Z] [     172.20.0.1 -> webapi-9  ] POST  200 5ms    /api/s/default/rest/networkconf
+[2026-02-20T22:14:19,284Z] [     172.20.0.1 -> webapi-1  ] POST  400 2ms    /api/s/default/rest/portconf
+[2026-02-20T22:14:19,455Z] [     172.20.0.1 -> webapi-1  ] DELETE 200 16ms   /api/s/default/rest/networkconf/6998dcbbe26d48c5855c37b2
+[2026-02-20T22:14:19,888Z] [     172.20.0.1 -> webapi-1  ] POST  200 3ms    /api/s/default/rest/usergroup
+[2026-02-20T22:14:20,188Z] [     172.20.0.1 -> webapi-1  ] GET   200 2ms    /api/s/default/rest/usergroup/6998dcbbe26d48c5855c37b3
+[2026-02-20T22:14:20,392Z] [     172.20.0.1 -> webapi-1  ] DELETE 200 5ms    /api/s/default/rest/usergroup/6998dcbbe26d48c5855c37b3
+[2026-02-20T22:15:09,871Z] [     172.20.0.1 -> webapi-1  ] POST  400 16ms   /api/s/default/rest/firewallrule
+[2026-02-20T22:15:10,355Z] [     172.20.0.1 -> webapi-1  ] POST  200 15ms   /api/s/default/rest/networkconf
+[2026-02-20T22:15:10,656Z] [     172.20.0.1 -> webapi-1  ] GET   200 3ms    /api/s/default/rest/networkconf/6998dceee26d48c5855c37b4
+[2026-02-20T22:15:10,805Z] [     172.20.0.1 -> webapi-1  ] GET   200 2ms    /api/s/default/rest/networkconf/6998dceee26d48c5855c37b4
+[2026-02-20T22:15:10,971Z] [     172.20.0.1 -> webapi-1  ] PUT   200 7ms    /api/s/default/rest/networkconf/6998dceee26d48c5855c37b4
+[2026-02-20T22:15:11,275Z] [     172.20.0.1 -> webapi-1  ] GET   200 3ms    /api/s/default/rest/networkconf/6998dceee26d48c5855c37b4
+[2026-02-20T22:15:11,491Z] [     172.20.0.1 -> webapi-1  ] DELETE 200 12ms   /api/s/default/rest/networkconf/6998dceee26d48c5855c37b4
+[2026-02-20T22:15:12,033Z] [     172.20.0.1 -> webapi-1  ] POST  200 9ms    /api/s/default/rest/networkconf
+[2026-02-20T22:15:12,056Z] [     172.20.0.1 -> webapi-9  ] POST  400 2ms    /api/s/default/rest/portconf
+[2026-02-20T22:15:12,237Z] [     172.20.0.1 -> webapi-9  ] DELETE 200 16ms   /api/s/default/rest/networkconf/6998dcf0e26d48c5855c37b5
+[2026-02-20T22:15:12,650Z] [     172.20.0.1 -> webapi-1  ] POST  200 3ms    /api/s/default/rest/usergroup
+[2026-02-20T22:15:12,948Z] [     172.20.0.1 -> webapi-1  ] GET   200 2ms    /api/s/default/rest/usergroup/6998dcf0e26d48c5855c37b6
+[2026-02-20T22:15:13,168Z] [     172.20.0.1 -> webapi-1  ] DELETE 200 6ms    /api/s/default/rest/usergroup/6998dcf0e26d48c5855c37b6
+[2026-02-20T22:15:22,798Z] [     172.20.0.1 -> webapi-16 ] POST  400 31ms   /api/s/default/rest/networkconf
+[2026-02-20T22:15:22,831Z] [     172.20.0.1 -> webapi-9  ] POST  200 4ms    /api/s/default/rest/portconf
+[2026-02-20T22:15:27,695Z] [     172.20.0.1 -> webapi-15 ] POST  400 8ms    /api/s/default/rest/networkconf
+[2026-02-20T22:16:18,686Z] [     172.20.0.1 -> webapi-14 ] POST  400 27ms   /api/s/default/rest/firewallrule
+[2026-02-20T22:16:19,165Z] [     172.20.0.1 -> webapi-14 ] POST  200 11ms   /api/s/default/rest/networkconf
+[2026-02-20T22:16:19,459Z] [     172.20.0.1 -> webapi-14 ] GET   200 2ms    /api/s/default/rest/networkconf/6998dd33e26d48c5855c37b8
+[2026-02-20T22:16:19,609Z] [     172.20.0.1 -> webapi-14 ] GET   200 2ms    /api/s/default/rest/networkconf/6998dd33e26d48c5855c37b8
+[2026-02-20T22:16:19,765Z] [     172.20.0.1 -> webapi-14 ] PUT   200 10ms   /api/s/default/rest/networkconf/6998dd33e26d48c5855c37b8
+[2026-02-20T22:16:20,065Z] [     172.20.0.1 -> webapi-14 ] GET   200 10ms   /api/s/default/rest/networkconf/6998dd33e26d48c5855c37b8
+[2026-02-20T22:16:20,285Z] [     172.20.0.1 -> webapi-14 ] DELETE 200 18ms   /api/s/default/rest/networkconf/6998dd33e26d48c5855c37b8
+[2026-02-20T22:16:20,696Z] [     172.20.0.1 -> webapi-14 ] POST  200 5ms    /api/s/default/rest/networkconf
+[2026-02-20T22:16:20,706Z] [     172.20.0.1 -> webapi-15 ] POST  400 2ms    /api/s/default/rest/portconf
+[2026-02-20T22:16:20,868Z] [     172.20.0.1 -> webapi-15 ] DELETE 200 10ms   /api/s/default/rest/networkconf/6998dd34e26d48c5855c37b9
+[2026-02-20T22:16:21,276Z] [     172.20.0.1 -> webapi-14 ] POST  200 4ms    /api/s/default/rest/usergroup
+[2026-02-20T22:16:21,566Z] [     172.20.0.1 -> webapi-14 ] GET   200 2ms    /api/s/default/rest/usergroup/6998dd35e26d48c5855c37ba
+[2026-02-20T22:16:21,777Z] [     172.20.0.1 -> webapi-14 ] DELETE 200 6ms    /api/s/default/rest/usergroup/6998dd35e26d48c5855c37ba
+[2026-02-20T22:17:20,009Z] [     172.20.0.1 -> webapi-19 ] POST  400 16ms   /api/s/default/rest/firewallrule
+[2026-02-20T22:17:20,490Z] [     172.20.0.1 -> webapi-19 ] POST  200 11ms   /api/s/default/rest/networkconf
+[2026-02-20T22:17:20,790Z] [     172.20.0.1 -> webapi-19 ] GET   200 2ms    /api/s/default/rest/networkconf/6998dd70e26d48c5855c37bb
+[2026-02-20T22:17:20,935Z] [     172.20.0.1 -> webapi-19 ] GET   200 2ms    /api/s/default/rest/networkconf/6998dd70e26d48c5855c37bb
+[2026-02-20T22:17:21,083Z] [     172.20.0.1 -> webapi-19 ] PUT   200 10ms   /api/s/default/rest/networkconf/6998dd70e26d48c5855c37bb
+[2026-02-20T22:17:21,373Z] [     172.20.0.1 -> webapi-19 ] GET   200 2ms    /api/s/default/rest/networkconf/6998dd70e26d48c5855c37bb
+[2026-02-20T22:17:21,583Z] [     172.20.0.1 -> webapi-19 ] DELETE 200 11ms   /api/s/default/rest/networkconf/6998dd70e26d48c5855c37bb
+[2026-02-20T22:17:21,990Z] [     172.20.0.1 -> webapi-19 ] POST  200 4ms    /api/s/default/rest/portconf
+[2026-02-20T22:17:22,273Z] [     172.20.0.1 -> webapi-19 ] GET   200 2ms    /api/s/default/rest/portconf/6998dd71e26d48c5855c37bc
+[2026-02-20T22:17:22,483Z] [     172.20.0.1 -> webapi-19 ] DELETE 200 2ms    /api/s/default/rest/portconf/6998dd71e26d48c5855c37bc
+[2026-02-20T22:17:22,893Z] [     172.20.0.1 -> webapi-19 ] POST  200 2ms    /api/s/default/rest/usergroup
+[2026-02-20T22:17:23,188Z] [     172.20.0.1 -> webapi-15 ] GET   200 2ms    /api/s/default/rest/usergroup/6998dd72e26d48c5855c37bd
+[2026-02-20T22:17:23,389Z] [     172.20.0.1 -> webapi-15 ] DELETE 200 3ms    /api/s/default/rest/usergroup/6998dd72e26d48c5855c37bd
+[2026-02-20T22:18:16,185Z] [     172.20.0.1 -> webapi-23 ] POST  200 35ms   /api/s/default/rest/firewallrule
+[2026-02-20T22:18:16,506Z] [     172.20.0.1 -> webapi-23 ] GET   200 2ms    /api/s/default/rest/firewallrule/6998dda8e26d48c5855c37be
+[2026-02-20T22:18:16,834Z] [     172.20.0.1 -> webapi-23 ] DELETE 200 2ms    /api/s/default/rest/firewallrule/6998dda8e26d48c5855c37be
+[2026-02-20T22:18:17,240Z] [     172.20.0.1 -> webapi-19 ] POST  200 9ms    /api/s/default/rest/networkconf
+[2026-02-20T22:18:17,530Z] [     172.20.0.1 -> webapi-19 ] GET   200 7ms    /api/s/default/rest/networkconf/6998dda9e26d48c5855c37bf
+[2026-02-20T22:18:17,678Z] [     172.20.0.1 -> webapi-19 ] GET   200 2ms    /api/s/default/rest/networkconf/6998dda9e26d48c5855c37bf
+[2026-02-20T22:18:17,829Z] [     172.20.0.1 -> webapi-23 ] PUT   200 9ms    /api/s/default/rest/networkconf/6998dda9e26d48c5855c37bf
+[2026-02-20T22:18:18,120Z] [     172.20.0.1 -> webapi-23 ] GET   200 2ms    /api/s/default/rest/networkconf/6998dda9e26d48c5855c37bf
+[2026-02-20T22:18:18,338Z] [     172.20.0.1 -> webapi-23 ] DELETE 200 17ms   /api/s/default/rest/networkconf/6998dda9e26d48c5855c37bf
+[2026-02-20T22:18:18,743Z] [     172.20.0.1 -> webapi-19 ] POST  200 3ms    /api/s/default/rest/portconf
+[2026-02-20T22:18:19,028Z] [     172.20.0.1 -> webapi-19 ] GET   200 5ms    /api/s/default/rest/portconf/6998ddaae26d48c5855c37c0
+[2026-02-20T22:18:19,224Z] [     172.20.0.1 -> webapi-19 ] DELETE 200 3ms    /api/s/default/rest/portconf/6998ddaae26d48c5855c37c0
+[2026-02-20T22:18:19,620Z] [     172.20.0.1 -> webapi-23 ] POST  200 2ms    /api/s/default/rest/usergroup
+[2026-02-20T22:18:19,917Z] [     172.20.0.1 -> webapi-23 ] GET   200 2ms    /api/s/default/rest/usergroup/6998ddabe26d48c5855c37c1
+[2026-02-20T22:18:20,120Z] [     172.20.0.1 -> webapi-23 ] DELETE 200 3ms    /api/s/default/rest/usergroup/6998ddabe26d48c5855c37c1
+[2026-02-20T22:18:32,885Z] [     172.20.0.1 -> webapi-19 ] POST  200 7ms    /api/s/default/rest/firewallrule
+[2026-02-20T22:18:33,183Z] [     172.20.0.1 -> webapi-26 ] GET   200 2ms    /api/s/default/rest/firewallrule/6998ddb8e26d48c5855c37c2
+[2026-02-20T22:18:33,501Z] [     172.20.0.1 -> webapi-26 ] DELETE 200 5ms    /api/s/default/rest/firewallrule/6998ddb8e26d48c5855c37c2
+[2026-02-20T22:18:33,927Z] [     172.20.0.1 -> webapi-26 ] POST  200 8ms    /api/s/default/rest/networkconf
+[2026-02-20T22:18:34,215Z] [     172.20.0.1 -> webapi-23 ] GET   200 3ms    /api/s/default/rest/networkconf/6998ddb9e26d48c5855c37c3
+[2026-02-20T22:18:34,358Z] [     172.20.0.1 -> webapi-24 ] GET   200 2ms    /api/s/default/rest/networkconf/6998ddb9e26d48c5855c37c3
+[2026-02-20T22:18:34,499Z] [     172.20.0.1 -> webapi-19 ] PUT   200 7ms    /api/s/default/rest/networkconf/6998ddb9e26d48c5855c37c3
+[2026-02-20T22:18:34,791Z] [     172.20.0.1 -> webapi-25 ] GET   200 2ms    /api/s/default/rest/networkconf/6998ddb9e26d48c5855c37c3
+[2026-02-20T22:18:35,011Z] [     172.20.0.1 -> webapi-26 ] DELETE 200 14ms   /api/s/default/rest/networkconf/6998ddb9e26d48c5855c37c3
+[2026-02-20T22:18:35,413Z] [     172.20.0.1 -> webapi-26 ] POST  200 2ms    /api/s/default/rest/portconf
+[2026-02-20T22:18:35,782Z] [     172.20.0.1 -> webapi-23 ] GET   200 91ms   /api/s/default/rest/portconf/6998ddbbe26d48c5855c37c4
+[2026-02-20T22:18:35,992Z] [     172.20.0.1 -> webapi-24 ] DELETE 200 2ms    /api/s/default/rest/portconf/6998ddbbe26d48c5855c37c4
+[2026-02-20T22:18:36,385Z] [     172.20.0.1 -> webapi-24 ] POST  200 2ms    /api/s/default/rest/usergroup
+[2026-02-20T22:18:36,667Z] [     172.20.0.1 -> webapi-19 ] GET   200 1ms    /api/s/default/rest/usergroup/6998ddbce26d48c5855c37c5
+[2026-02-20T22:18:36,877Z] [     172.20.0.1 -> webapi-25 ] DELETE 200 2ms    /api/s/default/rest/usergroup/6998ddbce26d48c5855c37c5
+[2026-02-20T22:18:43,003Z] [     172.20.0.1 -> webapi-24 ] GET   200 6ms    /api/s/default/rest/firewallrule
+[2026-02-20T22:19:33,295Z] [     172.20.0.1 -> webapi-23 ] POST  200 36ms   /api/s/default/rest/firewallrule
+[2026-02-20T22:19:33,461Z] [     172.20.0.1 -> webapi-23 ] DELETE 200 3ms    /api/s/default/rest/firewallrule/6998ddf5e26d48c5855c37c6
+[2026-02-20T22:19:33,871Z] [     172.20.0.1 -> webapi-24 ] POST  200 6ms    /api/s/default/rest/networkconf
+[2026-02-20T22:19:34,161Z] [     172.20.0.1 -> webapi-24 ] GET   200 2ms    /api/s/default/rest/networkconf/6998ddf5e26d48c5855c37c7
+[2026-02-20T22:19:34,305Z] [     172.20.0.1 -> webapi-24 ] GET   200 1ms    /api/s/default/rest/networkconf/6998ddf5e26d48c5855c37c7
+[2026-02-20T22:19:34,457Z] [     172.20.0.1 -> webapi-24 ] PUT   200 10ms   /api/s/default/rest/networkconf/6998ddf5e26d48c5855c37c7
+[2026-02-20T22:19:34,774Z] [     172.20.0.1 -> webapi-24 ] GET   200 11ms   /api/s/default/rest/networkconf/6998ddf5e26d48c5855c37c7
+[2026-02-20T22:19:34,989Z] [     172.20.0.1 -> webapi-24 ] DELETE 200 16ms   /api/s/default/rest/networkconf/6998ddf5e26d48c5855c37c7
+[2026-02-20T22:19:35,380Z] [     172.20.0.1 -> webapi-23 ] POST  200 3ms    /api/s/default/rest/portconf
+[2026-02-20T22:19:35,672Z] [     172.20.0.1 -> webapi-23 ] GET   200 1ms    /api/s/default/rest/portconf/6998ddf7e26d48c5855c37c8
+[2026-02-20T22:19:35,882Z] [     172.20.0.1 -> webapi-23 ] DELETE 200 8ms    /api/s/default/rest/portconf/6998ddf7e26d48c5855c37c8
+[2026-02-20T22:19:36,269Z] [     172.20.0.1 -> webapi-23 ] POST  200 2ms    /api/s/default/rest/usergroup
+[2026-02-20T22:19:36,545Z] [     172.20.0.1 -> webapi-23 ] GET   200 2ms    /api/s/default/rest/usergroup/6998ddf8e26d48c5855c37c9
+[2026-02-20T22:19:36,745Z] [     172.20.0.1 -> webapi-23 ] DELETE 200 2ms    /api/s/default/rest/usergroup/6998ddf8e26d48c5855c37c9
+[2026-02-20T22:20:02,045Z] [     172.20.0.1 -> webapi-24 ] POST  200 19ms   /api/s/default/rest/firewallrule
+[2026-02-20T22:20:02,338Z] [     172.20.0.1 -> webapi-29 ] GET   200 4ms    /api/s/default/rest/firewallrule/6998de12e26d48c5855c37ca
+[2026-02-20T22:20:02,657Z] [     172.20.0.1 -> webapi-28 ] DELETE 200 2ms    /api/s/default/rest/firewallrule/6998de12e26d48c5855c37ca
+[2026-02-20T22:20:03,053Z] [     172.20.0.1 -> webapi-28 ] POST  200 8ms    /api/s/default/rest/networkconf
+[2026-02-20T22:20:03,340Z] [     172.20.0.1 -> webapi-30 ] GET   200 2ms    /api/s/default/rest/networkconf/6998de13e26d48c5855c37cb
+[2026-02-20T22:20:03,482Z] [     172.20.0.1 -> webapi-23 ] GET   200 1ms    /api/s/default/rest/networkconf/6998de13e26d48c5855c37cb
+[2026-02-20T22:20:03,637Z] [     172.20.0.1 -> webapi-24 ] PUT   200 16ms   /api/s/default/rest/networkconf/6998de13e26d48c5855c37cb
+[2026-02-20T22:20:03,946Z] [     172.20.0.1 -> webapi-29 ] GET   200 2ms    /api/s/default/rest/networkconf/6998de13e26d48c5855c37cb
+[2026-02-20T22:20:04,166Z] [     172.20.0.1 -> webapi-28 ] DELETE 200 20ms   /api/s/default/rest/networkconf/6998de13e26d48c5855c37cb
+[2026-02-20T22:20:04,581Z] [     172.20.0.1 -> webapi-28 ] POST  200 23ms   /api/s/default/rest/portconf
+[2026-02-20T22:20:04,884Z] [     172.20.0.1 -> webapi-30 ] GET   200 2ms    /api/s/default/rest/portconf/6998de14e26d48c5855c37cc
+[2026-02-20T22:20:05,085Z] [     172.20.0.1 -> webapi-23 ] DELETE 200 2ms    /api/s/default/rest/portconf/6998de14e26d48c5855c37cc
+[2026-02-20T22:20:05,477Z] [     172.20.0.1 -> webapi-23 ] POST  200 2ms    /api/s/default/rest/usergroup
+[2026-02-20T22:20:05,758Z] [     172.20.0.1 -> webapi-23 ] GET   200 1ms    /api/s/default/rest/usergroup/6998de15e26d48c5855c37cd
+[2026-02-20T22:20:05,959Z] [     172.20.0.1 -> webapi-24 ] DELETE 200 2ms    /api/s/default/rest/usergroup/6998de15e26d48c5855c37cd
+[2026-02-20T22:25:31,032Z] [     172.20.0.1 -> webapi-23 ] POST  400 13ms   /api/s/default/rest/apgroup
+[2026-02-20T22:25:31,524Z] [     172.20.0.1 -> webapi-28 ] POST  200 24ms   /api/s/default/rest/firewallrule
+[2026-02-20T22:25:31,826Z] [     172.20.0.1 -> webapi-28 ] GET   200 2ms    /api/s/default/rest/firewallrule/6998df5be26d48c5855c37ce
+[2026-02-20T22:25:32,146Z] [     172.20.0.1 -> webapi-28 ] DELETE 200 3ms    /api/s/default/rest/firewallrule/6998df5be26d48c5855c37ce
+[2026-02-20T22:25:32,547Z] [     172.20.0.1 -> webapi-23 ] POST  200 10ms   /api/s/default/rest/networkconf
+[2026-02-20T22:25:32,830Z] [     172.20.0.1 -> webapi-23 ] GET   200 4ms    /api/s/default/rest/networkconf/6998df5ce26d48c5855c37cf
+[2026-02-20T22:25:32,969Z] [     172.20.0.1 -> webapi-23 ] GET   200 2ms    /api/s/default/rest/networkconf/6998df5ce26d48c5855c37cf
+[2026-02-20T22:25:33,114Z] [     172.20.0.1 -> webapi-23 ] PUT   200 6ms    /api/s/default/rest/networkconf/6998df5ce26d48c5855c37cf
+[2026-02-20T22:25:33,397Z] [     172.20.0.1 -> webapi-23 ] GET   200 1ms    /api/s/default/rest/networkconf/6998df5ce26d48c5855c37cf
+[2026-02-20T22:25:33,607Z] [     172.20.0.1 -> webapi-23 ] DELETE 200 12ms   /api/s/default/rest/networkconf/6998df5ce26d48c5855c37cf
+[2026-02-20T22:25:34,025Z] [     172.20.0.1 -> webapi-28 ] POST  200 4ms    /api/s/default/rest/portconf
+[2026-02-20T22:25:34,317Z] [     172.20.0.1 -> webapi-28 ] GET   200 2ms    /api/s/default/rest/portconf/6998df5ee26d48c5855c37d0
+[2026-02-20T22:25:34,517Z] [     172.20.0.1 -> webapi-28 ] DELETE 200 3ms    /api/s/default/rest/portconf/6998df5ee26d48c5855c37d0
+[2026-02-20T22:25:34,913Z] [     172.20.0.1 -> webapi-28 ] POST  200 2ms    /api/s/default/rest/usergroup
+[2026-02-20T22:25:35,186Z] [     172.20.0.1 -> webapi-28 ] GET   200 2ms    /api/s/default/rest/usergroup/6998df5ee26d48c5855c37d1
+[2026-02-20T22:25:35,384Z] [     172.20.0.1 -> webapi-28 ] DELETE 200 4ms    /api/s/default/rest/usergroup/6998df5ee26d48c5855c37d1
+[2026-02-20T22:25:35,799Z] [     172.20.0.1 -> webapi-28 ] POST  400 2ms    /api/s/default/rest/apgroup
+[2026-02-20T22:25:43,485Z] [     172.20.0.1 -> webapi-33 ] POST  400 7ms    /api/s/default/rest/apgroup
+[2026-02-20T22:25:49,106Z] [     172.20.0.1 -> webapi-36 ] POST  400 3ms    /api/s/default/rest/apgroup
+[2026-02-20T22:25:53,303Z] [     172.20.0.1 -> webapi-34 ] GET   400 6ms    /api/s/default/rest/apgroup
+[2026-02-20T22:26:07,843Z] [     172.20.0.1 -> webapi-35 ] GET   200 153ms  /v2/api/site/default/apgroups
+[2026-02-20T22:26:12,575Z] [     172.20.0.1 -> webapi-23 ] POST  400 65ms   /v2/api/site/default/apgroups
+[2026-02-20T22:26:17,549Z] [     172.20.0.1 -> webapi-33 ] POST  201 15ms   /v2/api/site/default/apgroups
+[2026-02-20T22:27:17,986Z] [     172.20.0.1 -> webapi-34 ] POST  400 17ms   /v2/api/site/default/apgroups
+[2026-02-20T22:27:18,436Z] [     172.20.0.1 -> webapi-34 ] POST  200 4ms    /api/s/default/rest/firewallrule
+[2026-02-20T22:27:18,717Z] [     172.20.0.1 -> webapi-34 ] GET   200 1ms    /api/s/default/rest/firewallrule/6998dfc6e26d48c5855c37d3
+[2026-02-20T22:27:19,018Z] [     172.20.0.1 -> webapi-34 ] DELETE 200 2ms    /api/s/default/rest/firewallrule/6998dfc6e26d48c5855c37d3
+[2026-02-20T22:27:19,416Z] [     172.20.0.1 -> webapi-33 ] POST  200 4ms    /api/s/default/rest/networkconf
+[2026-02-20T22:27:19,696Z] [     172.20.0.1 -> webapi-33 ] GET   200 2ms    /api/s/default/rest/networkconf/6998dfc7e26d48c5855c37d4
+[2026-02-20T22:27:19,839Z] [     172.20.0.1 -> webapi-33 ] GET   200 1ms    /api/s/default/rest/networkconf/6998dfc7e26d48c5855c37d4
+[2026-02-20T22:27:19,978Z] [     172.20.0.1 -> webapi-33 ] PUT   200 5ms    /api/s/default/rest/networkconf/6998dfc7e26d48c5855c37d4
+[2026-02-20T22:27:20,253Z] [     172.20.0.1 -> webapi-33 ] GET   200 2ms    /api/s/default/rest/networkconf/6998dfc7e26d48c5855c37d4
+[2026-02-20T22:27:20,454Z] [     172.20.0.1 -> webapi-33 ] DELETE 200 7ms    /api/s/default/rest/networkconf/6998dfc7e26d48c5855c37d4
+[2026-02-20T22:27:20,837Z] [     172.20.0.1 -> webapi-34 ] POST  200 3ms    /api/s/default/rest/portconf
+[2026-02-20T22:27:21,113Z] [     172.20.0.1 -> webapi-34 ] GET   200 2ms    /api/s/default/rest/portconf/6998dfc8e26d48c5855c37d5
+[2026-02-20T22:27:21,320Z] [     172.20.0.1 -> webapi-34 ] DELETE 200 2ms    /api/s/default/rest/portconf/6998dfc8e26d48c5855c37d5
+[2026-02-20T22:27:21,704Z] [     172.20.0.1 -> webapi-33 ] POST  200 2ms    /api/s/default/rest/usergroup
+[2026-02-20T22:27:21,988Z] [     172.20.0.1 -> webapi-33 ] GET   200 1ms    /api/s/default/rest/usergroup/6998dfc9e26d48c5855c37d6
+[2026-02-20T22:27:22,186Z] [     172.20.0.1 -> webapi-33 ] DELETE 200 3ms    /api/s/default/rest/usergroup/6998dfc9e26d48c5855c37d6
+[2026-02-20T22:27:22,573Z] [     172.20.0.1 -> webapi-34 ] POST  400 3ms    /v2/api/site/default/apgroups
+[2026-02-20T22:27:45,835Z] [     172.20.0.1 -> webapi-37 ] POST  400 5ms    /v2/api/site/default/apgroups
+[2026-02-20T22:27:46,293Z] [     172.20.0.1 -> webapi-38 ] POST  200 5ms    /api/s/default/rest/firewallrule
+[2026-02-20T22:27:46,581Z] [     172.20.0.1 -> webapi-33 ] GET   200 1ms    /api/s/default/rest/firewallrule/6998dfe2e26d48c5855c37d7
+[2026-02-20T22:27:46,895Z] [     172.20.0.1 -> webapi-37 ] DELETE 200 2ms    /api/s/default/rest/firewallrule/6998dfe2e26d48c5855c37d7
+[2026-02-20T22:27:47,275Z] [     172.20.0.1 -> webapi-39 ] POST  200 5ms    /api/s/default/rest/networkconf
+[2026-02-20T22:27:47,552Z] [     172.20.0.1 -> webapi-40 ] GET   200 2ms    /api/s/default/rest/networkconf/6998dfe3e26d48c5855c37d8
+[2026-02-20T22:27:47,690Z] [     172.20.0.1 -> webapi-34 ] GET   200 2ms    /api/s/default/rest/networkconf/6998dfe3e26d48c5855c37d8
+[2026-02-20T22:27:47,827Z] [     172.20.0.1 -> webapi-39 ] PUT   200 5ms    /api/s/default/rest/networkconf/6998dfe3e26d48c5855c37d8
+[2026-02-20T22:27:48,110Z] [     172.20.0.1 -> webapi-40 ] GET   200 2ms    /api/s/default/rest/networkconf/6998dfe3e26d48c5855c37d8
+[2026-02-20T22:27:48,314Z] [     172.20.0.1 -> webapi-34 ] DELETE 200 5ms    /api/s/default/rest/networkconf/6998dfe3e26d48c5855c37d8
+[2026-02-20T22:27:48,704Z] [     172.20.0.1 -> webapi-37 ] POST  200 2ms    /api/s/default/rest/portconf
+[2026-02-20T22:27:48,967Z] [     172.20.0.1 -> webapi-38 ] GET   200 1ms    /api/s/default/rest/portconf/6998dfe4e26d48c5855c37d9
+[2026-02-20T22:27:49,165Z] [     172.20.0.1 -> webapi-33 ] DELETE 200 2ms    /api/s/default/rest/portconf/6998dfe4e26d48c5855c37d9
+[2026-02-20T22:27:49,554Z] [     172.20.0.1 -> webapi-37 ] POST  200 1ms    /api/s/default/rest/usergroup
+[2026-02-20T22:27:49,849Z] [     172.20.0.1 -> webapi-38 ] GET   200 1ms    /api/s/default/rest/usergroup/6998dfe5e26d48c5855c37da
+[2026-02-20T22:27:50,047Z] [     172.20.0.1 -> webapi-33 ] DELETE 200 2ms    /api/s/default/rest/usergroup/6998dfe5e26d48c5855c37da
+[2026-02-20T22:27:50,445Z] [     172.20.0.1 -> webapi-37 ] POST  400 3ms    /v2/api/site/default/apgroups
+[2026-02-20T22:28:10,362Z] [     172.20.0.1 -> webapi-33 ] POST  201 4ms    /v2/api/site/default/apgroups
+[2026-02-20T22:28:10,695Z] [     172.20.0.1 -> webapi-37 ] GET   405 12ms   /v2/api/site/default/apgroups/6998dffae26d48c5855c37db
+[2026-02-20T22:28:10,705Z] [     172.20.0.1 -> webapi-39 ] GET   200 5ms    /v2/api/site/default/apgroups
+[2026-02-20T22:28:11,027Z] [     172.20.0.1 -> webapi-37 ] DELETE 204 5ms    /v2/api/site/default/apgroups/6998dffae26d48c5855c37db
+[2026-02-20T22:28:11,414Z] [     172.20.0.1 -> webapi-40 ] POST  200 4ms    /api/s/default/rest/firewallrule
+[2026-02-20T22:28:11,701Z] [     172.20.0.1 -> webapi-39 ] GET   200 2ms    /api/s/default/rest/firewallrule/6998dffbe26d48c5855c37dc
+[2026-02-20T22:28:12,002Z] [     172.20.0.1 -> webapi-38 ] DELETE 200 1ms    /api/s/default/rest/firewallrule/6998dffbe26d48c5855c37dc
+[2026-02-20T22:28:12,378Z] [     172.20.0.1 -> webapi-34 ] POST  200 3ms    /api/s/default/rest/networkconf
+[2026-02-20T22:28:12,662Z] [     172.20.0.1 -> webapi-37 ] GET   200 1ms    /api/s/default/rest/networkconf/6998dffce26d48c5855c37dd
+[2026-02-20T22:28:12,808Z] [     172.20.0.1 -> webapi-40 ] GET   200 3ms    /api/s/default/rest/networkconf/6998dffce26d48c5855c37dd
+[2026-02-20T22:28:12,943Z] [     172.20.0.1 -> webapi-33 ] PUT   200 4ms    /api/s/default/rest/networkconf/6998dffce26d48c5855c37dd
+[2026-02-20T22:28:13,220Z] [     172.20.0.1 -> webapi-38 ] GET   200 1ms    /api/s/default/rest/networkconf/6998dffce26d48c5855c37dd
+[2026-02-20T22:28:13,424Z] [     172.20.0.1 -> webapi-34 ] DELETE 200 5ms    /api/s/default/rest/networkconf/6998dffce26d48c5855c37dd
+[2026-02-20T22:28:13,810Z] [     172.20.0.1 -> webapi-37 ] POST  200 2ms    /api/s/default/rest/portconf
+[2026-02-20T22:28:14,090Z] [     172.20.0.1 -> webapi-40 ] GET   200 1ms    /api/s/default/rest/portconf/6998dffde26d48c5855c37de
+[2026-02-20T22:28:14,284Z] [     172.20.0.1 -> webapi-33 ] DELETE 200 2ms    /api/s/default/rest/portconf/6998dffde26d48c5855c37de
+[2026-02-20T22:28:14,675Z] [     172.20.0.1 -> webapi-37 ] POST  200 2ms    /api/s/default/rest/usergroup
+[2026-02-20T22:28:14,950Z] [     172.20.0.1 -> webapi-40 ] GET   200 1ms    /api/s/default/rest/usergroup/6998dffee26d48c5855c37df
+[2026-02-20T22:28:15,147Z] [     172.20.0.1 -> webapi-33 ] DELETE 200 2ms    /api/s/default/rest/usergroup/6998dffee26d48c5855c37df
+[2026-02-20T22:28:15,540Z] [     172.20.0.1 -> webapi-41 ] POST  201 4ms    /v2/api/site/default/apgroups
+[2026-02-20T22:28:15,581Z] [     172.20.0.1 -> webapi-40 ] POST  200 19ms   /api/s/default/rest/wlanconf
+[2026-02-20T22:28:15,864Z] [     172.20.0.1 -> webapi-33 ] GET   405 2ms    /v2/api/site/default/apgroups/6998dfffe26d48c5855c37e0
+[2026-02-20T22:28:15,868Z] [     172.20.0.1 -> webapi-34 ] GET   200 2ms    /v2/api/site/default/apgroups
+[2026-02-20T22:28:15,882Z] [     172.20.0.1 -> webapi-37 ] GET   200 1ms    /api/s/default/rest/wlanconf/6998dfffe26d48c5855c37e1
+[2026-02-20T22:28:16,198Z] [     172.20.0.1 -> webapi-40 ] DELETE 200 2ms    /api/s/default/rest/wlanconf/6998dfffe26d48c5855c37e1
+[2026-02-20T22:28:16,223Z] [     172.20.0.1 -> webapi-34 ] DELETE 204 3ms    /v2/api/site/default/apgroups/6998dfffe26d48c5855c37e0
+[2026-02-20T22:29:14,045Z] [     172.20.0.1 -> webapi-39 ] POST  201 4ms    /v2/api/site/default/apgroups
+[2026-02-20T22:29:14,201Z] [     172.20.0.1 -> webapi-33 ] DELETE 204 6ms    /v2/api/site/default/apgroups/6998e03ae26d48c5855c37e2
+[2026-02-20T22:29:14,590Z] [     172.20.0.1 -> webapi-33 ] POST  200 4ms    /api/s/default/rest/firewallrule
+[2026-02-20T22:29:14,875Z] [     172.20.0.1 -> webapi-33 ] GET   200 1ms    /api/s/default/rest/firewallrule/6998e03ae26d48c5855c37e3
+[2026-02-20T22:29:15,182Z] [     172.20.0.1 -> webapi-33 ] DELETE 200 2ms    /api/s/default/rest/firewallrule/6998e03ae26d48c5855c37e3
+[2026-02-20T22:29:15,579Z] [     172.20.0.1 -> webapi-39 ] POST  200 4ms    /api/s/default/rest/networkconf
+[2026-02-20T22:29:15,872Z] [     172.20.0.1 -> webapi-39 ] GET   200 4ms    /api/s/default/rest/networkconf/6998e03be26d48c5855c37e4
+[2026-02-20T22:29:16,016Z] [     172.20.0.1 -> webapi-39 ] GET   200 2ms    /api/s/default/rest/networkconf/6998e03be26d48c5855c37e4
+[2026-02-20T22:29:16,162Z] [     172.20.0.1 -> webapi-39 ] PUT   200 8ms    /api/s/default/rest/networkconf/6998e03be26d48c5855c37e4
+[2026-02-20T22:29:16,438Z] [     172.20.0.1 -> webapi-39 ] GET   200 3ms    /api/s/default/rest/networkconf/6998e03be26d48c5855c37e4
+[2026-02-20T22:29:16,643Z] [     172.20.0.1 -> webapi-39 ] DELETE 200 13ms   /api/s/default/rest/networkconf/6998e03be26d48c5855c37e4
+[2026-02-20T22:29:17,040Z] [     172.20.0.1 -> webapi-33 ] POST  200 2ms    /api/s/default/rest/portconf
+[2026-02-20T22:29:17,313Z] [     172.20.0.1 -> webapi-33 ] GET   200 1ms    /api/s/default/rest/portconf/6998e03de26d48c5855c37e5
+[2026-02-20T22:29:17,514Z] [     172.20.0.1 -> webapi-33 ] DELETE 200 2ms    /api/s/default/rest/portconf/6998e03de26d48c5855c37e5
+[2026-02-20T22:29:17,899Z] [     172.20.0.1 -> webapi-39 ] POST  200 2ms    /api/s/default/rest/usergroup
+[2026-02-20T22:29:18,184Z] [     172.20.0.1 -> webapi-39 ] GET   200 1ms    /api/s/default/rest/usergroup/6998e03de26d48c5855c37e6
+[2026-02-20T22:29:18,380Z] [     172.20.0.1 -> webapi-39 ] DELETE 200 3ms    /api/s/default/rest/usergroup/6998e03de26d48c5855c37e6
+[2026-02-20T22:29:18,773Z] [     172.20.0.1 -> webapi-33 ] POST  201 3ms    /v2/api/site/default/apgroups
+[2026-02-20T22:29:18,923Z] [     172.20.0.1 -> webapi-33 ] DELETE 204 3ms    /v2/api/site/default/apgroups/6998e03ee26d48c5855c37e7
+[2026-02-20T22:29:52,469Z] [     172.20.0.1 -> webapi-46 ] POST  201 8ms    /v2/api/site/default/apgroups
+[2026-02-20T22:29:52,770Z] [     172.20.0.1 -> webapi-46 ] GET   405 3ms    /v2/api/site/default/apgroups/6998e060e26d48c5855c37e8
+[2026-02-20T22:29:52,775Z] [     172.20.0.1 -> webapi-33 ] GET   200 4ms    /v2/api/site/default/apgroups
+[2026-02-20T22:29:52,989Z] [     172.20.0.1 -> webapi-46 ] DELETE 204 6ms    /v2/api/site/default/apgroups/6998e060e26d48c5855c37e8
+[2026-02-20T22:29:53,398Z] [     172.20.0.1 -> webapi-46 ] POST  200 5ms    /api/s/default/rest/firewallrule
+[2026-02-20T22:29:53,674Z] [     172.20.0.1 -> webapi-46 ] GET   200 1ms    /api/s/default/rest/firewallrule/6998e061e26d48c5855c37e9
+[2026-02-20T22:29:54,004Z] [     172.20.0.1 -> webapi-46 ] DELETE 200 2ms    /api/s/default/rest/firewallrule/6998e061e26d48c5855c37e9
+[2026-02-20T22:29:54,400Z] [     172.20.0.1 -> webapi-33 ] POST  200 4ms    /api/s/default/rest/networkconf
+[2026-02-20T22:29:54,681Z] [     172.20.0.1 -> webapi-33 ] GET   200 2ms    /api/s/default/rest/networkconf/6998e062e26d48c5855c37ea
+[2026-02-20T22:29:54,825Z] [     172.20.0.1 -> webapi-33 ] GET   200 1ms    /api/s/default/rest/networkconf/6998e062e26d48c5855c37ea
+[2026-02-20T22:29:54,982Z] [     172.20.0.1 -> webapi-33 ] PUT   200 14ms   /api/s/default/rest/networkconf/6998e062e26d48c5855c37ea
+[2026-02-20T22:29:55,266Z] [     172.20.0.1 -> webapi-33 ] GET   200 1ms    /api/s/default/rest/networkconf/6998e062e26d48c5855c37ea
+[2026-02-20T22:29:55,475Z] [     172.20.0.1 -> webapi-33 ] DELETE 200 9ms    /api/s/default/rest/networkconf/6998e062e26d48c5855c37ea
+[2026-02-20T22:29:55,873Z] [     172.20.0.1 -> webapi-46 ] POST  200 3ms    /api/s/default/rest/portconf
+[2026-02-20T22:29:56,155Z] [     172.20.0.1 -> webapi-46 ] GET   200 2ms    /api/s/default/rest/portconf/6998e063e26d48c5855c37eb
+[2026-02-20T22:29:56,350Z] [     172.20.0.1 -> webapi-46 ] DELETE 200 2ms    /api/s/default/rest/portconf/6998e063e26d48c5855c37eb
+[2026-02-20T22:29:56,747Z] [     172.20.0.1 -> webapi-33 ] POST  200 2ms    /api/s/default/rest/usergroup
+[2026-02-20T22:29:57,026Z] [     172.20.0.1 -> webapi-33 ] GET   200 1ms    /api/s/default/rest/usergroup/6998e064e26d48c5855c37ec
+[2026-02-20T22:29:57,225Z] [     172.20.0.1 -> webapi-33 ] DELETE 200 2ms    /api/s/default/rest/usergroup/6998e064e26d48c5855c37ec
+[2026-02-20T22:29:57,623Z] [     172.20.0.1 -> webapi-46 ] POST  201 4ms    /v2/api/site/default/apgroups
+[2026-02-20T22:29:57,656Z] [     172.20.0.1 -> webapi-33 ] POST  200 14ms   /api/s/default/rest/wlanconf
+[2026-02-20T22:29:57,939Z] [     172.20.0.1 -> webapi-33 ] GET   405 2ms    /v2/api/site/default/apgroups/6998e065e26d48c5855c37ed
+[2026-02-20T22:29:57,942Z] [     172.20.0.1 -> webapi-46 ] GET   200 2ms    /v2/api/site/default/apgroups
+[2026-02-20T22:29:57,958Z] [     172.20.0.1 -> webapi-46 ] GET   200 3ms    /api/s/default/rest/wlanconf/6998e065e26d48c5855c37ee
+[2026-02-20T22:29:58,162Z] [     172.20.0.1 -> webapi-46 ] DELETE 200 2ms    /api/s/default/rest/wlanconf/6998e065e26d48c5855c37ee
+[2026-02-20T22:29:58,184Z] [     172.20.0.1 -> webapi-33 ] DELETE 204 4ms    /v2/api/site/default/apgroups/6998e065e26d48c5855c37ed
+[2026-02-20T22:31:47,947Z] [     172.20.0.1 -> webapi-49 ] POST  201 9ms    /v2/api/site/default/apgroups
+[2026-02-20T22:31:48,244Z] [     172.20.0.1 -> webapi-49 ] GET   405 6ms    /v2/api/site/default/apgroups/6998e0d3e26d48c5855c37ef
+[2026-02-20T22:31:48,249Z] [     172.20.0.1 -> webapi-33 ] GET   200 4ms    /v2/api/site/default/apgroups
+[2026-02-20T22:31:48,470Z] [     172.20.0.1 -> webapi-33 ] DELETE 204 4ms    /v2/api/site/default/apgroups/6998e0d3e26d48c5855c37ef
+[2026-02-20T22:31:48,872Z] [     172.20.0.1 -> webapi-33 ] POST  200 6ms    /api/s/default/rest/firewallgroup
+[2026-02-20T22:31:49,160Z] [     172.20.0.1 -> webapi-33 ] GET   200 2ms    /api/s/default/rest/firewallgroup/6998e0d4e26d48c5855c37f0
+[2026-02-20T22:31:49,373Z] [     172.20.0.1 -> webapi-33 ] DELETE 200 15ms   /api/s/default/rest/firewallgroup/6998e0d4e26d48c5855c37f0
+[2026-02-20T22:31:49,793Z] [     172.20.0.1 -> webapi-33 ] POST  200 5ms    /api/s/default/rest/firewallrule
+[2026-02-20T22:31:50,079Z] [     172.20.0.1 -> webapi-33 ] GET   200 1ms    /api/s/default/rest/firewallrule/6998e0d5e26d48c5855c37f1
+[2026-02-20T22:31:50,405Z] [     172.20.0.1 -> webapi-33 ] DELETE 200 1ms    /api/s/default/rest/firewallrule/6998e0d5e26d48c5855c37f1
+[2026-02-20T22:31:50,801Z] [     172.20.0.1 -> webapi-33 ] POST  200 7ms    /api/s/default/rest/networkconf
+[2026-02-20T22:31:51,082Z] [     172.20.0.1 -> webapi-33 ] GET   200 1ms    /api/s/default/rest/networkconf/6998e0d6e26d48c5855c37f2
+[2026-02-20T22:31:51,225Z] [     172.20.0.1 -> webapi-33 ] GET   200 1ms    /api/s/default/rest/networkconf/6998e0d6e26d48c5855c37f2
+[2026-02-20T22:31:51,375Z] [     172.20.0.1 -> webapi-33 ] PUT   200 7ms    /api/s/default/rest/networkconf/6998e0d6e26d48c5855c37f2
+[2026-02-20T22:31:51,657Z] [     172.20.0.1 -> webapi-33 ] GET   200 2ms    /api/s/default/rest/networkconf/6998e0d6e26d48c5855c37f2
+[2026-02-20T22:31:51,871Z] [     172.20.0.1 -> webapi-33 ] DELETE 200 11ms   /api/s/default/rest/networkconf/6998e0d6e26d48c5855c37f2
+[2026-02-20T22:31:52,261Z] [     172.20.0.1 -> webapi-33 ] POST  200 3ms    /api/s/default/rest/portconf
+[2026-02-20T22:31:52,543Z] [     172.20.0.1 -> webapi-33 ] GET   200 1ms    /api/s/default/rest/portconf/6998e0d8e26d48c5855c37f3
+[2026-02-20T22:31:52,737Z] [     172.20.0.1 -> webapi-33 ] DELETE 200 2ms    /api/s/default/rest/portconf/6998e0d8e26d48c5855c37f3
+[2026-02-20T22:31:53,136Z] [     172.20.0.1 -> webapi-49 ] POST  200 2ms    /api/s/default/rest/usergroup
+[2026-02-20T22:31:53,415Z] [     172.20.0.1 -> webapi-49 ] GET   200 1ms    /api/s/default/rest/usergroup/6998e0d9e26d48c5855c37f4
+[2026-02-20T22:31:53,612Z] [     172.20.0.1 -> webapi-49 ] DELETE 200 2ms    /api/s/default/rest/usergroup/6998e0d9e26d48c5855c37f4
+[2026-02-20T22:31:54,057Z] [     172.20.0.1 -> webapi-33 ] POST  200 54ms   /api/s/default/rest/user
+[2026-02-20T22:31:54,338Z] [     172.20.0.1 -> webapi-33 ] GET   200 1ms    /api/s/default/rest/user/6998e0dae26d48c5855c37f5
+[2026-02-20T22:31:54,653Z] [     172.20.0.1 -> webapi-33 ] DELETE 404 1ms    /api/s/default/rest/user/6998e0dae26d48c5855c37f5
+[2026-02-20T22:31:55,032Z] [     172.20.0.1 -> webapi-33 ] POST  201 4ms    /v2/api/site/default/apgroups
+[2026-02-20T22:31:55,061Z] [     172.20.0.1 -> webapi-49 ] POST  200 11ms   /api/s/default/rest/wlanconf
+[2026-02-20T22:31:55,342Z] [     172.20.0.1 -> webapi-49 ] GET   405 2ms    /v2/api/site/default/apgroups/6998e0dbe26d48c5855c37f6
+[2026-02-20T22:31:55,344Z] [     172.20.0.1 -> webapi-33 ] GET   200 2ms    /v2/api/site/default/apgroups
+[2026-02-20T22:31:55,358Z] [     172.20.0.1 -> webapi-49 ] GET   200 1ms    /api/s/default/rest/wlanconf/6998e0dbe26d48c5855c37f7
+[2026-02-20T22:31:55,562Z] [     172.20.0.1 -> webapi-49 ] DELETE 200 2ms    /api/s/default/rest/wlanconf/6998e0dbe26d48c5855c37f7
+[2026-02-20T22:31:55,583Z] [     172.20.0.1 -> webapi-33 ] DELETE 204 2ms    /v2/api/site/default/apgroups/6998e0dbe26d48c5855c37f6
+[2026-02-20T22:32:02,108Z] [     172.20.0.1 -> webapi-56 ] POST  200 10ms   /api/s/default/rest/user
+[2026-02-20T22:32:07,015Z] [     172.20.0.1 -> webapi-49 ] DELETE 404 2ms    /api/s/default/rest/user/6998e0e2e26d48c5855c37f8
+[2026-02-20T22:32:12,536Z] [     172.20.0.1 -> webapi-57 ] GET   200 3ms    /api/s/default/rest/user
+[2026-02-20T22:33:27,811Z] [     172.20.0.1 -> webapi-57 ] POST  201 11ms   /v2/api/site/default/apgroups
+[2026-02-20T22:33:28,091Z] [     172.20.0.1 -> webapi-57 ] GET   405 2ms    /v2/api/site/default/apgroups/6998e137e26d48c5855c37f9
+[2026-02-20T22:33:28,100Z] [     172.20.0.1 -> webapi-54 ] GET   200 6ms    /v2/api/site/default/apgroups
+[2026-02-20T22:33:28,305Z] [     172.20.0.1 -> webapi-57 ] DELETE 204 3ms    /v2/api/site/default/apgroups/6998e137e26d48c5855c37f9
+[2026-02-20T22:33:28,693Z] [     172.20.0.1 -> webapi-57 ] POST  200 4ms    /api/s/default/rest/firewallgroup
+[2026-02-20T22:33:28,974Z] [     172.20.0.1 -> webapi-57 ] GET   200 1ms    /api/s/default/rest/firewallgroup/6998e138e26d48c5855c37fa
+[2026-02-20T22:33:29,184Z] [     172.20.0.1 -> webapi-57 ] DELETE 200 9ms    /api/s/default/rest/firewallgroup/6998e138e26d48c5855c37fa
+[2026-02-20T22:33:29,577Z] [     172.20.0.1 -> webapi-57 ] POST  200 4ms    /api/s/default/rest/firewallrule
+[2026-02-20T22:33:29,854Z] [     172.20.0.1 -> webapi-57 ] GET   200 1ms    /api/s/default/rest/firewallrule/6998e139e26d48c5855c37fb
+[2026-02-20T22:33:30,172Z] [     172.20.0.1 -> webapi-57 ] DELETE 200 3ms    /api/s/default/rest/firewallrule/6998e139e26d48c5855c37fb
+[2026-02-20T22:33:30,565Z] [     172.20.0.1 -> webapi-54 ] POST  200 5ms    /api/s/default/rest/networkconf
+[2026-02-20T22:33:30,849Z] [     172.20.0.1 -> webapi-54 ] GET   200 1ms    /api/s/default/rest/networkconf/6998e13ae26d48c5855c37fc
+[2026-02-20T22:33:30,996Z] [     172.20.0.1 -> webapi-54 ] GET   200 1ms    /api/s/default/rest/networkconf/6998e13ae26d48c5855c37fc
+[2026-02-20T22:33:31,137Z] [     172.20.0.1 -> webapi-54 ] PUT   200 4ms    /api/s/default/rest/networkconf/6998e13ae26d48c5855c37fc
+[2026-02-20T22:33:31,409Z] [     172.20.0.1 -> webapi-54 ] GET   200 1ms    /api/s/default/rest/networkconf/6998e13ae26d48c5855c37fc
+[2026-02-20T22:33:31,615Z] [     172.20.0.1 -> webapi-54 ] DELETE 200 10ms   /api/s/default/rest/networkconf/6998e13ae26d48c5855c37fc
+[2026-02-20T22:33:32,017Z] [     172.20.0.1 -> webapi-57 ] POST  200 2ms    /api/s/default/rest/portconf
+[2026-02-20T22:33:32,306Z] [     172.20.0.1 -> webapi-57 ] GET   200 1ms    /api/s/default/rest/portconf/6998e13ce26d48c5855c37fd
+[2026-02-20T22:33:32,507Z] [     172.20.0.1 -> webapi-57 ] DELETE 200 1ms    /api/s/default/rest/portconf/6998e13ce26d48c5855c37fd
+[2026-02-20T22:33:32,899Z] [     172.20.0.1 -> webapi-54 ] POST  200 2ms    /api/s/default/rest/usergroup
+[2026-02-20T22:33:33,176Z] [     172.20.0.1 -> webapi-54 ] GET   200 1ms    /api/s/default/rest/usergroup/6998e13ce26d48c5855c37fe
+[2026-02-20T22:33:33,371Z] [     172.20.0.1 -> webapi-54 ] DELETE 200 2ms    /api/s/default/rest/usergroup/6998e13ce26d48c5855c37fe
+[2026-02-20T22:33:33,769Z] [     172.20.0.1 -> webapi-57 ] POST  400 2ms    /api/s/default/rest/user
+[2026-02-20T22:33:34,225Z] [     172.20.0.1 -> webapi-57 ] POST  201 3ms    /v2/api/site/default/apgroups
+[2026-02-20T22:33:34,251Z] [     172.20.0.1 -> webapi-54 ] POST  200 8ms    /api/s/default/rest/wlanconf
+[2026-02-20T22:33:34,537Z] [     172.20.0.1 -> webapi-57 ] GET   405 3ms    /v2/api/site/default/apgroups/6998e13ee26d48c5855c37ff
+[2026-02-20T22:33:34,540Z] [     172.20.0.1 -> webapi-54 ] GET   200 2ms    /v2/api/site/default/apgroups
+[2026-02-20T22:33:34,554Z] [     172.20.0.1 -> webapi-57 ] GET   200 1ms    /api/s/default/rest/wlanconf/6998e13ee26d48c5855c3800
+[2026-02-20T22:33:34,758Z] [     172.20.0.1 -> webapi-57 ] DELETE 200 2ms    /api/s/default/rest/wlanconf/6998e13ee26d48c5855c3800
+[2026-02-20T22:33:34,779Z] [     172.20.0.1 -> webapi-54 ] DELETE 204 4ms    /v2/api/site/default/apgroups/6998e13ee26d48c5855c37ff
+[2026-02-20T22:33:41,237Z] [     172.20.0.1 -> webapi-60 ] POST  200 27ms   /api/s/default/cmd/stamgr
+[2026-02-20T22:33:45,558Z] [     172.20.0.1 -> webapi-54 ] GET   200 3ms    /api/s/default/rest/user
+[2026-02-20T22:34:14,074Z] [     172.20.0.1 -> webapi-54 ] POST  201 4ms    /v2/api/site/default/apgroups
+[2026-02-20T22:34:14,356Z] [     172.20.0.1 -> webapi-54 ] GET   405 1ms    /v2/api/site/default/apgroups/6998e166e26d48c5855c3801
+[2026-02-20T22:34:14,359Z] [     172.20.0.1 -> webapi-59 ] GET   200 2ms    /v2/api/site/default/apgroups
+[2026-02-20T22:34:14,558Z] [     172.20.0.1 -> webapi-59 ] DELETE 204 3ms    /v2/api/site/default/apgroups/6998e166e26d48c5855c3801
+[2026-02-20T22:34:14,968Z] [     172.20.0.1 -> webapi-54 ] POST  200 4ms    /api/s/default/rest/firewallgroup
+[2026-02-20T22:34:15,259Z] [     172.20.0.1 -> webapi-62 ] GET   200 1ms    /api/s/default/rest/firewallgroup/6998e166e26d48c5855c3802
+[2026-02-20T22:34:15,457Z] [     172.20.0.1 -> webapi-57 ] DELETE 200 4ms    /api/s/default/rest/firewallgroup/6998e166e26d48c5855c3802
+[2026-02-20T22:34:15,861Z] [     172.20.0.1 -> webapi-62 ] POST  200 3ms    /api/s/default/rest/firewallrule
+[2026-02-20T22:34:16,140Z] [     172.20.0.1 -> webapi-57 ] GET   200 1ms    /api/s/default/rest/firewallrule/6998e167e26d48c5855c3803
+[2026-02-20T22:34:16,454Z] [     172.20.0.1 -> webapi-61 ] DELETE 200 1ms    /api/s/default/rest/firewallrule/6998e167e26d48c5855c3803
+[2026-02-20T22:34:16,855Z] [     172.20.0.1 -> webapi-61 ] POST  200 3ms    /api/s/default/rest/networkconf
+[2026-02-20T22:34:17,149Z] [     172.20.0.1 -> webapi-59 ] GET   200 2ms    /api/s/default/rest/networkconf/6998e168e26d48c5855c3804
+[2026-02-20T22:34:17,291Z] [     172.20.0.1 -> webapi-54 ] GET   200 1ms    /api/s/default/rest/networkconf/6998e168e26d48c5855c3804
+[2026-02-20T22:34:17,433Z] [     172.20.0.1 -> webapi-62 ] PUT   200 4ms    /api/s/default/rest/networkconf/6998e168e26d48c5855c3804
+[2026-02-20T22:34:17,710Z] [     172.20.0.1 -> webapi-57 ] GET   200 1ms    /api/s/default/rest/networkconf/6998e168e26d48c5855c3804
+[2026-02-20T22:34:17,921Z] [     172.20.0.1 -> webapi-61 ] DELETE 200 11ms   /api/s/default/rest/networkconf/6998e168e26d48c5855c3804
+[2026-02-20T22:34:18,301Z] [     172.20.0.1 -> webapi-61 ] POST  200 2ms    /api/s/default/rest/portconf
+[2026-02-20T22:34:18,583Z] [     172.20.0.1 -> webapi-59 ] GET   200 2ms    /api/s/default/rest/portconf/6998e16ae26d48c5855c3805
+[2026-02-20T22:34:18,781Z] [     172.20.0.1 -> webapi-54 ] DELETE 200 2ms    /api/s/default/rest/portconf/6998e16ae26d48c5855c3805
+[2026-02-20T22:34:19,190Z] [     172.20.0.1 -> webapi-54 ] POST  200 3ms    /api/s/default/rest/usergroup
+[2026-02-20T22:34:19,463Z] [     172.20.0.1 -> webapi-62 ] GET   200 1ms    /api/s/default/rest/usergroup/6998e16be26d48c5855c3806
+[2026-02-20T22:34:19,656Z] [     172.20.0.1 -> webapi-57 ] DELETE 200 2ms    /api/s/default/rest/usergroup/6998e16be26d48c5855c3806
+[2026-02-20T22:34:20,048Z] [     172.20.0.1 -> webapi-57 ] POST  200 4ms    /api/s/default/rest/user
+[2026-02-20T22:34:20,324Z] [     172.20.0.1 -> webapi-61 ] GET   200 1ms    /api/s/default/rest/user/6998e16ce26d48c5855c3807
+[2026-02-20T22:34:20,654Z] [     172.20.0.1 -> webapi-59 ] POST  200 18ms   /api/s/default/cmd/stamgr
+[2026-02-20T22:34:21,046Z] [     172.20.0.1 -> webapi-59 ] POST  201 4ms    /v2/api/site/default/apgroups
+[2026-02-20T22:34:21,082Z] [     172.20.0.1 -> webapi-59 ] POST  200 16ms   /api/s/default/rest/wlanconf
+[2026-02-20T22:34:21,371Z] [     172.20.0.1 -> webapi-54 ] GET   405 2ms    /v2/api/site/default/apgroups/6998e16de26d48c5855c3808
+[2026-02-20T22:34:21,374Z] [     172.20.0.1 -> webapi-59 ] GET   200 2ms    /v2/api/site/default/apgroups
+[2026-02-20T22:34:21,388Z] [     172.20.0.1 -> webapi-59 ] GET   200 1ms    /api/s/default/rest/wlanconf/6998e16de26d48c5855c3809
+[2026-02-20T22:34:21,601Z] [     172.20.0.1 -> webapi-54 ] DELETE 200 2ms    /api/s/default/rest/wlanconf/6998e16de26d48c5855c3809
+[2026-02-20T22:34:21,621Z] [     172.20.0.1 -> webapi-54 ] DELETE 204 3ms    /v2/api/site/default/apgroups/6998e16de26d48c5855c3808
+[2026-02-20T22:35:56,771Z] [     172.20.0.1 -> webapi-67 ] POST  201 13ms   /v2/api/site/default/apgroups
+[2026-02-20T22:35:57,066Z] [     172.20.0.1 -> webapi-67 ] GET   405 2ms    /v2/api/site/default/apgroups/6998e1cce26d48c5855c380a
+[2026-02-20T22:35:57,069Z] [     172.20.0.1 -> webapi-65 ] GET   200 2ms    /v2/api/site/default/apgroups
+[2026-02-20T22:35:57,269Z] [     172.20.0.1 -> webapi-67 ] DELETE 204 5ms    /v2/api/site/default/apgroups/6998e1cce26d48c5855c380a
+[2026-02-20T22:35:57,664Z] [     172.20.0.1 -> webapi-67 ] POST  200 3ms    /api/s/default/rest/firewallgroup
+[2026-02-20T22:35:57,945Z] [     172.20.0.1 -> webapi-67 ] GET   200 1ms    /api/s/default/rest/firewallgroup/6998e1cde26d48c5855c380b
+[2026-02-20T22:35:58,147Z] [     172.20.0.1 -> webapi-67 ] DELETE 200 13ms   /api/s/default/rest/firewallgroup/6998e1cde26d48c5855c380b
+[2026-02-20T22:35:58,546Z] [     172.20.0.1 -> webapi-65 ] POST  200 5ms    /api/s/default/rest/firewallrule
+[2026-02-20T22:35:58,824Z] [     172.20.0.1 -> webapi-65 ] GET   200 1ms    /api/s/default/rest/firewallrule/6998e1cee26d48c5855c380c
+[2026-02-20T22:35:59,133Z] [     172.20.0.1 -> webapi-65 ] DELETE 200 5ms    /api/s/default/rest/firewallrule/6998e1cee26d48c5855c380c
+[2026-02-20T22:35:59,527Z] [     172.20.0.1 -> webapi-67 ] POST  200 7ms    /api/s/default/rest/networkconf
+[2026-02-20T22:35:59,818Z] [     172.20.0.1 -> webapi-67 ] GET   200 1ms    /api/s/default/rest/networkconf/6998e1cfe26d48c5855c380d
+[2026-02-20T22:35:59,955Z] [     172.20.0.1 -> webapi-67 ] GET   200 1ms    /api/s/default/rest/networkconf/6998e1cfe26d48c5855c380d
+[2026-02-20T22:36:00,104Z] [     172.20.0.1 -> webapi-65 ] PUT   200 11ms   /api/s/default/rest/networkconf/6998e1cfe26d48c5855c380d
+[2026-02-20T22:36:00,387Z] [     172.20.0.1 -> webapi-65 ] GET   200 1ms    /api/s/default/rest/networkconf/6998e1cfe26d48c5855c380d
+[2026-02-20T22:36:00,592Z] [     172.20.0.1 -> webapi-65 ] DELETE 200 11ms   /api/s/default/rest/networkconf/6998e1cfe26d48c5855c380d
+[2026-02-20T22:36:01,134Z] [     172.20.0.1 -> webapi-67 ] POST  200 121ms  /api/s/default/rest/portforward
+[2026-02-20T22:36:01,439Z] [     172.20.0.1 -> webapi-65 ] GET   200 1ms    /api/s/default/rest/portforward/6998e1d1e26d48c5855c380e
+[2026-02-20T22:36:01,639Z] [     172.20.0.1 -> webapi-65 ] DELETE 200 3ms    /api/s/default/rest/portforward/6998e1d1e26d48c5855c380e
+[2026-02-20T22:36:02,027Z] [     172.20.0.1 -> webapi-65 ] POST  200 2ms    /api/s/default/rest/portconf
+[2026-02-20T22:36:02,306Z] [     172.20.0.1 -> webapi-65 ] GET   200 1ms    /api/s/default/rest/portconf/6998e1d2e26d48c5855c380f
+[2026-02-20T22:36:02,501Z] [     172.20.0.1 -> webapi-65 ] DELETE 200 2ms    /api/s/default/rest/portconf/6998e1d2e26d48c5855c380f
+[2026-02-20T22:36:02,891Z] [     172.20.0.1 -> webapi-67 ] POST  200 4ms    /api/s/default/rest/radiusprofile
+[2026-02-20T22:36:03,173Z] [     172.20.0.1 -> webapi-67 ] GET   200 1ms    /api/s/default/rest/radiusprofile/6998e1d2e26d48c5855c3810
+[2026-02-20T22:36:03,370Z] [     172.20.0.1 -> webapi-67 ] DELETE 200 4ms    /api/s/default/rest/radiusprofile/6998e1d2e26d48c5855c3810
+[2026-02-20T22:36:03,761Z] [     172.20.0.1 -> webapi-65 ] POST  200 4ms    /api/s/default/rest/usergroup
+[2026-02-20T22:36:04,036Z] [     172.20.0.1 -> webapi-65 ] GET   200 1ms    /api/s/default/rest/usergroup/6998e1d3e26d48c5855c3811
+[2026-02-20T22:36:04,230Z] [     172.20.0.1 -> webapi-65 ] DELETE 200 2ms    /api/s/default/rest/usergroup/6998e1d3e26d48c5855c3811
+[2026-02-20T22:36:04,608Z] [     172.20.0.1 -> webapi-67 ] POST  200 4ms    /api/s/default/rest/user
+[2026-02-20T22:36:04,887Z] [     172.20.0.1 -> webapi-67 ] GET   200 1ms    /api/s/default/rest/user/6998e1d4e26d48c5855c3812
+[2026-02-20T22:36:05,242Z] [     172.20.0.1 -> webapi-67 ] POST  200 9ms    /api/s/default/cmd/stamgr
+[2026-02-20T22:36:05,643Z] [     172.20.0.1 -> webapi-67 ] POST  201 7ms    /v2/api/site/default/apgroups
+[2026-02-20T22:36:05,672Z] [     172.20.0.1 -> webapi-67 ] POST  200 8ms    /api/s/default/rest/wlanconf
+[2026-02-20T22:36:05,962Z] [     172.20.0.1 -> webapi-67 ] GET   405 8ms    /v2/api/site/default/apgroups/6998e1d5e26d48c5855c3813
+[2026-02-20T22:36:05,966Z] [     172.20.0.1 -> webapi-65 ] GET   200 3ms    /v2/api/site/default/apgroups
+[2026-02-20T22:36:05,981Z] [     172.20.0.1 -> webapi-67 ] GET   200 1ms    /api/s/default/rest/wlanconf/6998e1d5e26d48c5855c3814
+[2026-02-20T22:36:06,184Z] [     172.20.0.1 -> webapi-67 ] DELETE 200 1ms    /api/s/default/rest/wlanconf/6998e1d5e26d48c5855c3814
+[2026-02-20T22:36:06,205Z] [     172.20.0.1 -> webapi-65 ] DELETE 204 2ms    /v2/api/site/default/apgroups/6998e1d5e26d48c5855c3813
+[2026-02-20T22:37:45,682Z] [     172.20.0.1 -> webapi-71 ] POST  201 11ms   /v2/api/site/default/apgroups
+[2026-02-20T22:37:45,998Z] [     172.20.0.1 -> webapi-71 ] GET   405 2ms    /v2/api/site/default/apgroups/6998e239e26d48c5855c3815
+[2026-02-20T22:37:46,003Z] [     172.20.0.1 -> webapi-69 ] GET   200 3ms    /v2/api/site/default/apgroups
+[2026-02-20T22:37:46,207Z] [     172.20.0.1 -> webapi-71 ] DELETE 204 4ms    /v2/api/site/default/apgroups/6998e239e26d48c5855c3815
+[2026-02-20T22:37:46,594Z] [     172.20.0.1 -> webapi-71 ] POST  200 3ms    /api/s/default/rest/firewallgroup
+[2026-02-20T22:37:46,873Z] [     172.20.0.1 -> webapi-71 ] GET   200 1ms    /api/s/default/rest/firewallgroup/6998e23ae26d48c5855c3816
+[2026-02-20T22:37:47,072Z] [     172.20.0.1 -> webapi-71 ] DELETE 200 5ms    /api/s/default/rest/firewallgroup/6998e23ae26d48c5855c3816
+[2026-02-20T22:37:47,464Z] [     172.20.0.1 -> webapi-69 ] POST  200 3ms    /api/s/default/rest/firewallrule
+[2026-02-20T22:37:47,734Z] [     172.20.0.1 -> webapi-69 ] GET   200 1ms    /api/s/default/rest/firewallrule/6998e23be26d48c5855c3817
+[2026-02-20T22:37:48,043Z] [     172.20.0.1 -> webapi-69 ] DELETE 200 1ms    /api/s/default/rest/firewallrule/6998e23be26d48c5855c3817
+[2026-02-20T22:37:48,435Z] [     172.20.0.1 -> webapi-71 ] POST  200 7ms    /api/s/default/rest/networkconf
+[2026-02-20T22:37:48,714Z] [     172.20.0.1 -> webapi-71 ] GET   200 1ms    /api/s/default/rest/networkconf/6998e23ce26d48c5855c3818
+[2026-02-20T22:37:48,852Z] [     172.20.0.1 -> webapi-71 ] GET   200 1ms    /api/s/default/rest/networkconf/6998e23ce26d48c5855c3818
+[2026-02-20T22:37:48,985Z] [     172.20.0.1 -> webapi-71 ] PUT   200 4ms    /api/s/default/rest/networkconf/6998e23ce26d48c5855c3818
+[2026-02-20T22:37:49,249Z] [     172.20.0.1 -> webapi-71 ] GET   200 1ms    /api/s/default/rest/networkconf/6998e23ce26d48c5855c3818
+[2026-02-20T22:37:49,446Z] [     172.20.0.1 -> webapi-71 ] DELETE 200 5ms    /api/s/default/rest/networkconf/6998e23ce26d48c5855c3818
+[2026-02-20T22:37:49,931Z] [     172.20.0.1 -> webapi-69 ] POST  200 55ms   /api/s/default/rest/portforward
+[2026-02-20T22:37:50,255Z] [     172.20.0.1 -> webapi-69 ] GET   200 2ms    /api/s/default/rest/portforward/6998e23de26d48c5855c3819
+[2026-02-20T22:37:50,461Z] [     172.20.0.1 -> webapi-69 ] DELETE 200 2ms    /api/s/default/rest/portforward/6998e23de26d48c5855c3819
+[2026-02-20T22:37:50,939Z] [     172.20.0.1 -> webapi-71 ] POST  200 78ms   /api/s/default/rest/portconf
+[2026-02-20T22:37:51,234Z] [     172.20.0.1 -> webapi-71 ] GET   200 1ms    /api/s/default/rest/portconf/6998e23ee26d48c5855c381a
+[2026-02-20T22:37:51,442Z] [     172.20.0.1 -> webapi-71 ] DELETE 200 4ms    /api/s/default/rest/portconf/6998e23ee26d48c5855c381a
+[2026-02-20T22:37:51,826Z] [     172.20.0.1 -> webapi-69 ] POST  200 2ms    /api/s/default/rest/radiusprofile
+[2026-02-20T22:37:52,124Z] [     172.20.0.1 -> webapi-69 ] GET   200 1ms    /api/s/default/rest/radiusprofile/6998e23fe26d48c5855c381b
+[2026-02-20T22:37:52,330Z] [     172.20.0.1 -> webapi-69 ] DELETE 200 2ms    /api/s/default/rest/radiusprofile/6998e23fe26d48c5855c381b
+[2026-02-20T22:37:52,766Z] [     172.20.0.1 -> webapi-71 ] POST  500 42ms   /v2/api/site/default/static-dns
+[2026-02-20T22:37:53,207Z] [     172.20.0.1 -> webapi-71 ] POST  500 2ms    /api/s/default/rest/routing
+[2026-02-20T22:37:53,708Z] [     172.20.0.1 -> webapi-71 ] POST  400 66ms   /v2/api/site/default/trafficrules
+[2026-02-20T22:37:54,160Z] [     172.20.0.1 -> webapi-71 ] POST  200 1ms    /api/s/default/rest/usergroup
+[2026-02-20T22:37:54,436Z] [     172.20.0.1 -> webapi-71 ] GET   200 1ms    /api/s/default/rest/usergroup/6998e242e26d48c5855c381c
+[2026-02-20T22:37:54,630Z] [     172.20.0.1 -> webapi-71 ] DELETE 200 2ms    /api/s/default/rest/usergroup/6998e242e26d48c5855c381c
+[2026-02-20T22:37:55,013Z] [     172.20.0.1 -> webapi-69 ] POST  200 5ms    /api/s/default/rest/user
+[2026-02-20T22:37:55,297Z] [     172.20.0.1 -> webapi-69 ] GET   200 1ms    /api/s/default/rest/user/6998e243e26d48c5855c381d
+[2026-02-20T22:37:55,602Z] [     172.20.0.1 -> webapi-69 ] POST  200 13ms   /api/s/default/cmd/stamgr
+[2026-02-20T22:37:56,011Z] [     172.20.0.1 -> webapi-71 ] POST  201 8ms    /v2/api/site/default/apgroups
+[2026-02-20T22:37:56,040Z] [     172.20.0.1 -> webapi-71 ] POST  200 8ms    /api/s/default/rest/wlanconf
+[2026-02-20T22:37:56,323Z] [     172.20.0.1 -> webapi-71 ] GET   405 8ms    /v2/api/site/default/apgroups/6998e244e26d48c5855c381e
+[2026-02-20T22:37:56,327Z] [     172.20.0.1 -> webapi-69 ] GET   200 2ms    /v2/api/site/default/apgroups
+[2026-02-20T22:37:56,344Z] [     172.20.0.1 -> webapi-71 ] GET   200 1ms    /api/s/default/rest/wlanconf/6998e244e26d48c5855c381f
+[2026-02-20T22:37:56,554Z] [     172.20.0.1 -> webapi-69 ] DELETE 200 5ms    /api/s/default/rest/wlanconf/6998e244e26d48c5855c381f
+[2026-02-20T22:37:56,580Z] [     172.20.0.1 -> webapi-74 ] DELETE 204 9ms    /v2/api/site/default/apgroups/6998e244e26d48c5855c381e
+[2026-02-20T22:38:04,605Z] [     172.20.0.1 -> webapi-69 ] POST  500 2ms    /api/s/default/rest/routing
+[2026-02-20T22:38:09,402Z] [     172.20.0.1 -> webapi-76 ] POST  200 29ms   /v2/api/site/default/static-dns
+[2026-02-20T22:38:16,508Z] [     172.20.0.1 -> webapi-78 ] POST  500 3ms    /api/s/default/rest/routing
+[2026-02-20T22:39:10,380Z] [     172.20.0.1 -> webapi-78 ] POST  201 10ms   /v2/api/site/default/apgroups
+[2026-02-20T22:39:10,673Z] [     172.20.0.1 -> webapi-78 ] GET   405 2ms    /v2/api/site/default/apgroups/6998e28ee26d48c5855c3821
+[2026-02-20T22:39:10,678Z] [     172.20.0.1 -> webapi-77 ] GET   200 4ms    /v2/api/site/default/apgroups
+[2026-02-20T22:39:10,888Z] [     172.20.0.1 -> webapi-78 ] DELETE 204 12ms   /v2/api/site/default/apgroups/6998e28ee26d48c5855c3821
+[2026-02-20T22:39:11,285Z] [     172.20.0.1 -> webapi-78 ] POST  200 3ms    /api/s/default/rest/firewallgroup
+[2026-02-20T22:39:11,556Z] [     172.20.0.1 -> webapi-78 ] GET   200 2ms    /api/s/default/rest/firewallgroup/6998e28fe26d48c5855c3822
+[2026-02-20T22:39:11,751Z] [     172.20.0.1 -> webapi-78 ] DELETE 200 4ms    /api/s/default/rest/firewallgroup/6998e28fe26d48c5855c3822
+[2026-02-20T22:39:12,138Z] [     172.20.0.1 -> webapi-78 ] POST  200 3ms    /api/s/default/rest/firewallrule
+[2026-02-20T22:39:12,415Z] [     172.20.0.1 -> webapi-78 ] GET   200 1ms    /api/s/default/rest/firewallrule/6998e290e26d48c5855c3823
+[2026-02-20T22:39:12,725Z] [     172.20.0.1 -> webapi-78 ] DELETE 200 1ms    /api/s/default/rest/firewallrule/6998e290e26d48c5855c3823
+[2026-02-20T22:39:13,107Z] [     172.20.0.1 -> webapi-77 ] POST  200 3ms    /api/s/default/rest/networkconf
+[2026-02-20T22:39:13,383Z] [     172.20.0.1 -> webapi-77 ] GET   200 1ms    /api/s/default/rest/networkconf/6998e291e26d48c5855c3824
+[2026-02-20T22:39:13,536Z] [     172.20.0.1 -> webapi-77 ] GET   200 2ms    /api/s/default/rest/networkconf/6998e291e26d48c5855c3824
+[2026-02-20T22:39:13,680Z] [     172.20.0.1 -> webapi-77 ] PUT   200 5ms    /api/s/default/rest/networkconf/6998e291e26d48c5855c3824
+[2026-02-20T22:39:13,958Z] [     172.20.0.1 -> webapi-77 ] GET   200 1ms    /api/s/default/rest/networkconf/6998e291e26d48c5855c3824
+[2026-02-20T22:39:14,155Z] [     172.20.0.1 -> webapi-77 ] DELETE 200 5ms    /api/s/default/rest/networkconf/6998e291e26d48c5855c3824
+[2026-02-20T22:39:14,588Z] [     172.20.0.1 -> webapi-77 ] POST  200 46ms   /api/s/default/rest/portforward
+[2026-02-20T22:39:14,870Z] [     172.20.0.1 -> webapi-77 ] GET   200 1ms    /api/s/default/rest/portforward/6998e292e26d48c5855c3825
+[2026-02-20T22:39:15,065Z] [     172.20.0.1 -> webapi-77 ] DELETE 200 2ms    /api/s/default/rest/portforward/6998e292e26d48c5855c3825
+[2026-02-20T22:39:15,444Z] [     172.20.0.1 -> webapi-78 ] POST  200 2ms    /api/s/default/rest/portconf
+[2026-02-20T22:39:15,719Z] [     172.20.0.1 -> webapi-78 ] GET   200 1ms    /api/s/default/rest/portconf/6998e293e26d48c5855c3826
+[2026-02-20T22:39:15,908Z] [     172.20.0.1 -> webapi-78 ] DELETE 200 1ms    /api/s/default/rest/portconf/6998e293e26d48c5855c3826
+[2026-02-20T22:39:16,288Z] [     172.20.0.1 -> webapi-78 ] POST  200 1ms    /api/s/default/rest/radiusprofile
+[2026-02-20T22:39:16,560Z] [     172.20.0.1 -> webapi-78 ] GET   200 1ms    /api/s/default/rest/radiusprofile/6998e294e26d48c5855c3827
+[2026-02-20T22:39:16,764Z] [     172.20.0.1 -> webapi-78 ] DELETE 200 2ms    /api/s/default/rest/radiusprofile/6998e294e26d48c5855c3827
+[2026-02-20T22:39:17,151Z] [     172.20.0.1 -> webapi-77 ] POST  400 7ms    /v2/api/site/default/static-dns
+[2026-02-20T22:39:17,588Z] [     172.20.0.1 -> webapi-77 ] POST  500 2ms    /api/s/default/rest/routing
+[2026-02-20T22:39:18,070Z] [     172.20.0.1 -> webapi-77 ] POST  201 46ms   /v2/api/site/default/trafficrules
+[2026-02-20T22:39:18,350Z] [     172.20.0.1 -> webapi-78 ] GET   405 1ms    /v2/api/site/default/trafficrules/6998e296e26d48c5855c3828
+[2026-02-20T22:39:18,494Z] [     172.20.0.1 -> webapi-78 ] DELETE 200 14ms   /v2/api/site/default/trafficrules/6998e296e26d48c5855c3828
+[2026-02-20T22:39:18,877Z] [     172.20.0.1 -> webapi-78 ] POST  200 1ms    /api/s/default/rest/usergroup
+[2026-02-20T22:39:19,142Z] [     172.20.0.1 -> webapi-78 ] GET   200 1ms    /api/s/default/rest/usergroup/6998e296e26d48c5855c3829
+[2026-02-20T22:39:19,336Z] [     172.20.0.1 -> webapi-78 ] DELETE 200 1ms    /api/s/default/rest/usergroup/6998e296e26d48c5855c3829
+[2026-02-20T22:39:19,730Z] [     172.20.0.1 -> webapi-78 ] POST  200 6ms    /api/s/default/rest/user
+[2026-02-20T22:39:20,004Z] [     172.20.0.1 -> webapi-78 ] GET   200 2ms    /api/s/default/rest/user/6998e297e26d48c5855c382a
+[2026-02-20T22:39:20,329Z] [     172.20.0.1 -> webapi-78 ] POST  200 21ms   /api/s/default/cmd/stamgr
+[2026-02-20T22:39:20,720Z] [     172.20.0.1 -> webapi-77 ] POST  201 3ms    /v2/api/site/default/apgroups
+[2026-02-20T22:39:20,745Z] [     172.20.0.1 -> webapi-78 ] POST  200 5ms    /api/s/default/rest/wlanconf
+[2026-02-20T22:39:21,027Z] [     172.20.0.1 -> webapi-78 ] GET   405 1ms    /v2/api/site/default/apgroups/6998e298e26d48c5855c382b
+[2026-02-20T22:39:21,030Z] [     172.20.0.1 -> webapi-77 ] GET   200 2ms    /v2/api/site/default/apgroups
+[2026-02-20T22:39:21,044Z] [     172.20.0.1 -> webapi-78 ] GET   200 2ms    /api/s/default/rest/wlanconf/6998e298e26d48c5855c382c
+[2026-02-20T22:39:21,247Z] [     172.20.0.1 -> webapi-78 ] DELETE 200 1ms    /api/s/default/rest/wlanconf/6998e298e26d48c5855c382c
+[2026-02-20T22:39:21,268Z] [     172.20.0.1 -> webapi-77 ] DELETE 204 4ms    /v2/api/site/default/apgroups/6998e298e26d48c5855c382b
+[2026-02-20T22:39:49,070Z] [     172.20.0.1 -> webapi-78 ] POST  201 5ms    /v2/api/site/default/apgroups
+[2026-02-20T22:39:49,351Z] [     172.20.0.1 -> webapi-83 ] GET   405 2ms    /v2/api/site/default/apgroups/6998e2b5e26d48c5855c382d
+[2026-02-20T22:39:49,357Z] [     172.20.0.1 -> webapi-81 ] GET   200 5ms    /v2/api/site/default/apgroups
+[2026-02-20T22:39:49,551Z] [     172.20.0.1 -> webapi-80 ] DELETE 204 3ms    /v2/api/site/default/apgroups/6998e2b5e26d48c5855c382d
+[2026-02-20T22:39:49,953Z] [     172.20.0.1 -> webapi-81 ] POST  200 3ms    /api/s/default/rest/firewallgroup
+[2026-02-20T22:39:50,228Z] [     172.20.0.1 -> webapi-80 ] GET   200 1ms    /api/s/default/rest/firewallgroup/6998e2b5e26d48c5855c382e
+[2026-02-20T22:39:50,427Z] [     172.20.0.1 -> webapi-81 ] DELETE 200 5ms    /api/s/default/rest/firewallgroup/6998e2b5e26d48c5855c382e
+[2026-02-20T22:39:50,833Z] [     172.20.0.1 -> webapi-82 ] POST  200 4ms    /api/s/default/rest/firewallrule
+[2026-02-20T22:39:51,117Z] [     172.20.0.1 -> webapi-79 ] GET   200 1ms    /api/s/default/rest/firewallrule/6998e2b6e26d48c5855c382f
+[2026-02-20T22:39:51,426Z] [     172.20.0.1 -> webapi-82 ] DELETE 200 1ms    /api/s/default/rest/firewallrule/6998e2b6e26d48c5855c382f
+[2026-02-20T22:39:51,815Z] [     172.20.0.1 -> webapi-77 ] POST  200 4ms    /api/s/default/rest/networkconf
+[2026-02-20T22:39:52,089Z] [     172.20.0.1 -> webapi-84 ] GET   200 1ms    /api/s/default/rest/networkconf/6998e2b7e26d48c5855c3830
+[2026-02-20T22:39:52,226Z] [     172.20.0.1 -> webapi-77 ] GET   200 1ms    /api/s/default/rest/networkconf/6998e2b7e26d48c5855c3830
+[2026-02-20T22:39:52,362Z] [     172.20.0.1 -> webapi-84 ] PUT   200 5ms    /api/s/default/rest/networkconf/6998e2b7e26d48c5855c3830
+[2026-02-20T22:39:52,628Z] [     172.20.0.1 -> webapi-77 ] GET   200 1ms    /api/s/default/rest/networkconf/6998e2b7e26d48c5855c3830
+[2026-02-20T22:39:52,829Z] [     172.20.0.1 -> webapi-84 ] DELETE 200 6ms    /api/s/default/rest/networkconf/6998e2b7e26d48c5855c3830
+[2026-02-20T22:39:53,215Z] [     172.20.0.1 -> webapi-77 ] POST  200 8ms    /api/s/default/rest/portforward
+[2026-02-20T22:39:53,495Z] [     172.20.0.1 -> webapi-84 ] GET   200 1ms    /api/s/default/rest/portforward/6998e2b9e26d48c5855c3831
+[2026-02-20T22:39:53,685Z] [     172.20.0.1 -> webapi-77 ] DELETE 200 2ms    /api/s/default/rest/portforward/6998e2b9e26d48c5855c3831
+[2026-02-20T22:39:54,079Z] [     172.20.0.1 -> webapi-81 ] POST  200 2ms    /api/s/default/rest/portconf
+[2026-02-20T22:39:54,355Z] [     172.20.0.1 -> webapi-80 ] GET   200 1ms    /api/s/default/rest/portconf/6998e2bae26d48c5855c3832
+[2026-02-20T22:39:54,549Z] [     172.20.0.1 -> webapi-81 ] DELETE 200 1ms    /api/s/default/rest/portconf/6998e2bae26d48c5855c3832
+[2026-02-20T22:39:54,934Z] [     172.20.0.1 -> webapi-82 ] POST  200 2ms    /api/s/default/rest/radiusprofile
+[2026-02-20T22:39:55,202Z] [     172.20.0.1 -> webapi-79 ] GET   200 1ms    /api/s/default/rest/radiusprofile/6998e2bae26d48c5855c3833
+[2026-02-20T22:39:55,398Z] [     172.20.0.1 -> webapi-82 ] DELETE 200 2ms    /api/s/default/rest/radiusprofile/6998e2bae26d48c5855c3833
+[2026-02-20T22:39:55,777Z] [     172.20.0.1 -> webapi-77 ] POST  400 2ms    /v2/api/site/default/static-dns
+[2026-02-20T22:39:56,223Z] [     172.20.0.1 -> webapi-84 ] POST  500 2ms    /api/s/default/rest/routing
+[2026-02-20T22:39:56,668Z] [     172.20.0.1 -> webapi-77 ] POST  201 4ms    /v2/api/site/default/trafficrules
+[2026-02-20T22:39:56,944Z] [     172.20.0.1 -> webapi-83 ] GET   405 1ms    /v2/api/site/default/trafficrules/6998e2bce26d48c5855c3834
+[2026-02-20T22:39:56,948Z] [     172.20.0.1 -> webapi-81 ] GET   200 2ms    /v2/api/site/default/trafficrules
+[2026-02-20T22:39:57,263Z] [     172.20.0.1 -> webapi-82 ] DELETE 200 9ms    /v2/api/site/default/trafficrules/6998e2bce26d48c5855c3834
+[2026-02-20T22:39:57,649Z] [     172.20.0.1 -> webapi-79 ] POST  200 2ms    /api/s/default/rest/usergroup
+[2026-02-20T22:39:57,912Z] [     172.20.0.1 -> webapi-82 ] GET   200 1ms    /api/s/default/rest/usergroup/6998e2bde26d48c5855c3835
+[2026-02-20T22:39:58,125Z] [     172.20.0.1 -> webapi-79 ] DELETE 200 2ms    /api/s/default/rest/usergroup/6998e2bde26d48c5855c3835
+[2026-02-20T22:39:58,530Z] [     172.20.0.1 -> webapi-84 ] POST  200 3ms    /api/s/default/rest/user
+[2026-02-20T22:39:58,816Z] [     172.20.0.1 -> webapi-78 ] GET   200 1ms    /api/s/default/rest/user/6998e2bee26d48c5855c3836
+[2026-02-20T22:39:59,129Z] [     172.20.0.1 -> webapi-83 ] POST  200 8ms    /api/s/default/cmd/stamgr
+[2026-02-20T22:39:59,520Z] [     172.20.0.1 -> webapi-80 ] POST  201 3ms    /v2/api/site/default/apgroups
+[2026-02-20T22:39:59,542Z] [     172.20.0.1 -> webapi-81 ] POST  200 5ms    /api/s/default/rest/wlanconf
+[2026-02-20T22:39:59,823Z] [     172.20.0.1 -> webapi-80 ] GET   405 2ms    /v2/api/site/default/apgroups/6998e2bfe26d48c5855c3837
+[2026-02-20T22:39:59,826Z] [     172.20.0.1 -> webapi-82 ] GET   200 2ms    /v2/api/site/default/apgroups
+[2026-02-20T22:39:59,839Z] [     172.20.0.1 -> webapi-77 ] GET   200 1ms    /api/s/default/rest/wlanconf/6998e2bfe26d48c5855c3838
+[2026-02-20T22:40:00,038Z] [     172.20.0.1 -> webapi-84 ] DELETE 200 1ms    /api/s/default/rest/wlanconf/6998e2bfe26d48c5855c3838
+[2026-02-20T22:40:00,058Z] [     172.20.0.1 -> webapi-77 ] DELETE 204 2ms    /v2/api/site/default/apgroups/6998e2bfe26d48c5855c3837
+[2026-02-20T22:40:11,639Z] [     172.20.0.1 -> webapi-83 ] GET   200 5ms    /v2/api/site/default/trafficrules
+[2026-02-21T20:42:38,241Z] [     172.20.0.1 -> webapi-81 ] POST  201 27ms   /v2/api/site/default/apgroups
+[2026-02-21T20:42:38,529Z] [     172.20.0.1 -> webapi-81 ] GET   405 4ms    /v2/api/site/default/apgroups/699a18bee26d48c5855c3839
+[2026-02-21T20:42:38,534Z] [     172.20.0.1 -> webapi-83 ] GET   200 4ms    /v2/api/site/default/apgroups
+[2026-02-21T20:42:38,741Z] [     172.20.0.1 -> webapi-83 ] DELETE 204 4ms    /v2/api/site/default/apgroups/699a18bee26d48c5855c3839
+[2026-02-21T20:42:39,129Z] [     172.20.0.1 -> webapi-83 ] POST  200 7ms    /api/s/default/rest/firewallgroup
+[2026-02-21T20:42:39,407Z] [     172.20.0.1 -> webapi-83 ] GET   200 1ms    /api/s/default/rest/firewallgroup/699a18bfe26d48c5855c383a
+[2026-02-21T20:42:39,611Z] [     172.20.0.1 -> webapi-83 ] DELETE 200 7ms    /api/s/default/rest/firewallgroup/699a18bfe26d48c5855c383a
+[2026-02-21T20:42:39,991Z] [     172.20.0.1 -> webapi-83 ] POST  200 4ms    /api/s/default/rest/firewallrule
+[2026-02-21T20:42:40,145Z] [     172.20.0.1 -> webapi-83 ] DELETE 200 2ms    /api/s/default/rest/firewallrule/699a18bfe26d48c5855c383b
+[2026-02-21T20:42:40,538Z] [     172.20.0.1 -> webapi-83 ] POST  200 6ms    /api/s/default/rest/networkconf
+[2026-02-21T20:42:40,812Z] [     172.20.0.1 -> webapi-83 ] GET   200 1ms    /api/s/default/rest/networkconf/699a18c0e26d48c5855c383c
+[2026-02-21T20:42:40,953Z] [     172.20.0.1 -> webapi-83 ] GET   200 1ms    /api/s/default/rest/networkconf/699a18c0e26d48c5855c383c
+[2026-02-21T20:42:41,097Z] [     172.20.0.1 -> webapi-83 ] PUT   200 5ms    /api/s/default/rest/networkconf/699a18c0e26d48c5855c383c
+[2026-02-21T20:42:41,376Z] [     172.20.0.1 -> webapi-83 ] GET   200 1ms    /api/s/default/rest/networkconf/699a18c0e26d48c5855c383c
+[2026-02-21T20:42:41,585Z] [     172.20.0.1 -> webapi-83 ] DELETE 200 12ms   /api/s/default/rest/networkconf/699a18c0e26d48c5855c383c
+[2026-02-21T20:42:42,081Z] [     172.20.0.1 -> webapi-83 ] POST  200 114ms  /api/s/default/rest/portforward
+[2026-02-21T20:42:42,374Z] [     172.20.0.1 -> webapi-83 ] GET   200 1ms    /api/s/default/rest/portforward/699a18c2e26d48c5855c383d
+[2026-02-21T20:42:42,571Z] [     172.20.0.1 -> webapi-83 ] DELETE 200 4ms    /api/s/default/rest/portforward/699a18c2e26d48c5855c383d
+[2026-02-21T20:42:42,986Z] [     172.20.0.1 -> webapi-83 ] POST  200 2ms    /api/s/default/rest/portconf
+[2026-02-21T20:42:43,276Z] [     172.20.0.1 -> webapi-83 ] GET   200 1ms    /api/s/default/rest/portconf/699a18c2e26d48c5855c383e
+[2026-02-21T20:42:43,487Z] [     172.20.0.1 -> webapi-83 ] DELETE 200 2ms    /api/s/default/rest/portconf/699a18c2e26d48c5855c383e
+[2026-02-21T20:42:43,905Z] [     172.20.0.1 -> webapi-81 ] POST  200 3ms    /api/s/default/rest/radiusprofile
+[2026-02-21T20:42:44,186Z] [     172.20.0.1 -> webapi-81 ] GET   200 1ms    /api/s/default/rest/radiusprofile/699a18c3e26d48c5855c383f
+[2026-02-21T20:42:44,390Z] [     172.20.0.1 -> webapi-81 ] DELETE 200 3ms    /api/s/default/rest/radiusprofile/699a18c3e26d48c5855c383f
+[2026-02-21T20:42:44,771Z] [     172.20.0.1 -> webapi-83 ] POST  400 3ms    /v2/api/site/default/static-dns
+[2026-02-21T20:42:45,218Z] [     172.20.0.1 -> webapi-83 ] POST  500 3ms    /api/s/default/rest/routing
+[2026-02-21T20:42:45,667Z] [     172.20.0.1 -> webapi-83 ] POST  201 10ms   /v2/api/site/default/trafficrules
+[2026-02-21T20:42:45,947Z] [     172.20.0.1 -> webapi-81 ] GET   405 5ms    /v2/api/site/default/trafficrules/699a18c5e26d48c5855c3840
+[2026-02-21T20:42:45,951Z] [     172.20.0.1 -> webapi-83 ] GET   200 2ms    /v2/api/site/default/trafficrules
+[2026-02-21T20:42:46,270Z] [     172.20.0.1 -> webapi-81 ] DELETE 200 7ms    /v2/api/site/default/trafficrules/699a18c5e26d48c5855c3840
+[2026-02-21T20:42:46,673Z] [     172.20.0.1 -> webapi-81 ] POST  200 2ms    /api/s/default/rest/usergroup
+[2026-02-21T20:42:46,958Z] [     172.20.0.1 -> webapi-81 ] GET   200 1ms    /api/s/default/rest/usergroup/699a18c6e26d48c5855c3841
+[2026-02-21T20:42:47,161Z] [     172.20.0.1 -> webapi-81 ] DELETE 200 10ms   /api/s/default/rest/usergroup/699a18c6e26d48c5855c3841
+[2026-02-21T20:42:47,563Z] [     172.20.0.1 -> webapi-83 ] POST  200 5ms    /api/s/default/rest/user
+[2026-02-21T20:42:47,846Z] [     172.20.0.1 -> webapi-83 ] GET   200 1ms    /api/s/default/rest/user/699a18c7e26d48c5855c3842
+[2026-02-21T20:42:48,166Z] [     172.20.0.1 -> webapi-83 ] POST  200 11ms   /api/s/default/cmd/stamgr
+[2026-02-21T20:42:48,568Z] [     172.20.0.1 -> webapi-81 ] POST  201 3ms    /v2/api/site/default/apgroups
+[2026-02-21T20:42:48,595Z] [     172.20.0.1 -> webapi-83 ] POST  200 9ms    /api/s/default/rest/wlanconf
+[2026-02-21T20:42:48,878Z] [     172.20.0.1 -> webapi-83 ] GET   405 1ms    /v2/api/site/default/apgroups/699a18c8e26d48c5855c3843
+[2026-02-21T20:42:48,880Z] [     172.20.0.1 -> webapi-81 ] GET   200 1ms    /v2/api/site/default/apgroups
+[2026-02-21T20:42:48,894Z] [     172.20.0.1 -> webapi-83 ] GET   200 1ms    /api/s/default/rest/wlanconf/699a18c8e26d48c5855c3844
+[2026-02-21T20:42:49,099Z] [     172.20.0.1 -> webapi-83 ] DELETE 200 2ms    /api/s/default/rest/wlanconf/699a18c8e26d48c5855c3844
+[2026-02-21T20:42:49,121Z] [     172.20.0.1 -> webapi-83 ] DELETE 204 3ms    /v2/api/site/default/apgroups/699a18c8e26d48c5855c3843
+[2026-02-21T20:44:28,471Z] [     172.20.0.1 -> webapi-93 ] POST  201 4ms    /v2/api/site/default/apgroups
+[2026-02-21T20:44:28,762Z] [     172.20.0.1 -> webapi-93 ] GET   405 1ms    /v2/api/site/default/apgroups/699a192ce26d48c5855c3845
+[2026-02-21T20:44:28,765Z] [     172.20.0.1 -> webapi-83 ] GET   200 2ms    /v2/api/site/default/apgroups
+[2026-02-21T20:44:28,963Z] [     172.20.0.1 -> webapi-93 ] DELETE 204 4ms    /v2/api/site/default/apgroups/699a192ce26d48c5855c3845
+[2026-02-21T20:44:29,362Z] [     172.20.0.1 -> webapi-93 ] POST  200 3ms    /api/s/default/rest/firewallgroup
+[2026-02-21T20:44:29,650Z] [     172.20.0.1 -> webapi-93 ] GET   200 2ms    /api/s/default/rest/firewallgroup/699a192de26d48c5855c3846
+[2026-02-21T20:44:29,859Z] [     172.20.0.1 -> webapi-93 ] DELETE 200 6ms    /api/s/default/rest/firewallgroup/699a192de26d48c5855c3846
+[2026-02-21T20:44:30,276Z] [     172.20.0.1 -> webapi-93 ] POST  200 24ms   /api/s/default/rest/firewallrule
+[2026-02-21T20:44:30,560Z] [     172.20.0.1 -> webapi-93 ] GET   200 1ms    /api/s/default/rest/firewallrule/699a192ee26d48c5855c3847
+[2026-02-21T20:44:30,707Z] [     172.20.0.1 -> webapi-93 ] GET   200 1ms    /api/s/default/rest/firewallrule/699a192ee26d48c5855c3847
+[2026-02-21T20:44:30,857Z] [     172.20.0.1 -> webapi-93 ] PUT   200 5ms    /api/s/default/rest/firewallrule/699a192ee26d48c5855c3847
+[2026-02-21T20:44:31,137Z] [     172.20.0.1 -> webapi-93 ] GET   200 1ms    /api/s/default/rest/firewallrule/699a192ee26d48c5855c3847
+[2026-02-21T20:44:31,343Z] [     172.20.0.1 -> webapi-93 ] DELETE 200 2ms    /api/s/default/rest/firewallrule/699a192ee26d48c5855c3847
+[2026-02-21T20:44:31,738Z] [     172.20.0.1 -> webapi-93 ] POST  200 5ms    /api/s/default/rest/networkconf
+[2026-02-21T20:44:32,020Z] [     172.20.0.1 -> webapi-93 ] GET   200 3ms    /api/s/default/rest/networkconf/699a192fe26d48c5855c3848
+[2026-02-21T20:44:32,160Z] [     172.20.0.1 -> webapi-93 ] GET   200 1ms    /api/s/default/rest/networkconf/699a192fe26d48c5855c3848
+[2026-02-21T20:44:32,304Z] [     172.20.0.1 -> webapi-93 ] PUT   200 4ms    /api/s/default/rest/networkconf/699a192fe26d48c5855c3848
+[2026-02-21T20:44:32,600Z] [     172.20.0.1 -> webapi-93 ] GET   200 1ms    /api/s/default/rest/networkconf/699a192fe26d48c5855c3848
+[2026-02-21T20:44:32,814Z] [     172.20.0.1 -> webapi-93 ] DELETE 200 6ms    /api/s/default/rest/networkconf/699a192fe26d48c5855c3848
+[2026-02-21T20:44:33,262Z] [     172.20.0.1 -> webapi-83 ] POST  200 75ms   /api/s/default/rest/portforward
+[2026-02-21T20:44:33,560Z] [     172.20.0.1 -> webapi-83 ] GET   200 7ms    /api/s/default/rest/portforward/699a1931e26d48c5855c3849
+[2026-02-21T20:44:33,756Z] [     172.20.0.1 -> webapi-83 ] DELETE 200 1ms    /api/s/default/rest/portforward/699a1931e26d48c5855c3849
+[2026-02-21T20:44:34,143Z] [     172.20.0.1 -> webapi-93 ] POST  200 2ms    /api/s/default/rest/portconf
+[2026-02-21T20:44:34,427Z] [     172.20.0.1 -> webapi-93 ] GET   200 1ms    /api/s/default/rest/portconf/699a1932e26d48c5855c384a
+[2026-02-21T20:44:34,627Z] [     172.20.0.1 -> webapi-93 ] DELETE 200 1ms    /api/s/default/rest/portconf/699a1932e26d48c5855c384a
+[2026-02-21T20:44:35,025Z] [     172.20.0.1 -> webapi-83 ] POST  200 2ms    /api/s/default/rest/radiusprofile
+[2026-02-21T20:44:35,302Z] [     172.20.0.1 -> webapi-83 ] GET   200 1ms    /api/s/default/rest/radiusprofile/699a1933e26d48c5855c384b
+[2026-02-21T20:44:35,503Z] [     172.20.0.1 -> webapi-83 ] DELETE 200 4ms    /api/s/default/rest/radiusprofile/699a1933e26d48c5855c384b
+[2026-02-21T20:44:35,889Z] [     172.20.0.1 -> webapi-93 ] POST  400 2ms    /v2/api/site/default/static-dns
+[2026-02-21T20:44:36,333Z] [     172.20.0.1 -> webapi-93 ] POST  500 2ms    /api/s/default/rest/routing
+[2026-02-21T20:44:36,776Z] [     172.20.0.1 -> webapi-93 ] POST  201 4ms    /v2/api/site/default/trafficrules
+[2026-02-21T20:44:36,933Z] [     172.20.0.1 -> webapi-93 ] DELETE 200 3ms    /v2/api/site/default/trafficrules/699a1934e26d48c5855c384c
+[2026-02-21T20:44:37,315Z] [     172.20.0.1 -> webapi-93 ] POST  200 4ms    /api/s/default/rest/usergroup
+[2026-02-21T20:44:37,592Z] [     172.20.0.1 -> webapi-93 ] GET   200 1ms    /api/s/default/rest/usergroup/699a1935e26d48c5855c384d
+[2026-02-21T20:44:37,793Z] [     172.20.0.1 -> webapi-93 ] DELETE 200 2ms    /api/s/default/rest/usergroup/699a1935e26d48c5855c384d
+[2026-02-21T20:44:38,175Z] [     172.20.0.1 -> webapi-83 ] POST  200 4ms    /api/s/default/rest/user
+[2026-02-21T20:44:38,454Z] [     172.20.0.1 -> webapi-83 ] GET   200 1ms    /api/s/default/rest/user/699a1936e26d48c5855c384e
+[2026-02-21T20:44:39,008Z] [     172.20.0.1 -> webapi-83 ] POST  200 17ms   /api/s/default/cmd/stamgr
+[2026-02-21T20:44:39,556Z] [     172.20.0.1 -> webapi-93 ] POST  201 3ms    /v2/api/site/default/apgroups
+[2026-02-21T20:44:39,580Z] [     172.20.0.1 -> webapi-93 ] POST  200 5ms    /api/s/default/rest/wlanconf
+[2026-02-21T20:44:39,865Z] [     172.20.0.1 -> webapi-93 ] GET   405 7ms    /v2/api/site/default/apgroups/699a1937e26d48c5855c384f
+[2026-02-21T20:44:39,868Z] [     172.20.0.1 -> webapi-83 ] GET   200 2ms    /v2/api/site/default/apgroups
+[2026-02-21T20:44:39,881Z] [     172.20.0.1 -> webapi-93 ] GET   200 1ms    /api/s/default/rest/wlanconf/699a1937e26d48c5855c3850
+[2026-02-21T20:44:40,087Z] [     172.20.0.1 -> webapi-93 ] DELETE 200 2ms    /api/s/default/rest/wlanconf/699a1937e26d48c5855c3850
+[2026-02-21T20:44:40,106Z] [     172.20.0.1 -> webapi-83 ] DELETE 204 2ms    /v2/api/site/default/apgroups/699a1937e26d48c5855c384f
+[2026-02-21T20:44:47,436Z] [     172.20.0.1 -> webapi-93 ] POST  201 9ms    /v2/api/site/default/trafficrules
+[2026-02-21T20:44:54,354Z] [     172.20.0.1 -> webapi-83 ] POST  201 38ms   /v2/api/site/default/trafficrules
+[2026-02-21T20:46:58,096Z] [     172.20.0.1 -> webapi-83 ] POST  201 3ms    /v2/api/site/default/apgroups
+[2026-02-21T20:46:58,382Z] [     172.20.0.1 -> webapi-83 ] GET   405 1ms    /v2/api/site/default/apgroups/699a19c2e26d48c5855c3853
+[2026-02-21T20:46:58,385Z] [     172.20.0.1 -> webapi-100] GET   200 2ms    /v2/api/site/default/apgroups
+[2026-02-21T20:46:58,587Z] [     172.20.0.1 -> webapi-100] DELETE 204 3ms    /v2/api/site/default/apgroups/699a19c2e26d48c5855c3853
+[2026-02-21T20:46:58,993Z] [     172.20.0.1 -> webapi-100] POST  200 3ms    /api/s/default/rest/firewallgroup
+[2026-02-21T20:46:59,267Z] [     172.20.0.1 -> webapi-100] GET   200 2ms    /api/s/default/rest/firewallgroup/699a19c2e26d48c5855c3854
+[2026-02-21T20:46:59,471Z] [     172.20.0.1 -> webapi-100] DELETE 200 5ms    /api/s/default/rest/firewallgroup/699a19c2e26d48c5855c3854
+[2026-02-21T20:46:59,877Z] [     172.20.0.1 -> webapi-83 ] POST  200 3ms    /api/s/default/rest/firewallrule
+[2026-02-21T20:47:00,156Z] [     172.20.0.1 -> webapi-83 ] GET   200 1ms    /api/s/default/rest/firewallrule/699a19c3e26d48c5855c3855
+[2026-02-21T20:47:00,301Z] [     172.20.0.1 -> webapi-83 ] GET   200 2ms    /api/s/default/rest/firewallrule/699a19c3e26d48c5855c3855
+[2026-02-21T20:47:00,447Z] [     172.20.0.1 -> webapi-83 ] PUT   200 3ms    /api/s/default/rest/firewallrule/699a19c3e26d48c5855c3855
+[2026-02-21T20:47:00,731Z] [     172.20.0.1 -> webapi-83 ] GET   200 2ms    /api/s/default/rest/firewallrule/699a19c3e26d48c5855c3855
+[2026-02-21T20:47:00,932Z] [     172.20.0.1 -> webapi-83 ] DELETE 200 2ms    /api/s/default/rest/firewallrule/699a19c3e26d48c5855c3855
+[2026-02-21T20:47:01,332Z] [     172.20.0.1 -> webapi-100] POST  200 3ms    /api/s/default/rest/networkconf
+[2026-02-21T20:47:01,609Z] [     172.20.0.1 -> webapi-100] GET   200 1ms    /api/s/default/rest/networkconf/699a19c5e26d48c5855c3856
+[2026-02-21T20:47:01,754Z] [     172.20.0.1 -> webapi-100] GET   200 1ms    /api/s/default/rest/networkconf/699a19c5e26d48c5855c3856
+[2026-02-21T20:47:01,899Z] [     172.20.0.1 -> webapi-100] PUT   200 8ms    /api/s/default/rest/networkconf/699a19c5e26d48c5855c3856
+[2026-02-21T20:47:02,180Z] [     172.20.0.1 -> webapi-100] GET   200 4ms    /api/s/default/rest/networkconf/699a19c5e26d48c5855c3856
+[2026-02-21T20:47:02,385Z] [     172.20.0.1 -> webapi-100] DELETE 200 6ms    /api/s/default/rest/networkconf/699a19c5e26d48c5855c3856
+[2026-02-21T20:47:02,836Z] [     172.20.0.1 -> webapi-83 ] POST  200 59ms   /api/s/default/rest/portforward
+[2026-02-21T20:47:03,121Z] [     172.20.0.1 -> webapi-83 ] GET   200 1ms    /api/s/default/rest/portforward/699a19c6e26d48c5855c3857
+[2026-02-21T20:47:03,318Z] [     172.20.0.1 -> webapi-83 ] DELETE 200 1ms    /api/s/default/rest/portforward/699a19c6e26d48c5855c3857
+[2026-02-21T20:47:03,698Z] [     172.20.0.1 -> webapi-100] POST  200 2ms    /api/s/default/rest/portconf
+[2026-02-21T20:47:03,974Z] [     172.20.0.1 -> webapi-100] GET   200 1ms    /api/s/default/rest/portconf/699a19c7e26d48c5855c3858
+[2026-02-21T20:47:04,166Z] [     172.20.0.1 -> webapi-100] DELETE 200 1ms    /api/s/default/rest/portconf/699a19c7e26d48c5855c3858
+[2026-02-21T20:47:04,549Z] [     172.20.0.1 -> webapi-83 ] POST  200 1ms    /api/s/default/rest/radiusprofile
+[2026-02-21T20:47:04,819Z] [     172.20.0.1 -> webapi-83 ] GET   200 1ms    /api/s/default/rest/radiusprofile/699a19c8e26d48c5855c3859
+[2026-02-21T20:47:05,015Z] [     172.20.0.1 -> webapi-83 ] DELETE 200 2ms    /api/s/default/rest/radiusprofile/699a19c8e26d48c5855c3859
+[2026-02-21T20:47:05,417Z] [     172.20.0.1 -> webapi-100] POST  400 2ms    /v2/api/site/default/static-dns
+[2026-02-21T20:47:05,861Z] [     172.20.0.1 -> webapi-100] POST  500 2ms    /api/s/default/rest/routing
+[2026-02-21T20:47:06,309Z] [     172.20.0.1 -> webapi-100] POST  201 5ms    /v2/api/site/default/trafficrules
+[2026-02-21T20:47:06,478Z] [     172.20.0.1 -> webapi-100] DELETE 200 3ms    /v2/api/site/default/trafficrules/699a19cae26d48c5855c385a
+[2026-02-21T20:47:06,867Z] [     172.20.0.1 -> webapi-100] POST  200 1ms    /api/s/default/rest/usergroup
+[2026-02-21T20:47:07,142Z] [     172.20.0.1 -> webapi-100] GET   200 1ms    /api/s/default/rest/usergroup/699a19cae26d48c5855c385b
+[2026-02-21T20:47:07,341Z] [     172.20.0.1 -> webapi-100] DELETE 200 2ms    /api/s/default/rest/usergroup/699a19cae26d48c5855c385b
+[2026-02-21T20:47:07,744Z] [     172.20.0.1 -> webapi-83 ] POST  200 7ms    /api/s/default/rest/user
+[2026-02-21T20:47:08,022Z] [     172.20.0.1 -> webapi-83 ] GET   200 1ms    /api/s/default/rest/user/699a19cbe26d48c5855c385c
+[2026-02-21T20:47:08,342Z] [     172.20.0.1 -> webapi-83 ] POST  200 9ms    /api/s/default/cmd/stamgr
+[2026-02-21T20:47:08,745Z] [     172.20.0.1 -> webapi-100] POST  201 3ms    /v2/api/site/default/apgroups
+[2026-02-21T20:47:08,768Z] [     172.20.0.1 -> webapi-83 ] POST  200 5ms    /api/s/default/rest/wlanconf
+[2026-02-21T20:47:09,056Z] [     172.20.0.1 -> webapi-83 ] GET   405 1ms    /v2/api/site/default/apgroups/699a19cce26d48c5855c385d
+[2026-02-21T20:47:09,058Z] [     172.20.0.1 -> webapi-100] GET   200 1ms    /v2/api/site/default/apgroups
+[2026-02-21T20:47:09,071Z] [     172.20.0.1 -> webapi-83 ] GET   200 1ms    /api/s/default/rest/wlanconf/699a19cce26d48c5855c385e
+[2026-02-21T20:47:09,278Z] [     172.20.0.1 -> webapi-83 ] DELETE 200 1ms    /api/s/default/rest/wlanconf/699a19cce26d48c5855c385e
+[2026-02-21T20:47:09,298Z] [     172.20.0.1 -> webapi-83 ] DELETE 204 2ms    /v2/api/site/default/apgroups/699a19cce26d48c5855c385d
+[2026-02-21T20:48:15,170Z] [     172.20.0.1 -> webapi-107] POST  201 3ms    /v2/api/site/default/apgroups
+[2026-02-21T20:48:15,448Z] [     172.20.0.1 -> webapi-107] GET   405 1ms    /v2/api/site/default/apgroups/699a1a0fe26d48c5855c385f
+[2026-02-21T20:48:15,451Z] [     172.20.0.1 -> webapi-104] GET   200 2ms    /v2/api/site/default/apgroups
+[2026-02-21T20:48:15,647Z] [     172.20.0.1 -> webapi-104] DELETE 204 2ms    /v2/api/site/default/apgroups/699a1a0fe26d48c5855c385f
+[2026-02-21T20:48:16,040Z] [     172.20.0.1 -> webapi-104] POST  200 3ms    /api/s/default/rest/firewallgroup
+[2026-02-21T20:48:16,318Z] [     172.20.0.1 -> webapi-104] GET   200 4ms    /api/s/default/rest/firewallgroup/699a1a10e26d48c5855c3860
+[2026-02-21T20:48:16,528Z] [     172.20.0.1 -> webapi-104] DELETE 200 5ms    /api/s/default/rest/firewallgroup/699a1a10e26d48c5855c3860
+[2026-02-21T20:48:16,921Z] [     172.20.0.1 -> webapi-107] POST  200 2ms    /api/s/default/rest/firewallrule
+[2026-02-21T20:48:17,202Z] [     172.20.0.1 -> webapi-107] GET   200 1ms    /api/s/default/rest/firewallrule/699a1a10e26d48c5855c3861
+[2026-02-21T20:48:17,349Z] [     172.20.0.1 -> webapi-107] GET   200 1ms    /api/s/default/rest/firewallrule/699a1a10e26d48c5855c3861
+[2026-02-21T20:48:17,493Z] [     172.20.0.1 -> webapi-107] PUT   200 3ms    /api/s/default/rest/firewallrule/699a1a10e26d48c5855c3861
+[2026-02-21T20:48:17,772Z] [     172.20.0.1 -> webapi-107] GET   200 1ms    /api/s/default/rest/firewallrule/699a1a10e26d48c5855c3861
+[2026-02-21T20:48:17,978Z] [     172.20.0.1 -> webapi-107] DELETE 200 2ms    /api/s/default/rest/firewallrule/699a1a10e26d48c5855c3861
+[2026-02-21T20:48:18,354Z] [     172.20.0.1 -> webapi-104] POST  200 3ms    /api/s/default/rest/networkconf
+[2026-02-21T20:48:18,637Z] [     172.20.0.1 -> webapi-104] GET   200 1ms    /api/s/default/rest/networkconf/699a1a12e26d48c5855c3862
+[2026-02-21T20:48:18,782Z] [     172.20.0.1 -> webapi-104] GET   200 1ms    /api/s/default/rest/networkconf/699a1a12e26d48c5855c3862
+[2026-02-21T20:48:18,923Z] [     172.20.0.1 -> webapi-104] PUT   200 3ms    /api/s/default/rest/networkconf/699a1a12e26d48c5855c3862
+[2026-02-21T20:48:19,226Z] [     172.20.0.1 -> webapi-107] GET   200 1ms    /api/s/default/rest/networkconf/699a1a12e26d48c5855c3862
+[2026-02-21T20:48:19,427Z] [     172.20.0.1 -> webapi-107] DELETE 200 5ms    /api/s/default/rest/networkconf/699a1a12e26d48c5855c3862
+[2026-02-21T20:48:19,815Z] [     172.20.0.1 -> webapi-104] POST  200 7ms    /api/s/default/rest/portforward
+[2026-02-21T20:48:20,091Z] [     172.20.0.1 -> webapi-104] GET   200 1ms    /api/s/default/rest/portforward/699a1a13e26d48c5855c3863
+[2026-02-21T20:48:20,291Z] [     172.20.0.1 -> webapi-104] DELETE 200 1ms    /api/s/default/rest/portforward/699a1a13e26d48c5855c3863
+[2026-02-21T20:48:20,671Z] [     172.20.0.1 -> webapi-104] POST  200 2ms    /api/s/default/rest/portconf
+[2026-02-21T20:48:20,949Z] [     172.20.0.1 -> webapi-107] GET   200 1ms    /api/s/default/rest/portconf/699a1a14e26d48c5855c3864
+[2026-02-21T20:48:21,146Z] [     172.20.0.1 -> webapi-107] DELETE 200 1ms    /api/s/default/rest/portconf/699a1a14e26d48c5855c3864
+[2026-02-21T20:48:21,532Z] [     172.20.0.1 -> webapi-104] POST  200 1ms    /api/s/default/rest/radiusprofile
+[2026-02-21T20:48:21,816Z] [     172.20.0.1 -> webapi-104] GET   200 1ms    /api/s/default/rest/radiusprofile/699a1a15e26d48c5855c3865
+[2026-02-21T20:48:22,013Z] [     172.20.0.1 -> webapi-104] DELETE 200 2ms    /api/s/default/rest/radiusprofile/699a1a15e26d48c5855c3865
+[2026-02-21T20:48:22,397Z] [     172.20.0.1 -> webapi-107] POST  400 2ms    /v2/api/site/default/static-dns
+[2026-02-21T20:48:22,845Z] [     172.20.0.1 -> webapi-107] POST  500 2ms    /api/s/default/rest/routing
+[2026-02-21T20:48:23,290Z] [     172.20.0.1 -> webapi-107] POST  201 5ms    /v2/api/site/default/trafficrules
+[2026-02-21T20:48:23,443Z] [     172.20.0.1 -> webapi-104] DELETE 200 6ms    /v2/api/site/default/trafficrules/699a1a17e26d48c5855c3866
+[2026-02-21T20:48:23,829Z] [     172.20.0.1 -> webapi-104] POST  200 1ms    /api/s/default/rest/usergroup
+[2026-02-21T20:48:24,108Z] [     172.20.0.1 -> webapi-104] GET   200 1ms    /api/s/default/rest/usergroup/699a1a17e26d48c5855c3867
+[2026-02-21T20:48:24,311Z] [     172.20.0.1 -> webapi-104] DELETE 200 2ms    /api/s/default/rest/usergroup/699a1a17e26d48c5855c3867
+[2026-02-21T20:48:24,695Z] [     172.20.0.1 -> webapi-107] POST  200 5ms    /api/s/default/rest/user
+[2026-02-21T20:48:24,975Z] [     172.20.0.1 -> webapi-104] GET   200 1ms    /api/s/default/rest/user/699a1a18e26d48c5855c3868
+[2026-02-21T20:48:25,293Z] [     172.20.0.1 -> webapi-104] POST  200 7ms    /api/s/default/cmd/stamgr
+[2026-02-21T20:48:25,690Z] [     172.20.0.1 -> webapi-107] POST  201 3ms    /v2/api/site/default/apgroups
+[2026-02-21T20:48:25,713Z] [     172.20.0.1 -> webapi-104] POST  200 4ms    /api/s/default/rest/wlanconf
+[2026-02-21T20:48:25,997Z] [     172.20.0.1 -> webapi-107] GET   405 1ms    /v2/api/site/default/apgroups/699a1a19e26d48c5855c3869
+[2026-02-21T20:48:25,999Z] [     172.20.0.1 -> webapi-104] GET   200 1ms    /v2/api/site/default/apgroups
+[2026-02-21T20:48:26,013Z] [     172.20.0.1 -> webapi-107] GET   200 1ms    /api/s/default/rest/wlanconf/699a1a19e26d48c5855c386a
+[2026-02-21T20:48:26,221Z] [     172.20.0.1 -> webapi-107] DELETE 200 1ms    /api/s/default/rest/wlanconf/699a1a19e26d48c5855c386a
+[2026-02-21T20:48:26,244Z] [     172.20.0.1 -> webapi-104] DELETE 204 2ms    /v2/api/site/default/apgroups/699a1a19e26d48c5855c3869
+[2026-02-21T20:49:11,327Z] [     172.20.0.1 -> webapi-110] POST  201 3ms    /v2/api/site/default/apgroups
+[2026-02-21T20:49:11,605Z] [     172.20.0.1 -> webapi-107] GET   405 1ms    /v2/api/site/default/apgroups/699a1a47e26d48c5855c386b
+[2026-02-21T20:49:11,607Z] [     172.20.0.1 -> webapi-110] GET   200 1ms    /v2/api/site/default/apgroups
+[2026-02-21T20:49:11,795Z] [     172.20.0.1 -> webapi-107] DELETE 204 2ms    /v2/api/site/default/apgroups/699a1a47e26d48c5855c386b
+[2026-02-21T20:49:12,162Z] [     172.20.0.1 -> webapi-107] POST  200 2ms    /api/s/default/rest/firewallgroup
+[2026-02-21T20:49:12,425Z] [     172.20.0.1 -> webapi-107] GET   200 1ms    /api/s/default/rest/firewallgroup/699a1a48e26d48c5855c386c
+[2026-02-21T20:49:12,619Z] [     172.20.0.1 -> webapi-107] DELETE 200 3ms    /api/s/default/rest/firewallgroup/699a1a48e26d48c5855c386c
+[2026-02-21T20:49:12,998Z] [     172.20.0.1 -> webapi-110] POST  200 3ms    /api/s/default/rest/firewallrule
+[2026-02-21T20:49:13,262Z] [     172.20.0.1 -> webapi-110] GET   200 1ms    /api/s/default/rest/firewallrule/699a1a48e26d48c5855c386d
+[2026-02-21T20:49:13,404Z] [     172.20.0.1 -> webapi-110] GET   200 1ms    /api/s/default/rest/firewallrule/699a1a48e26d48c5855c386d
+[2026-02-21T20:49:13,544Z] [     172.20.0.1 -> webapi-110] PUT   200 3ms    /api/s/default/rest/firewallrule/699a1a48e26d48c5855c386d
+[2026-02-21T20:49:13,815Z] [     172.20.0.1 -> webapi-110] GET   200 1ms    /api/s/default/rest/firewallrule/699a1a48e26d48c5855c386d
+[2026-02-21T20:49:14,009Z] [     172.20.0.1 -> webapi-110] DELETE 200 1ms    /api/s/default/rest/firewallrule/699a1a48e26d48c5855c386d
+[2026-02-21T20:49:14,394Z] [     172.20.0.1 -> webapi-107] POST  200 6ms    /api/s/default/rest/networkconf
+[2026-02-21T20:49:14,691Z] [     172.20.0.1 -> webapi-107] GET   200 1ms    /api/s/default/rest/networkconf/699a1a4ae26d48c5855c386e
+[2026-02-21T20:49:14,831Z] [     172.20.0.1 -> webapi-107] GET   200 1ms    /api/s/default/rest/networkconf/699a1a4ae26d48c5855c386e
+[2026-02-21T20:49:14,965Z] [     172.20.0.1 -> webapi-107] PUT   200 5ms    /api/s/default/rest/networkconf/699a1a4ae26d48c5855c386e
+[2026-02-21T20:49:15,230Z] [     172.20.0.1 -> webapi-107] GET   200 2ms    /api/s/default/rest/networkconf/699a1a4ae26d48c5855c386e
+[2026-02-21T20:49:15,435Z] [     172.20.0.1 -> webapi-107] DELETE 200 8ms    /api/s/default/rest/networkconf/699a1a4ae26d48c5855c386e
+[2026-02-21T20:49:15,814Z] [     172.20.0.1 -> webapi-110] POST  200 8ms    /api/s/default/rest/portforward
+[2026-02-21T20:49:16,087Z] [     172.20.0.1 -> webapi-110] GET   200 1ms    /api/s/default/rest/portforward/699a1a4be26d48c5855c386f
+[2026-02-21T20:49:16,285Z] [     172.20.0.1 -> webapi-110] DELETE 200 12ms   /api/s/default/rest/portforward/699a1a4be26d48c5855c386f
+[2026-02-21T20:49:16,661Z] [     172.20.0.1 -> webapi-110] POST  200 1ms    /api/s/default/rest/portconf
+[2026-02-21T20:49:16,927Z] [     172.20.0.1 -> webapi-114] GET   200 1ms    /api/s/default/rest/portconf/699a1a4ce26d48c5855c3870
+[2026-02-21T20:49:17,121Z] [     172.20.0.1 -> webapi-107] DELETE 200 1ms    /api/s/default/rest/portconf/699a1a4ce26d48c5855c3870
+[2026-02-21T20:49:17,497Z] [     172.20.0.1 -> webapi-114] POST  200 1ms    /api/s/default/rest/radiusprofile
+[2026-02-21T20:49:17,765Z] [     172.20.0.1 -> webapi-107] GET   200 1ms    /api/s/default/rest/radiusprofile/699a1a4de26d48c5855c3871
+[2026-02-21T20:49:17,959Z] [     172.20.0.1 -> webapi-110] DELETE 200 2ms    /api/s/default/rest/radiusprofile/699a1a4de26d48c5855c3871
+[2026-02-21T20:49:18,325Z] [     172.20.0.1 -> webapi-110] POST  400 6ms    /v2/api/site/default/static-dns
+[2026-02-21T20:49:18,760Z] [     172.20.0.1 -> webapi-114] POST  500 1ms    /api/s/default/rest/routing
+[2026-02-21T20:49:19,183Z] [     172.20.0.1 -> webapi-107] POST  201 5ms    /v2/api/site/default/trafficrules
+[2026-02-21T20:49:19,330Z] [     172.20.0.1 -> webapi-114] DELETE 200 3ms    /v2/api/site/default/trafficrules/699a1a4fe26d48c5855c3872
+[2026-02-21T20:49:19,700Z] [     172.20.0.1 -> webapi-107] POST  200 1ms    /api/s/default/rest/usergroup
+[2026-02-21T20:49:19,993Z] [     172.20.0.1 -> webapi-110] GET   200 1ms    /api/s/default/rest/usergroup/699a1a4fe26d48c5855c3873
+[2026-02-21T20:49:20,184Z] [     172.20.0.1 -> webapi-114] DELETE 200 1ms    /api/s/default/rest/usergroup/699a1a4fe26d48c5855c3873
+[2026-02-21T20:49:20,567Z] [     172.20.0.1 -> webapi-110] POST  200 3ms    /api/s/default/rest/user
+[2026-02-21T20:49:20,830Z] [     172.20.0.1 -> webapi-114] GET   200 1ms    /api/s/default/rest/user/699a1a50e26d48c5855c3874
+[2026-02-21T20:49:21,149Z] [     172.20.0.1 -> webapi-107] POST  200 13ms   /api/s/default/cmd/stamgr
+[2026-02-21T20:49:21,536Z] [     172.20.0.1 -> webapi-110] POST  201 12ms   /v2/api/site/default/apgroups
+[2026-02-21T20:49:21,557Z] [     172.20.0.1 -> webapi-107] POST  200 4ms    /api/s/default/rest/wlanconf
+[2026-02-21T20:49:21,834Z] [     172.20.0.1 -> webapi-110] GET   405 1ms    /v2/api/site/default/apgroups/699a1a51e26d48c5855c3875
+[2026-02-21T20:49:21,837Z] [     172.20.0.1 -> webapi-114] GET   200 2ms    /v2/api/site/default/apgroups
+[2026-02-21T20:49:21,849Z] [     172.20.0.1 -> webapi-110] GET   200 0ms    /api/s/default/rest/wlanconf/699a1a51e26d48c5855c3876
+[2026-02-21T20:49:22,046Z] [     172.20.0.1 -> webapi-114] DELETE 200 1ms    /api/s/default/rest/wlanconf/699a1a51e26d48c5855c3876
+[2026-02-21T20:49:22,064Z] [     172.20.0.1 -> webapi-110] DELETE 204 2ms    /v2/api/site/default/apgroups/699a1a51e26d48c5855c3875
+[2026-02-21T20:55:02,392Z] [     172.20.0.1 -> webapi-114] POST  201 4ms    /v2/api/site/default/apgroups
+[2026-02-21T20:55:02,671Z] [     172.20.0.1 -> webapi-107] GET   405 1ms    /v2/api/site/default/apgroups/699a1ba6e26d48c5855c3877
+[2026-02-21T20:55:02,674Z] [     172.20.0.1 -> webapi-114] GET   200 1ms    /v2/api/site/default/apgroups
+[2026-02-21T20:55:02,873Z] [     172.20.0.1 -> webapi-107] DELETE 204 4ms    /v2/api/site/default/apgroups/699a1ba6e26d48c5855c3877
+[2026-02-21T20:55:03,257Z] [     172.20.0.1 -> webapi-107] POST  200 2ms    /api/s/default/rest/firewallgroup
+[2026-02-21T20:55:03,533Z] [     172.20.0.1 -> webapi-107] GET   200 1ms    /api/s/default/rest/firewallgroup/699a1ba7e26d48c5855c3878
+[2026-02-21T20:55:03,734Z] [     172.20.0.1 -> webapi-107] DELETE 200 4ms    /api/s/default/rest/firewallgroup/699a1ba7e26d48c5855c3878
+[2026-02-21T20:55:04,123Z] [     172.20.0.1 -> webapi-114] POST  200 3ms    /api/s/default/rest/firewallrule
+[2026-02-21T20:55:04,409Z] [     172.20.0.1 -> webapi-114] GET   200 1ms    /api/s/default/rest/firewallrule/699a1ba8e26d48c5855c3879
+[2026-02-21T20:55:04,549Z] [     172.20.0.1 -> webapi-114] GET   200 1ms    /api/s/default/rest/firewallrule/699a1ba8e26d48c5855c3879
+[2026-02-21T20:55:04,704Z] [     172.20.0.1 -> webapi-114] PUT   200 4ms    /api/s/default/rest/firewallrule/699a1ba8e26d48c5855c3879
+[2026-02-21T20:55:04,993Z] [     172.20.0.1 -> webapi-114] GET   200 1ms    /api/s/default/rest/firewallrule/699a1ba8e26d48c5855c3879
+[2026-02-21T20:55:05,196Z] [     172.20.0.1 -> webapi-114] DELETE 200 1ms    /api/s/default/rest/firewallrule/699a1ba8e26d48c5855c3879
+[2026-02-21T20:55:05,586Z] [     172.20.0.1 -> webapi-107] POST  200 4ms    /api/s/default/rest/networkconf
+[2026-02-21T20:55:05,865Z] [     172.20.0.1 -> webapi-107] GET   200 1ms    /api/s/default/rest/networkconf/699a1ba9e26d48c5855c387a
+[2026-02-21T20:55:06,006Z] [     172.20.0.1 -> webapi-107] GET   200 1ms    /api/s/default/rest/networkconf/699a1ba9e26d48c5855c387a
+[2026-02-21T20:55:06,146Z] [     172.20.0.1 -> webapi-107] PUT   200 3ms    /api/s/default/rest/networkconf/699a1ba9e26d48c5855c387a
+[2026-02-21T20:55:06,422Z] [     172.20.0.1 -> webapi-107] GET   200 1ms    /api/s/default/rest/networkconf/699a1ba9e26d48c5855c387a
+[2026-02-21T20:55:06,623Z] [     172.20.0.1 -> webapi-107] DELETE 200 4ms    /api/s/default/rest/networkconf/699a1ba9e26d48c5855c387a
+[2026-02-21T20:55:07,061Z] [     172.20.0.1 -> webapi-114] POST  200 54ms   /api/s/default/rest/portforward
+[2026-02-21T20:55:07,341Z] [     172.20.0.1 -> webapi-114] GET   200 1ms    /api/s/default/rest/portforward/699a1babe26d48c5855c387b
+[2026-02-21T20:55:07,547Z] [     172.20.0.1 -> webapi-114] DELETE 200 1ms    /api/s/default/rest/portforward/699a1babe26d48c5855c387b
+[2026-02-21T20:55:07,938Z] [     172.20.0.1 -> webapi-107] POST  200 2ms    /api/s/default/rest/portconf
+[2026-02-21T20:55:08,210Z] [     172.20.0.1 -> webapi-107] GET   200 1ms    /api/s/default/rest/portconf/699a1babe26d48c5855c387c
+[2026-02-21T20:55:08,409Z] [     172.20.0.1 -> webapi-107] DELETE 200 1ms    /api/s/default/rest/portconf/699a1babe26d48c5855c387c
+[2026-02-21T20:55:08,809Z] [     172.20.0.1 -> webapi-114] POST  200 4ms    /api/s/default/rest/radiusprofile
+[2026-02-21T20:55:09,089Z] [     172.20.0.1 -> webapi-114] GET   200 3ms    /api/s/default/rest/radiusprofile/699a1bace26d48c5855c387d
+[2026-02-21T20:55:09,288Z] [     172.20.0.1 -> webapi-114] DELETE 200 1ms    /api/s/default/rest/radiusprofile/699a1bace26d48c5855c387d
+[2026-02-21T20:55:09,682Z] [     172.20.0.1 -> webapi-107] POST  200 4ms    /v2/api/site/default/static-dns
+[2026-02-21T20:55:09,960Z] [     172.20.0.1 -> webapi-114] GET   405 1ms    /v2/api/site/default/static-dns/699a1bade26d48c5855c387e
+[2026-02-21T20:55:10,100Z] [     172.20.0.1 -> webapi-114] DELETE 200 8ms    /v2/api/site/default/static-dns/699a1bade26d48c5855c387e
+[2026-02-21T20:55:10,491Z] [     172.20.0.1 -> webapi-114] POST  400 3ms    /api/s/default/rest/routing
+[2026-02-21T20:55:10,936Z] [     172.20.0.1 -> webapi-114] POST  201 4ms    /v2/api/site/default/trafficrules
+[2026-02-21T20:55:11,085Z] [     172.20.0.1 -> webapi-107] DELETE 200 2ms    /v2/api/site/default/trafficrules/699a1baee26d48c5855c387f
+[2026-02-21T20:55:11,473Z] [     172.20.0.1 -> webapi-107] POST  200 1ms    /api/s/default/rest/usergroup
+[2026-02-21T20:55:11,750Z] [     172.20.0.1 -> webapi-107] GET   200 1ms    /api/s/default/rest/usergroup/699a1bafe26d48c5855c3880
+[2026-02-21T20:55:11,951Z] [     172.20.0.1 -> webapi-107] DELETE 200 1ms    /api/s/default/rest/usergroup/699a1bafe26d48c5855c3880
+[2026-02-21T20:55:12,339Z] [     172.20.0.1 -> webapi-114] POST  200 3ms    /api/s/default/rest/user
+[2026-02-21T20:55:12,626Z] [     172.20.0.1 -> webapi-114] GET   200 1ms    /api/s/default/rest/user/699a1bb0e26d48c5855c3881
+[2026-02-21T20:55:12,951Z] [     172.20.0.1 -> webapi-114] POST  200 7ms    /api/s/default/cmd/stamgr
+[2026-02-21T20:55:13,337Z] [     172.20.0.1 -> webapi-107] POST  201 3ms    /v2/api/site/default/apgroups
+[2026-02-21T20:55:13,360Z] [     172.20.0.1 -> webapi-114] POST  200 6ms    /api/s/default/rest/wlanconf
+[2026-02-21T20:55:13,644Z] [     172.20.0.1 -> webapi-114] GET   405 1ms    /v2/api/site/default/apgroups/699a1bb1e26d48c5855c3882
+[2026-02-21T20:55:13,647Z] [     172.20.0.1 -> webapi-107] GET   200 1ms    /v2/api/site/default/apgroups
+[2026-02-21T20:55:13,660Z] [     172.20.0.1 -> webapi-114] GET   200 1ms    /api/s/default/rest/wlanconf/699a1bb1e26d48c5855c3883
+[2026-02-21T20:55:13,864Z] [     172.20.0.1 -> webapi-114] DELETE 200 1ms    /api/s/default/rest/wlanconf/699a1bb1e26d48c5855c3883
+[2026-02-21T20:55:13,884Z] [     172.20.0.1 -> webapi-114] DELETE 204 3ms    /v2/api/site/default/apgroups/699a1bb1e26d48c5855c3882
+[2026-02-21T20:55:35,017Z] [     172.20.0.1 -> webapi-125] POST  201 3ms    /v2/api/site/default/apgroups
+[2026-02-21T20:55:35,300Z] [     172.20.0.1 -> webapi-114] GET   405 1ms    /v2/api/site/default/apgroups/699a1bc7e26d48c5855c3884
+[2026-02-21T20:55:35,302Z] [     172.20.0.1 -> webapi-127] GET   200 1ms    /v2/api/site/default/apgroups
+[2026-02-21T20:55:35,496Z] [     172.20.0.1 -> webapi-124] DELETE 204 2ms    /v2/api/site/default/apgroups/699a1bc7e26d48c5855c3884
+[2026-02-21T20:55:35,888Z] [     172.20.0.1 -> webapi-127] POST  200 2ms    /api/s/default/rest/firewallgroup
+[2026-02-21T20:55:36,173Z] [     172.20.0.1 -> webapi-125] GET   200 1ms    /api/s/default/rest/firewallgroup/699a1bc7e26d48c5855c3885
+[2026-02-21T20:55:36,379Z] [     172.20.0.1 -> webapi-114] DELETE 200 3ms    /api/s/default/rest/firewallgroup/699a1bc7e26d48c5855c3885
+[2026-02-21T20:55:36,769Z] [     172.20.0.1 -> webapi-125] POST  200 3ms    /api/s/default/rest/firewallrule
+[2026-02-21T20:55:37,050Z] [     172.20.0.1 -> webapi-114] GET   200 3ms    /api/s/default/rest/firewallrule/699a1bc8e26d48c5855c3886
+[2026-02-21T20:55:37,192Z] [     172.20.0.1 -> webapi-121] GET   200 1ms    /api/s/default/rest/firewallrule/699a1bc8e26d48c5855c3886
+[2026-02-21T20:55:37,336Z] [     172.20.0.1 -> webapi-123] PUT   200 3ms    /api/s/default/rest/firewallrule/699a1bc8e26d48c5855c3886
+[2026-02-21T20:55:37,623Z] [     172.20.0.1 -> webapi-122] GET   200 1ms    /api/s/default/rest/firewallrule/699a1bc8e26d48c5855c3886
+[2026-02-21T20:55:37,820Z] [     172.20.0.1 -> webapi-107] DELETE 200 1ms    /api/s/default/rest/firewallrule/699a1bc8e26d48c5855c3886
+[2026-02-21T20:55:38,191Z] [     172.20.0.1 -> webapi-122] POST  200 3ms    /api/s/default/rest/networkconf
+[2026-02-21T20:55:38,462Z] [     172.20.0.1 -> webapi-107] GET   200 1ms    /api/s/default/rest/networkconf/699a1bcae26d48c5855c3887
+[2026-02-21T20:55:38,607Z] [     172.20.0.1 -> webapi-126] GET   200 1ms    /api/s/default/rest/networkconf/699a1bcae26d48c5855c3887
+[2026-02-21T20:55:38,743Z] [     172.20.0.1 -> webapi-124] PUT   200 2ms    /api/s/default/rest/networkconf/699a1bcae26d48c5855c3887
+[2026-02-21T20:55:39,021Z] [     172.20.0.1 -> webapi-127] GET   200 1ms    /api/s/default/rest/networkconf/699a1bcae26d48c5855c3887
+[2026-02-21T20:55:39,222Z] [     172.20.0.1 -> webapi-125] DELETE 200 5ms    /api/s/default/rest/networkconf/699a1bcae26d48c5855c3887
+[2026-02-21T20:55:39,615Z] [     172.20.0.1 -> webapi-127] POST  200 7ms    /api/s/default/rest/portforward
+[2026-02-21T20:55:39,915Z] [     172.20.0.1 -> webapi-124] GET   200 1ms    /api/s/default/rest/portforward/699a1bcbe26d48c5855c3888
+[2026-02-21T20:55:40,115Z] [     172.20.0.1 -> webapi-127] DELETE 200 1ms    /api/s/default/rest/portforward/699a1bcbe26d48c5855c3888
+[2026-02-21T20:55:40,506Z] [     172.20.0.1 -> webapi-124] POST  200 2ms    /api/s/default/rest/portconf
+[2026-02-21T20:55:40,786Z] [     172.20.0.1 -> webapi-127] GET   200 1ms    /api/s/default/rest/portconf/699a1bcce26d48c5855c3889
+[2026-02-21T20:55:40,986Z] [     172.20.0.1 -> webapi-125] DELETE 200 2ms    /api/s/default/rest/portconf/699a1bcce26d48c5855c3889
+[2026-02-21T20:55:41,372Z] [     172.20.0.1 -> webapi-127] POST  200 1ms    /api/s/default/rest/radiusprofile
+[2026-02-21T20:55:41,652Z] [     172.20.0.1 -> webapi-125] GET   200 1ms    /api/s/default/rest/radiusprofile/699a1bcde26d48c5855c388a
+[2026-02-21T20:55:41,853Z] [     172.20.0.1 -> webapi-114] DELETE 200 1ms    /api/s/default/rest/radiusprofile/699a1bcde26d48c5855c388a
+[2026-02-21T20:55:42,242Z] [     172.20.0.1 -> webapi-125] POST  200 3ms    /v2/api/site/default/static-dns
+[2026-02-21T20:55:42,519Z] [     172.20.0.1 -> webapi-127] GET   405 1ms    /v2/api/site/default/static-dns/699a1bcee26d48c5855c388b
+[2026-02-21T20:55:42,523Z] [     172.20.0.1 -> webapi-126] GET   200 2ms    /v2/api/site/default/static-dns
+[2026-02-21T20:55:42,724Z] [     172.20.0.1 -> webapi-124] DELETE 200 2ms    /v2/api/site/default/static-dns/699a1bcee26d48c5855c388b
+[2026-02-21T20:55:43,112Z] [     172.20.0.1 -> webapi-127] POST  400 1ms    /api/s/default/rest/routing
+[2026-02-21T20:55:43,565Z] [     172.20.0.1 -> webapi-125] POST  201 5ms    /v2/api/site/default/trafficrules
+[2026-02-21T20:55:43,723Z] [     172.20.0.1 -> webapi-127] DELETE 200 5ms    /v2/api/site/default/trafficrules/699a1bcfe26d48c5855c388c
+[2026-02-21T20:55:44,156Z] [     172.20.0.1 -> webapi-125] POST  200 1ms    /api/s/default/rest/usergroup
+[2026-02-21T20:55:44,437Z] [     172.20.0.1 -> webapi-114] GET   200 1ms    /api/s/default/rest/usergroup/699a1bd0e26d48c5855c388d
+[2026-02-21T20:55:44,642Z] [     172.20.0.1 -> webapi-121] DELETE 200 1ms    /api/s/default/rest/usergroup/699a1bd0e26d48c5855c388d
+[2026-02-21T20:55:45,028Z] [     172.20.0.1 -> webapi-114] POST  200 3ms    /api/s/default/rest/user
+[2026-02-21T20:55:45,304Z] [     172.20.0.1 -> webapi-121] GET   200 1ms    /api/s/default/rest/user/699a1bd1e26d48c5855c388e
+[2026-02-21T20:55:45,627Z] [     172.20.0.1 -> webapi-123] POST  200 9ms    /api/s/default/cmd/stamgr
+[2026-02-21T20:55:46,013Z] [     172.20.0.1 -> webapi-122] POST  201 3ms    /v2/api/site/default/apgroups
+[2026-02-21T20:55:46,034Z] [     172.20.0.1 -> webapi-114] POST  200 3ms    /api/s/default/rest/wlanconf
+[2026-02-21T20:55:46,318Z] [     172.20.0.1 -> webapi-121] GET   405 1ms    /v2/api/site/default/apgroups/699a1bd2e26d48c5855c388f
+[2026-02-21T20:55:46,320Z] [     172.20.0.1 -> webapi-125] GET   200 1ms    /v2/api/site/default/apgroups
+[2026-02-21T20:55:46,333Z] [     172.20.0.1 -> webapi-127] GET   200 1ms    /api/s/default/rest/wlanconf/699a1bd2e26d48c5855c3890
+[2026-02-21T20:55:46,527Z] [     172.20.0.1 -> webapi-125] DELETE 200 1ms    /api/s/default/rest/wlanconf/699a1bd2e26d48c5855c3890
+[2026-02-21T20:55:46,549Z] [     172.20.0.1 -> webapi-127] DELETE 204 2ms    /v2/api/site/default/apgroups/699a1bd2e26d48c5855c388f
+[2026-02-21T20:56:05,270Z] [     172.20.0.1 -> webapi-127] POST  201 3ms    /v2/api/site/default/apgroups
+[2026-02-21T20:56:05,573Z] [     172.20.0.1 -> webapi-121] GET   405 11ms   /v2/api/site/default/apgroups/699a1be5e26d48c5855c3891
+[2026-02-21T20:56:05,576Z] [     172.20.0.1 -> webapi-114] GET   200 2ms    /v2/api/site/default/apgroups
+[2026-02-21T20:56:05,774Z] [     172.20.0.1 -> webapi-129] DELETE 204 2ms    /v2/api/site/default/apgroups/699a1be5e26d48c5855c3891
+[2026-02-21T20:56:06,150Z] [     172.20.0.1 -> webapi-126] POST  200 1ms    /api/s/default/rest/firewallgroup
+[2026-02-21T20:56:06,421Z] [     172.20.0.1 -> webapi-124] GET   200 1ms    /api/s/default/rest/firewallgroup/699a1be6e26d48c5855c3892
+[2026-02-21T20:56:06,617Z] [     172.20.0.1 -> webapi-129] DELETE 200 3ms    /api/s/default/rest/firewallgroup/699a1be6e26d48c5855c3892
+[2026-02-21T20:56:07,002Z] [     172.20.0.1 -> webapi-122] POST  200 2ms    /api/s/default/rest/firewallrule
+[2026-02-21T20:56:07,274Z] [     172.20.0.1 -> webapi-130] GET   200 1ms    /api/s/default/rest/firewallrule/699a1be7e26d48c5855c3893
+[2026-02-21T20:56:07,415Z] [     172.20.0.1 -> webapi-123] GET   200 1ms    /api/s/default/rest/firewallrule/699a1be7e26d48c5855c3893
+[2026-02-21T20:56:07,557Z] [     172.20.0.1 -> webapi-122] PUT   200 3ms    /api/s/default/rest/firewallrule/699a1be7e26d48c5855c3893
+[2026-02-21T20:56:07,828Z] [     172.20.0.1 -> webapi-130] GET   200 1ms    /api/s/default/rest/firewallrule/699a1be7e26d48c5855c3893
+[2026-02-21T20:56:08,027Z] [     172.20.0.1 -> webapi-123] DELETE 200 1ms    /api/s/default/rest/firewallrule/699a1be7e26d48c5855c3893
+[2026-02-21T20:56:08,399Z] [     172.20.0.1 -> webapi-121] POST  200 8ms    /api/s/default/rest/networkconf
+[2026-02-21T20:56:08,681Z] [     172.20.0.1 -> webapi-128] GET   200 1ms    /api/s/default/rest/networkconf/699a1be8e26d48c5855c3894
+[2026-02-21T20:56:08,820Z] [     172.20.0.1 -> webapi-127] GET   200 1ms    /api/s/default/rest/networkconf/699a1be8e26d48c5855c3894
+[2026-02-21T20:56:08,964Z] [     172.20.0.1 -> webapi-114] PUT   200 6ms    /api/s/default/rest/networkconf/699a1be8e26d48c5855c3894
+[2026-02-21T20:56:09,237Z] [     172.20.0.1 -> webapi-125] GET   200 1ms    /api/s/default/rest/networkconf/699a1be8e26d48c5855c3894
+[2026-02-21T20:56:09,444Z] [     172.20.0.1 -> webapi-107] DELETE 200 5ms    /api/s/default/rest/networkconf/699a1be8e26d48c5855c3894
+[2026-02-21T20:56:09,836Z] [     172.20.0.1 -> webapi-124] POST  200 7ms    /api/s/default/rest/portforward
+[2026-02-21T20:56:10,117Z] [     172.20.0.1 -> webapi-129] GET   200 1ms    /api/s/default/rest/portforward/699a1be9e26d48c5855c3895
+[2026-02-21T20:56:10,317Z] [     172.20.0.1 -> webapi-126] DELETE 200 1ms    /api/s/default/rest/portforward/699a1be9e26d48c5855c3895
+[2026-02-21T20:56:10,705Z] [     172.20.0.1 -> webapi-130] POST  200 1ms    /api/s/default/rest/portconf
+[2026-02-21T20:56:10,982Z] [     172.20.0.1 -> webapi-123] GET   200 1ms    /api/s/default/rest/portconf/699a1beae26d48c5855c3896
+[2026-02-21T20:56:11,173Z] [     172.20.0.1 -> webapi-122] DELETE 200 1ms    /api/s/default/rest/portconf/699a1beae26d48c5855c3896
+[2026-02-21T20:56:11,567Z] [     172.20.0.1 -> webapi-128] POST  200 1ms    /api/s/default/rest/radiusprofile
+[2026-02-21T20:56:11,844Z] [     172.20.0.1 -> webapi-127] GET   200 1ms    /api/s/default/rest/radiusprofile/699a1bebe26d48c5855c3897
+[2026-02-21T20:56:12,039Z] [     172.20.0.1 -> webapi-121] DELETE 200 1ms    /api/s/default/rest/radiusprofile/699a1bebe26d48c5855c3897
+[2026-02-21T20:56:12,457Z] [     172.20.0.1 -> webapi-125] POST  200 3ms    /v2/api/site/default/static-dns
+[2026-02-21T20:56:12,722Z] [     172.20.0.1 -> webapi-126] GET   405 1ms    /v2/api/site/default/static-dns/699a1bece26d48c5855c3898
+[2026-02-21T20:56:12,725Z] [     172.20.0.1 -> webapi-122] GET   200 1ms    /v2/api/site/default/static-dns
+[2026-02-21T20:56:12,925Z] [     172.20.0.1 -> webapi-128] DELETE 200 2ms    /v2/api/site/default/static-dns/699a1bece26d48c5855c3898
+[2026-02-21T20:56:13,313Z] [     172.20.0.1 -> webapi-127] POST  400 1ms    /api/s/default/rest/routing
+[2026-02-21T20:56:13,769Z] [     172.20.0.1 -> webapi-121] POST  201 6ms    /v2/api/site/default/trafficrules
+[2026-02-21T20:56:13,923Z] [     172.20.0.1 -> webapi-125] DELETE 200 4ms    /v2/api/site/default/trafficrules/699a1bede26d48c5855c3899
+[2026-02-21T20:56:14,311Z] [     172.20.0.1 -> webapi-107] POST  200 1ms    /api/s/default/rest/usergroup
+[2026-02-21T20:56:14,594Z] [     172.20.0.1 -> webapi-114] GET   200 1ms    /api/s/default/rest/usergroup/699a1beee26d48c5855c389a
+[2026-02-21T20:56:14,792Z] [     172.20.0.1 -> webapi-125] DELETE 200 1ms    /api/s/default/rest/usergroup/699a1beee26d48c5855c389a
+[2026-02-21T20:56:15,181Z] [     172.20.0.1 -> webapi-107] POST  200 4ms    /api/s/default/rest/user
+[2026-02-21T20:56:15,458Z] [     172.20.0.1 -> webapi-114] GET   200 1ms    /api/s/default/rest/user/699a1befe26d48c5855c389b
+[2026-02-21T20:56:15,805Z] [     172.20.0.1 -> webapi-125] POST  200 26ms   /api/s/default/cmd/stamgr
+[2026-02-21T20:56:16,202Z] [     172.20.0.1 -> webapi-107] POST  201 3ms    /v2/api/site/default/apgroups
+[2026-02-21T20:56:16,224Z] [     172.20.0.1 -> webapi-124] POST  200 4ms    /api/s/default/rest/wlanconf
+[2026-02-21T20:56:16,508Z] [     172.20.0.1 -> webapi-129] GET   405 1ms    /v2/api/site/default/apgroups/699a1bf0e26d48c5855c389c
+[2026-02-21T20:56:16,510Z] [     172.20.0.1 -> webapi-123] GET   200 1ms    /v2/api/site/default/apgroups
+[2026-02-21T20:56:16,522Z] [     172.20.0.1 -> webapi-121] GET   200 0ms    /api/s/default/rest/wlanconf/699a1bf0e26d48c5855c389d
+[2026-02-21T20:56:16,726Z] [     172.20.0.1 -> webapi-128] DELETE 200 1ms    /api/s/default/rest/wlanconf/699a1bf0e26d48c5855c389d
+[2026-02-21T20:56:16,744Z] [     172.20.0.1 -> webapi-127] DELETE 204 2ms    /v2/api/site/default/apgroups/699a1bf0e26d48c5855c389c
+[2026-02-21T20:56:21,461Z] [     172.20.0.1 -> webapi-125] GET   200 5ms    /api/s/default/rest/routing
+[2026-02-21T20:56:25,501Z] [     172.20.0.1 -> webapi-126] POST  500 2ms    /api/s/default/rest/routing
+[2026-02-21T20:56:29,656Z] [     172.20.0.1 -> webapi-114] GET   200 3ms    /api/s/default/rest/networkconf/6998b557e26d48c5855c3794
+[2026-02-21T20:56:34,084Z] [     172.20.0.1 -> webapi-129] POST  400 3ms    /api/s/default/rest/routing
+[2026-02-21T20:56:43,998Z] [     172.20.0.1 -> webapi-126] POST  500 3ms    /api/s/default/rest/routing
+[2026-02-21T21:01:26,395Z] [     172.20.0.1 -> webapi-126] POST  200 8ms    /api/s/default/rest/routing
+[2026-02-21T21:02:06,838Z] [     172.20.0.1 -> webapi-126] POST  201 2ms    /v2/api/site/default/apgroups
+[2026-02-21T21:02:07,123Z] [     172.20.0.1 -> webapi-107] GET   405 2ms    /v2/api/site/default/apgroups/699a1d4ee26d48c5855c389f
+[2026-02-21T21:02:07,128Z] [     172.20.0.1 -> webapi-126] GET   200 2ms    /v2/api/site/default/apgroups
+[2026-02-21T21:02:07,333Z] [     172.20.0.1 -> webapi-107] DELETE 204 11ms   /v2/api/site/default/apgroups/699a1d4ee26d48c5855c389f
+[2026-02-21T21:02:07,731Z] [     172.20.0.1 -> webapi-107] POST  200 2ms    /api/s/default/rest/firewallgroup
+[2026-02-21T21:02:08,003Z] [     172.20.0.1 -> webapi-126] GET   200 1ms    /api/s/default/rest/firewallgroup/699a1d4fe26d48c5855c38a0
+[2026-02-21T21:02:08,206Z] [     172.20.0.1 -> webapi-126] DELETE 200 4ms    /api/s/default/rest/firewallgroup/699a1d4fe26d48c5855c38a0
+[2026-02-21T21:02:08,586Z] [     172.20.0.1 -> webapi-126] POST  200 3ms    /api/s/default/rest/firewallrule
+[2026-02-21T21:02:08,899Z] [     172.20.0.1 -> webapi-126] GET   200 1ms    /api/s/default/rest/firewallrule/699a1d50e26d48c5855c38a1
+[2026-02-21T21:02:09,043Z] [     172.20.0.1 -> webapi-126] GET   200 1ms    /api/s/default/rest/firewallrule/699a1d50e26d48c5855c38a1
+[2026-02-21T21:02:09,185Z] [     172.20.0.1 -> webapi-126] PUT   200 3ms    /api/s/default/rest/firewallrule/699a1d50e26d48c5855c38a1
+[2026-02-21T21:02:09,463Z] [     172.20.0.1 -> webapi-126] GET   200 1ms    /api/s/default/rest/firewallrule/699a1d50e26d48c5855c38a1
+[2026-02-21T21:02:09,672Z] [     172.20.0.1 -> webapi-126] DELETE 200 1ms    /api/s/default/rest/firewallrule/699a1d50e26d48c5855c38a1
+[2026-02-21T21:02:10,057Z] [     172.20.0.1 -> webapi-107] POST  200 2ms    /api/s/default/rest/networkconf
+[2026-02-21T21:02:10,333Z] [     172.20.0.1 -> webapi-107] GET   200 1ms    /api/s/default/rest/networkconf/699a1d52e26d48c5855c38a2
+[2026-02-21T21:02:10,480Z] [     172.20.0.1 -> webapi-107] GET   200 1ms    /api/s/default/rest/networkconf/699a1d52e26d48c5855c38a2
+[2026-02-21T21:02:10,618Z] [     172.20.0.1 -> webapi-107] PUT   200 3ms    /api/s/default/rest/networkconf/699a1d52e26d48c5855c38a2
+[2026-02-21T21:02:10,893Z] [     172.20.0.1 -> webapi-107] GET   200 1ms    /api/s/default/rest/networkconf/699a1d52e26d48c5855c38a2
+[2026-02-21T21:02:11,090Z] [     172.20.0.1 -> webapi-107] DELETE 200 4ms    /api/s/default/rest/networkconf/699a1d52e26d48c5855c38a2
+[2026-02-21T21:02:11,540Z] [     172.20.0.1 -> webapi-126] POST  200 54ms   /api/s/default/rest/portforward
+[2026-02-21T21:02:11,823Z] [     172.20.0.1 -> webapi-126] GET   200 2ms    /api/s/default/rest/portforward/699a1d53e26d48c5855c38a3
+[2026-02-21T21:02:12,017Z] [     172.20.0.1 -> webapi-126] DELETE 200 1ms    /api/s/default/rest/portforward/699a1d53e26d48c5855c38a3
+[2026-02-21T21:02:12,404Z] [     172.20.0.1 -> webapi-126] POST  200 1ms    /api/s/default/rest/portconf
+[2026-02-21T21:02:12,674Z] [     172.20.0.1 -> webapi-126] GET   200 1ms    /api/s/default/rest/portconf/699a1d54e26d48c5855c38a4
+[2026-02-21T21:02:12,872Z] [     172.20.0.1 -> webapi-126] DELETE 200 1ms    /api/s/default/rest/portconf/699a1d54e26d48c5855c38a4
+[2026-02-21T21:02:13,247Z] [     172.20.0.1 -> webapi-107] POST  200 2ms    /api/s/default/rest/radiusprofile
+[2026-02-21T21:02:13,523Z] [     172.20.0.1 -> webapi-107] GET   200 1ms    /api/s/default/rest/radiusprofile/699a1d55e26d48c5855c38a5
+[2026-02-21T21:02:13,722Z] [     172.20.0.1 -> webapi-107] DELETE 200 1ms    /api/s/default/rest/radiusprofile/699a1d55e26d48c5855c38a5
+[2026-02-21T21:02:14,108Z] [     172.20.0.1 -> webapi-126] POST  200 3ms    /v2/api/site/default/static-dns
+[2026-02-21T21:02:14,390Z] [     172.20.0.1 -> webapi-107] GET   405 1ms    /v2/api/site/default/static-dns/699a1d56e26d48c5855c38a6
+[2026-02-21T21:02:14,395Z] [     172.20.0.1 -> webapi-126] GET   200 2ms    /v2/api/site/default/static-dns
+[2026-02-21T21:02:14,593Z] [     172.20.0.1 -> webapi-107] DELETE 200 2ms    /v2/api/site/default/static-dns/699a1d56e26d48c5855c38a6
+[2026-02-21T21:02:14,981Z] [     172.20.0.1 -> webapi-107] POST  200 5ms    /api/s/default/rest/routing
+[2026-02-21T21:02:15,249Z] [     172.20.0.1 -> webapi-107] GET   200 1ms    /api/s/default/rest/routing/699a1d56e26d48c5855c38a7
+[2026-02-21T21:02:15,443Z] [     172.20.0.1 -> webapi-107] DELETE 200 1ms    /api/s/default/rest/routing/699a1d56e26d48c5855c38a7
+[2026-02-21T21:02:15,836Z] [     172.20.0.1 -> webapi-126] POST  201 11ms   /v2/api/site/default/trafficrules
+[2026-02-21T21:02:15,984Z] [     172.20.0.1 -> webapi-107] DELETE 200 2ms    /v2/api/site/default/trafficrules/699a1d57e26d48c5855c38a8
+[2026-02-21T21:02:16,370Z] [     172.20.0.1 -> webapi-126] POST  200 1ms    /api/s/default/rest/usergroup
+[2026-02-21T21:02:16,646Z] [     172.20.0.1 -> webapi-126] GET   200 1ms    /api/s/default/rest/usergroup/699a1d58e26d48c5855c38a9
+[2026-02-21T21:02:16,844Z] [     172.20.0.1 -> webapi-126] DELETE 200 1ms    /api/s/default/rest/usergroup/699a1d58e26d48c5855c38a9
+[2026-02-21T21:02:17,234Z] [     172.20.0.1 -> webapi-107] POST  200 4ms    /api/s/default/rest/user
+[2026-02-21T21:02:17,511Z] [     172.20.0.1 -> webapi-107] GET   200 1ms    /api/s/default/rest/user/699a1d59e26d48c5855c38aa
+[2026-02-21T21:02:17,835Z] [     172.20.0.1 -> webapi-107] POST  200 8ms    /api/s/default/cmd/stamgr
+[2026-02-21T21:02:18,218Z] [     172.20.0.1 -> webapi-126] POST  201 3ms    /v2/api/site/default/apgroups
+[2026-02-21T21:02:18,240Z] [     172.20.0.1 -> webapi-107] POST  200 3ms    /api/s/default/rest/wlanconf
+[2026-02-21T21:02:18,518Z] [     172.20.0.1 -> webapi-107] GET   405 1ms    /v2/api/site/default/apgroups/699a1d5ae26d48c5855c38ab
+[2026-02-21T21:02:18,522Z] [     172.20.0.1 -> webapi-126] GET   200 3ms    /v2/api/site/default/apgroups
+[2026-02-21T21:02:18,535Z] [     172.20.0.1 -> webapi-107] GET   200 0ms    /api/s/default/rest/wlanconf/699a1d5ae26d48c5855c38ac
+[2026-02-21T21:02:18,743Z] [     172.20.0.1 -> webapi-107] DELETE 200 2ms    /api/s/default/rest/wlanconf/699a1d5ae26d48c5855c38ac
+[2026-02-21T21:02:18,759Z] [     172.20.0.1 -> webapi-126] DELETE 204 2ms    /v2/api/site/default/apgroups/699a1d5ae26d48c5855c38ab
+[2026-02-21T21:02:58,329Z] [     172.20.0.1 -> webapi-107] POST  201 2ms    /v2/api/site/default/apgroups
+[2026-02-21T21:02:58,624Z] [     172.20.0.1 -> webapi-107] GET   405 1ms    /v2/api/site/default/apgroups/699a1d82e26d48c5855c38ad
+[2026-02-21T21:02:58,626Z] [     172.20.0.1 -> webapi-134] GET   200 1ms    /v2/api/site/default/apgroups
+[2026-02-21T21:02:58,822Z] [     172.20.0.1 -> webapi-107] DELETE 204 2ms    /v2/api/site/default/apgroups/699a1d82e26d48c5855c38ad
+[2026-02-21T21:02:59,218Z] [     172.20.0.1 -> webapi-107] POST  200 2ms    /api/s/default/rest/firewallgroup
+[2026-02-21T21:02:59,493Z] [     172.20.0.1 -> webapi-107] GET   200 1ms    /api/s/default/rest/firewallgroup/699a1d83e26d48c5855c38ae
+[2026-02-21T21:02:59,696Z] [     172.20.0.1 -> webapi-107] DELETE 200 4ms    /api/s/default/rest/firewallgroup/699a1d83e26d48c5855c38ae
+[2026-02-21T21:03:00,092Z] [     172.20.0.1 -> webapi-134] POST  200 2ms    /api/s/default/rest/firewallrule
+[2026-02-21T21:03:00,379Z] [     172.20.0.1 -> webapi-107] GET   200 1ms    /api/s/default/rest/firewallrule/699a1d84e26d48c5855c38af
+[2026-02-21T21:03:00,520Z] [     172.20.0.1 -> webapi-107] GET   200 2ms    /api/s/default/rest/firewallrule/699a1d84e26d48c5855c38af
+[2026-02-21T21:03:00,659Z] [     172.20.0.1 -> webapi-107] PUT   200 2ms    /api/s/default/rest/firewallrule/699a1d84e26d48c5855c38af
+[2026-02-21T21:03:00,946Z] [     172.20.0.1 -> webapi-107] GET   200 1ms    /api/s/default/rest/firewallrule/699a1d84e26d48c5855c38af
+[2026-02-21T21:03:01,148Z] [     172.20.0.1 -> webapi-107] DELETE 200 1ms    /api/s/default/rest/firewallrule/699a1d84e26d48c5855c38af
+[2026-02-21T21:03:01,543Z] [     172.20.0.1 -> webapi-134] POST  200 2ms    /api/s/default/rest/networkconf
+[2026-02-21T21:03:01,818Z] [     172.20.0.1 -> webapi-134] GET   200 1ms    /api/s/default/rest/networkconf/699a1d85e26d48c5855c38b0
+[2026-02-21T21:03:01,962Z] [     172.20.0.1 -> webapi-134] GET   200 7ms    /api/s/default/rest/networkconf/699a1d85e26d48c5855c38b0
+[2026-02-21T21:03:02,099Z] [     172.20.0.1 -> webapi-134] PUT   200 3ms    /api/s/default/rest/networkconf/699a1d85e26d48c5855c38b0
+[2026-02-21T21:03:02,374Z] [     172.20.0.1 -> webapi-134] GET   200 1ms    /api/s/default/rest/networkconf/699a1d85e26d48c5855c38b0
+[2026-02-21T21:03:02,576Z] [     172.20.0.1 -> webapi-134] DELETE 200 4ms    /api/s/default/rest/networkconf/699a1d85e26d48c5855c38b0
+[2026-02-21T21:03:02,976Z] [     172.20.0.1 -> webapi-107] POST  200 6ms    /api/s/default/rest/portforward
+[2026-02-21T21:03:03,248Z] [     172.20.0.1 -> webapi-107] GET   200 2ms    /api/s/default/rest/portforward/699a1d86e26d48c5855c38b1
+[2026-02-21T21:03:03,445Z] [     172.20.0.1 -> webapi-107] DELETE 200 1ms    /api/s/default/rest/portforward/699a1d86e26d48c5855c38b1
+[2026-02-21T21:03:03,841Z] [     172.20.0.1 -> webapi-134] POST  200 2ms    /api/s/default/rest/portconf
+[2026-02-21T21:03:04,117Z] [     172.20.0.1 -> webapi-134] GET   200 1ms    /api/s/default/rest/portconf/699a1d87e26d48c5855c38b2
+[2026-02-21T21:03:04,309Z] [     172.20.0.1 -> webapi-134] DELETE 200 1ms    /api/s/default/rest/portconf/699a1d87e26d48c5855c38b2
+[2026-02-21T21:03:04,700Z] [     172.20.0.1 -> webapi-107] POST  200 1ms    /api/s/default/rest/radiusprofile
+[2026-02-21T21:03:04,974Z] [     172.20.0.1 -> webapi-107] GET   200 1ms    /api/s/default/rest/radiusprofile/699a1d88e26d48c5855c38b3
+[2026-02-21T21:03:05,177Z] [     172.20.0.1 -> webapi-107] DELETE 200 1ms    /api/s/default/rest/radiusprofile/699a1d88e26d48c5855c38b3
+[2026-02-21T21:03:05,595Z] [     172.20.0.1 -> webapi-134] POST  200 6ms    /v2/api/site/default/static-dns
+[2026-02-21T21:03:05,875Z] [     172.20.0.1 -> webapi-107] GET   405 1ms    /v2/api/site/default/static-dns/699a1d89e26d48c5855c38b4
+[2026-02-21T21:03:05,877Z] [     172.20.0.1 -> webapi-134] GET   200 1ms    /v2/api/site/default/static-dns
+[2026-02-21T21:03:06,077Z] [     172.20.0.1 -> webapi-107] DELETE 200 2ms    /v2/api/site/default/static-dns/699a1d89e26d48c5855c38b4
+[2026-02-21T21:03:06,463Z] [     172.20.0.1 -> webapi-107] POST  200 2ms    /api/s/default/rest/routing
+[2026-02-21T21:03:06,749Z] [     172.20.0.1 -> webapi-107] GET   200 1ms    /api/s/default/rest/routing/699a1d8ae26d48c5855c38b5
+[2026-02-21T21:03:06,948Z] [     172.20.0.1 -> webapi-107] DELETE 200 1ms    /api/s/default/rest/routing/699a1d8ae26d48c5855c38b5
+[2026-02-21T21:03:07,346Z] [     172.20.0.1 -> webapi-134] POST  201 5ms    /v2/api/site/default/trafficrules
+[2026-02-21T21:03:07,498Z] [     172.20.0.1 -> webapi-107] DELETE 200 2ms    /v2/api/site/default/trafficrules/699a1d8be26d48c5855c38b6
+[2026-02-21T21:03:07,875Z] [     172.20.0.1 -> webapi-107] POST  200 1ms    /api/s/default/rest/usergroup
+[2026-02-21T21:03:08,149Z] [     172.20.0.1 -> webapi-107] GET   200 1ms    /api/s/default/rest/usergroup/699a1d8be26d48c5855c38b7
+[2026-02-21T21:03:08,346Z] [     172.20.0.1 -> webapi-107] DELETE 200 1ms    /api/s/default/rest/usergroup/699a1d8be26d48c5855c38b7
+[2026-02-21T21:03:08,740Z] [     172.20.0.1 -> webapi-107] POST  200 6ms    /api/s/default/rest/user
+[2026-02-21T21:03:09,015Z] [     172.20.0.1 -> webapi-107] GET   200 3ms    /api/s/default/rest/user/699a1d8ce26d48c5855c38b8
+[2026-02-21T21:03:09,340Z] [     172.20.0.1 -> webapi-107] POST  200 8ms    /api/s/default/cmd/stamgr
+[2026-02-21T21:03:09,748Z] [     172.20.0.1 -> webapi-134] POST  201 3ms    /v2/api/site/default/apgroups
+[2026-02-21T21:03:09,769Z] [     172.20.0.1 -> webapi-134] POST  200 4ms    /api/s/default/rest/wlanconf
+[2026-02-21T21:03:10,050Z] [     172.20.0.1 -> webapi-134] GET   405 1ms    /v2/api/site/default/apgroups/699a1d8de26d48c5855c38b9
+[2026-02-21T21:03:10,053Z] [     172.20.0.1 -> webapi-107] GET   200 1ms    /v2/api/site/default/apgroups
+[2026-02-21T21:03:10,065Z] [     172.20.0.1 -> webapi-107] GET   200 1ms    /api/s/default/rest/wlanconf/699a1d8de26d48c5855c38ba
+[2026-02-21T21:03:10,267Z] [     172.20.0.1 -> webapi-107] DELETE 200 1ms    /api/s/default/rest/wlanconf/699a1d8de26d48c5855c38ba
+[2026-02-21T21:03:10,293Z] [     172.20.0.1 -> webapi-107] DELETE 204 8ms    /v2/api/site/default/apgroups/699a1d8de26d48c5855c38b9
+[2026-02-21T21:03:46,425Z] [     172.20.0.1 -> webapi-143] POST  201 2ms    /v2/api/site/default/apgroups
+[2026-02-21T21:03:46,714Z] [     172.20.0.1 -> webapi-142] GET   405 1ms    /v2/api/site/default/apgroups/699a1db2e26d48c5855c38bb
+[2026-02-21T21:03:46,717Z] [     172.20.0.1 -> webapi-143] GET   200 1ms    /v2/api/site/default/apgroups
+[2026-02-21T21:03:46,913Z] [     172.20.0.1 -> webapi-142] DELETE 204 2ms    /v2/api/site/default/apgroups/699a1db2e26d48c5855c38bb
+[2026-02-21T21:03:47,304Z] [     172.20.0.1 -> webapi-142] POST  200 2ms    /api/s/default/rest/firewallgroup
+[2026-02-21T21:03:47,583Z] [     172.20.0.1 -> webapi-142] GET   200 2ms    /api/s/default/rest/firewallgroup/699a1db3e26d48c5855c38bc
+[2026-02-21T21:03:47,782Z] [     172.20.0.1 -> webapi-142] DELETE 200 2ms    /api/s/default/rest/firewallgroup/699a1db3e26d48c5855c38bc
+[2026-02-21T21:03:48,169Z] [     172.20.0.1 -> webapi-143] POST  200 2ms    /api/s/default/rest/firewallrule
+[2026-02-21T21:03:48,450Z] [     172.20.0.1 -> webapi-143] GET   200 1ms    /api/s/default/rest/firewallrule/699a1db4e26d48c5855c38bd
+[2026-02-21T21:03:48,594Z] [     172.20.0.1 -> webapi-143] GET   200 1ms    /api/s/default/rest/firewallrule/699a1db4e26d48c5855c38bd
+[2026-02-21T21:03:48,739Z] [     172.20.0.1 -> webapi-143] PUT   200 4ms    /api/s/default/rest/firewallrule/699a1db4e26d48c5855c38bd
+[2026-02-21T21:03:49,016Z] [     172.20.0.1 -> webapi-143] GET   200 1ms    /api/s/default/rest/firewallrule/699a1db4e26d48c5855c38bd
+[2026-02-21T21:03:49,213Z] [     172.20.0.1 -> webapi-143] DELETE 200 1ms    /api/s/default/rest/firewallrule/699a1db4e26d48c5855c38bd
+[2026-02-21T21:03:49,596Z] [     172.20.0.1 -> webapi-142] POST  200 2ms    /api/s/default/rest/networkconf
+[2026-02-21T21:03:49,857Z] [     172.20.0.1 -> webapi-142] GET   200 1ms    /api/s/default/rest/networkconf/699a1db5e26d48c5855c38be
+[2026-02-21T21:03:49,997Z] [     172.20.0.1 -> webapi-142] GET   200 1ms    /api/s/default/rest/networkconf/699a1db5e26d48c5855c38be
+[2026-02-21T21:03:50,132Z] [     172.20.0.1 -> webapi-142] PUT   200 3ms    /api/s/default/rest/networkconf/699a1db5e26d48c5855c38be
+[2026-02-21T21:03:50,396Z] [     172.20.0.1 -> webapi-142] GET   200 1ms    /api/s/default/rest/networkconf/699a1db5e26d48c5855c38be
+[2026-02-21T21:03:50,599Z] [     172.20.0.1 -> webapi-142] DELETE 200 4ms    /api/s/default/rest/networkconf/699a1db5e26d48c5855c38be
+[2026-02-21T21:03:51,043Z] [     172.20.0.1 -> webapi-143] POST  200 50ms   /api/s/default/rest/portforward
+[2026-02-21T21:03:51,324Z] [     172.20.0.1 -> webapi-143] GET   200 1ms    /api/s/default/rest/portforward/699a1db7e26d48c5855c38bf
+[2026-02-21T21:03:51,534Z] [     172.20.0.1 -> webapi-143] DELETE 200 1ms    /api/s/default/rest/portforward/699a1db7e26d48c5855c38bf
+[2026-02-21T21:03:51,918Z] [     172.20.0.1 -> webapi-142] POST  200 1ms    /api/s/default/rest/portconf
+[2026-02-21T21:03:52,193Z] [     172.20.0.1 -> webapi-142] GET   200 1ms    /api/s/default/rest/portconf/699a1db7e26d48c5855c38c0
+[2026-02-21T21:03:52,396Z] [     172.20.0.1 -> webapi-142] DELETE 200 1ms    /api/s/default/rest/portconf/699a1db7e26d48c5855c38c0
+[2026-02-21T21:03:52,781Z] [     172.20.0.1 -> webapi-143] POST  200 2ms    /api/s/default/rest/radiusprofile
+[2026-02-21T21:03:53,058Z] [     172.20.0.1 -> webapi-143] GET   200 1ms    /api/s/default/rest/radiusprofile/699a1db8e26d48c5855c38c1
+[2026-02-21T21:03:53,259Z] [     172.20.0.1 -> webapi-143] DELETE 200 1ms    /api/s/default/rest/radiusprofile/699a1db8e26d48c5855c38c1
+[2026-02-21T21:03:53,651Z] [     172.20.0.1 -> webapi-142] POST  200 4ms    /v2/api/site/default/static-dns
+[2026-02-21T21:03:53,929Z] [     172.20.0.1 -> webapi-143] GET   405 1ms    /v2/api/site/default/static-dns/699a1db9e26d48c5855c38c2
+[2026-02-21T21:03:53,932Z] [     172.20.0.1 -> webapi-142] GET   200 2ms    /v2/api/site/default/static-dns
+[2026-02-21T21:03:54,135Z] [     172.20.0.1 -> webapi-143] DELETE 200 2ms    /v2/api/site/default/static-dns/699a1db9e26d48c5855c38c2
+[2026-02-21T21:03:54,521Z] [     172.20.0.1 -> webapi-143] POST  200 2ms    /api/s/default/rest/routing
+[2026-02-21T21:03:54,794Z] [     172.20.0.1 -> webapi-143] GET   200 1ms    /api/s/default/rest/routing/699a1dbae26d48c5855c38c3
+[2026-02-21T21:03:54,992Z] [     172.20.0.1 -> webapi-143] DELETE 200 1ms    /api/s/default/rest/routing/699a1dbae26d48c5855c38c3
+[2026-02-21T21:03:55,381Z] [     172.20.0.1 -> webapi-142] POST  201 5ms    /v2/api/site/default/trafficrules
+[2026-02-21T21:03:55,656Z] [     172.20.0.1 -> webapi-143] GET   405 1ms    /v2/api/site/default/trafficrules/699a1dbbe26d48c5855c38c4
+[2026-02-21T21:03:55,661Z] [     172.20.0.1 -> webapi-142] GET   200 4ms    /v2/api/site/default/trafficrules
+[2026-02-21T21:03:55,867Z] [     172.20.0.1 -> webapi-142] DELETE 200 2ms    /v2/api/site/default/trafficrules/699a1dbbe26d48c5855c38c4
+[2026-02-21T21:03:56,243Z] [     172.20.0.1 -> webapi-142] POST  200 1ms    /api/s/default/rest/usergroup
+[2026-02-21T21:03:56,519Z] [     172.20.0.1 -> webapi-143] GET   200 1ms    /api/s/default/rest/usergroup/699a1dbce26d48c5855c38c5
+[2026-02-21T21:03:56,719Z] [     172.20.0.1 -> webapi-143] DELETE 200 1ms    /api/s/default/rest/usergroup/699a1dbce26d48c5855c38c5
+[2026-02-21T21:03:57,115Z] [     172.20.0.1 -> webapi-142] POST  200 3ms    /api/s/default/rest/user
+[2026-02-21T21:03:57,391Z] [     172.20.0.1 -> webapi-142] GET   200 1ms    /api/s/default/rest/user/699a1dbde26d48c5855c38c6
+[2026-02-21T21:03:57,595Z] [     172.20.0.1 -> webapi-142] POST  200 8ms    /api/s/default/cmd/stamgr
+[2026-02-21T21:03:57,989Z] [     172.20.0.1 -> webapi-142] POST  201 2ms    /v2/api/site/default/apgroups
+[2026-02-21T21:03:58,011Z] [     172.20.0.1 -> webapi-143] POST  200 5ms    /api/s/default/rest/wlanconf
+[2026-02-21T21:03:58,281Z] [     172.20.0.1 -> webapi-143] GET   405 1ms    /v2/api/site/default/apgroups/699a1dbde26d48c5855c38c7
+[2026-02-21T21:03:58,283Z] [     172.20.0.1 -> webapi-142] GET   200 1ms    /v2/api/site/default/apgroups
+[2026-02-21T21:03:58,298Z] [     172.20.0.1 -> webapi-142] GET   200 2ms    /api/s/default/rest/wlanconf/699a1dbee26d48c5855c38c8
+[2026-02-21T21:03:58,500Z] [     172.20.0.1 -> webapi-142] DELETE 200 1ms    /api/s/default/rest/wlanconf/699a1dbee26d48c5855c38c8
+[2026-02-21T21:03:58,519Z] [     172.20.0.1 -> webapi-142] DELETE 204 2ms    /v2/api/site/default/apgroups/699a1dbde26d48c5855c38c7
+[2026-02-21T21:26:15,787Z] [     172.20.0.1 -> webapi-149] GET   200 1ms    /api/s/default/rest/networkconf
+[2026-02-21T21:26:16,196Z] [     172.20.0.1 -> webapi-149] POST  400 2ms    /v2/api/site/default/apgroups
+[2026-02-21T21:26:16,616Z] [     172.20.0.1 -> webapi-143] POST  200 1ms    /api/s/default/rest/firewallgroup
+[2026-02-21T21:26:16,882Z] [     172.20.0.1 -> webapi-149] GET   200 1ms    /api/s/default/rest/firewallgroup/699a22f8e26d48c5855c38c9
+[2026-02-21T21:26:17,069Z] [     172.20.0.1 -> webapi-149] DELETE 200 2ms    /api/s/default/rest/firewallgroup/699a22f8e26d48c5855c38c9
+[2026-02-21T21:26:17,434Z] [     172.20.0.1 -> webapi-149] POST  400 2ms    /api/s/default/rest/firewallrule
+[2026-02-21T21:26:17,859Z] [     172.20.0.1 -> webapi-149] POST  400 2ms    /api/s/default/rest/networkconf
+[2026-02-21T21:26:18,316Z] [     172.20.0.1 -> webapi-149] POST  200 52ms   /api/s/default/rest/portforward
+[2026-02-21T21:26:18,584Z] [     172.20.0.1 -> webapi-149] GET   200 1ms    /api/s/default/rest/portforward/699a22fae26d48c5855c38ca
+[2026-02-21T21:26:18,771Z] [     172.20.0.1 -> webapi-149] DELETE 200 1ms    /api/s/default/rest/portforward/699a22fae26d48c5855c38ca
+[2026-02-21T21:26:19,528Z] [     172.20.0.1 -> webapi-143] POST  200 1ms    /api/s/default/rest/radiusprofile
+[2026-02-21T21:26:19,797Z] [     172.20.0.1 -> webapi-143] GET   200 1ms    /api/s/default/rest/radiusprofile/699a22fbe26d48c5855c38cb
+[2026-02-21T21:26:19,985Z] [     172.20.0.1 -> webapi-143] DELETE 200 1ms    /api/s/default/rest/radiusprofile/699a22fbe26d48c5855c38cb
+[2026-02-21T21:26:20,357Z] [     172.20.0.1 -> webapi-143] POST  200 4ms    /v2/api/site/default/static-dns
+[2026-02-21T21:26:20,624Z] [     172.20.0.1 -> webapi-143] GET   405 1ms    /v2/api/site/default/static-dns/699a22fce26d48c5855c38cc
+[2026-02-21T21:26:20,633Z] [     172.20.0.1 -> webapi-149] GET   200 8ms    /v2/api/site/default/static-dns
+[2026-02-21T21:26:20,842Z] [     172.20.0.1 -> webapi-149] DELETE 200 2ms    /v2/api/site/default/static-dns/699a22fce26d48c5855c38cc
+[2026-02-21T21:26:21,210Z] [     172.20.0.1 -> webapi-149] POST  200 2ms    /api/s/default/rest/routing
+[2026-02-21T21:26:21,487Z] [     172.20.0.1 -> webapi-149] GET   200 1ms    /api/s/default/rest/routing/699a22fde26d48c5855c38cd
+[2026-02-21T21:26:21,675Z] [     172.20.0.1 -> webapi-149] DELETE 200 1ms    /api/s/default/rest/routing/699a22fde26d48c5855c38cd
+[2026-02-21T21:26:22,054Z] [     172.20.0.1 -> webapi-143] POST  201 18ms   /v2/api/site/default/trafficrules
+[2026-02-21T21:26:22,193Z] [     172.20.0.1 -> webapi-143] DELETE 200 2ms    /v2/api/site/default/trafficrules/699a22fee26d48c5855c38ce
+[2026-02-21T21:26:22,558Z] [     172.20.0.1 -> webapi-143] POST  200 1ms    /api/s/default/rest/usergroup
+[2026-02-21T21:26:22,833Z] [     172.20.0.1 -> webapi-143] GET   200 1ms    /api/s/default/rest/usergroup/699a22fee26d48c5855c38cf
+[2026-02-21T21:26:23,025Z] [     172.20.0.1 -> webapi-143] DELETE 200 1ms    /api/s/default/rest/usergroup/699a22fee26d48c5855c38cf
+[2026-02-21T21:26:23,391Z] [     172.20.0.1 -> webapi-149] POST  200 3ms    /api/s/default/rest/user
+[2026-02-21T21:26:23,662Z] [     172.20.0.1 -> webapi-149] GET   200 1ms    /api/s/default/rest/user/699a22ffe26d48c5855c38d0
+[2026-02-21T21:26:23,858Z] [     172.20.0.1 -> webapi-149] POST  200 6ms    /api/s/default/cmd/stamgr
+[2026-02-21T21:26:24,229Z] [     172.20.0.1 -> webapi-143] POST  400 2ms    /v2/api/site/default/apgroups
+[2026-02-21T21:27:35,966Z] [     172.20.0.1 -> webapi-154] GET   200 1ms    /api/s/default/rest/networkconf
+[2026-02-21T21:27:36,182Z] [     172.20.0.1 -> webapi-154] GET   200 1ms    /api/s/default/rest/networkconf
+[2026-02-21T21:27:36,328Z] [     172.20.0.1 -> webapi-154] GET   200 5ms    /api/s/default/rest/networkconf
+[2026-02-21T21:27:36,864Z] [     172.20.0.1 -> webapi-154] POST  400 2ms    /v2/api/site/default/apgroups
+[2026-02-21T21:27:37,285Z] [     172.20.0.1 -> webapi-154] POST  200 4ms    /api/s/default/rest/firewallgroup
+[2026-02-21T21:27:37,551Z] [     172.20.0.1 -> webapi-154] GET   200 1ms    /api/s/default/rest/firewallgroup/699a2349e26d48c5855c38d1
+[2026-02-21T21:27:37,744Z] [     172.20.0.1 -> webapi-154] DELETE 200 3ms    /api/s/default/rest/firewallgroup/699a2349e26d48c5855c38d1
+[2026-02-21T21:27:38,108Z] [     172.20.0.1 -> webapi-153] POST  200 2ms    /api/s/default/rest/firewallrule
+[2026-02-21T21:27:38,366Z] [     172.20.0.1 -> webapi-153] GET   200 1ms    /api/s/default/rest/firewallrule/699a234ae26d48c5855c38d2
+[2026-02-21T21:27:38,502Z] [     172.20.0.1 -> webapi-153] GET   200 1ms    /api/s/default/rest/firewallrule/699a234ae26d48c5855c38d2
+[2026-02-21T21:27:38,634Z] [     172.20.0.1 -> webapi-153] PUT   200 2ms    /api/s/default/rest/firewallrule/699a234ae26d48c5855c38d2
+[2026-02-21T21:27:38,893Z] [     172.20.0.1 -> webapi-153] GET   200 1ms    /api/s/default/rest/firewallrule/699a234ae26d48c5855c38d2
+[2026-02-21T21:27:39,080Z] [     172.20.0.1 -> webapi-153] DELETE 200 1ms    /api/s/default/rest/firewallrule/699a234ae26d48c5855c38d2
+[2026-02-21T21:27:39,452Z] [     172.20.0.1 -> webapi-153] POST  400 2ms    /api/s/default/rest/networkconf
+[2026-02-21T21:27:39,949Z] [     172.20.0.1 -> webapi-153] POST  200 77ms   /api/s/default/rest/portforward
+[2026-02-21T21:27:40,230Z] [     172.20.0.1 -> webapi-153] GET   200 1ms    /api/s/default/rest/portforward/699a234be26d48c5855c38d3
+[2026-02-21T21:27:40,422Z] [     172.20.0.1 -> webapi-154] DELETE 200 1ms    /api/s/default/rest/portforward/699a234be26d48c5855c38d3
+[2026-02-21T21:27:40,787Z] [     172.20.0.1 -> webapi-153] POST  200 1ms    /api/s/default/rest/portconf
+[2026-02-21T21:27:41,049Z] [     172.20.0.1 -> webapi-153] GET   200 1ms    /api/s/default/rest/portconf/699a234ce26d48c5855c38d4
+[2026-02-21T21:27:41,238Z] [     172.20.0.1 -> webapi-153] DELETE 200 1ms    /api/s/default/rest/portconf/699a234ce26d48c5855c38d4
+[2026-02-21T21:27:41,604Z] [     172.20.0.1 -> webapi-154] POST  200 2ms    /api/s/default/rest/radiusprofile
+[2026-02-21T21:27:41,874Z] [     172.20.0.1 -> webapi-154] GET   200 1ms    /api/s/default/rest/radiusprofile/699a234de26d48c5855c38d5
+[2026-02-21T21:27:42,063Z] [     172.20.0.1 -> webapi-154] DELETE 200 2ms    /api/s/default/rest/radiusprofile/699a234de26d48c5855c38d5
+[2026-02-21T21:27:42,434Z] [     172.20.0.1 -> webapi-153] POST  200 3ms    /v2/api/site/default/static-dns
+[2026-02-21T21:27:42,695Z] [     172.20.0.1 -> webapi-153] GET   405 1ms    /v2/api/site/default/static-dns/699a234ee26d48c5855c38d6
+[2026-02-21T21:27:42,697Z] [     172.20.0.1 -> webapi-154] GET   200 1ms    /v2/api/site/default/static-dns
+[2026-02-21T21:27:42,889Z] [     172.20.0.1 -> webapi-154] DELETE 200 2ms    /v2/api/site/default/static-dns/699a234ee26d48c5855c38d6
+[2026-02-21T21:27:43,260Z] [     172.20.0.1 -> webapi-153] POST  200 8ms    /api/s/default/rest/routing
+[2026-02-21T21:27:43,522Z] [     172.20.0.1 -> webapi-153] GET   200 1ms    /api/s/default/rest/routing/699a234fe26d48c5855c38d7
+[2026-02-21T21:27:43,713Z] [     172.20.0.1 -> webapi-153] DELETE 200 1ms    /api/s/default/rest/routing/699a234fe26d48c5855c38d7
+[2026-02-21T21:27:44,078Z] [     172.20.0.1 -> webapi-154] POST  201 4ms    /v2/api/site/default/trafficrules
+[2026-02-21T21:27:44,345Z] [     172.20.0.1 -> webapi-154] GET   405 1ms    /v2/api/site/default/trafficrules/699a2350e26d48c5855c38d8
+[2026-02-21T21:27:44,347Z] [     172.20.0.1 -> webapi-153] GET   200 2ms    /v2/api/site/default/trafficrules
+[2026-02-21T21:27:44,543Z] [     172.20.0.1 -> webapi-153] DELETE 200 2ms    /v2/api/site/default/trafficrules/699a2350e26d48c5855c38d8
+[2026-02-21T21:27:44,911Z] [     172.20.0.1 -> webapi-153] POST  200 1ms    /api/s/default/rest/usergroup
+[2026-02-21T21:27:45,175Z] [     172.20.0.1 -> webapi-153] GET   200 1ms    /api/s/default/rest/usergroup/699a2350e26d48c5855c38d9
+[2026-02-21T21:27:45,366Z] [     172.20.0.1 -> webapi-153] DELETE 200 1ms    /api/s/default/rest/usergroup/699a2350e26d48c5855c38d9
+[2026-02-21T21:27:45,745Z] [     172.20.0.1 -> webapi-153] POST  200 3ms    /api/s/default/rest/user
+[2026-02-21T21:27:46,008Z] [     172.20.0.1 -> webapi-153] GET   200 1ms    /api/s/default/rest/user/699a2351e26d48c5855c38da
+[2026-02-21T21:27:46,202Z] [     172.20.0.1 -> webapi-153] POST  200 6ms    /api/s/default/cmd/stamgr
+[2026-02-21T21:27:46,568Z] [     172.20.0.1 -> webapi-154] POST  400 1ms    /v2/api/site/default/apgroups
+[2026-02-21T21:28:52,708Z] [     172.20.0.1 -> webapi-160] GET   200 1ms    /api/s/default/rest/networkconf
+[2026-02-21T21:28:52,910Z] [     172.20.0.1 -> webapi-160] GET   200 1ms    /api/s/default/rest/networkconf
+[2026-02-21T21:28:53,060Z] [     172.20.0.1 -> webapi-160] GET   200 7ms    /api/s/default/rest/networkconf
+[2026-02-21T21:28:53,610Z] [     172.20.0.1 -> webapi-160] POST  201 3ms    /v2/api/site/default/apgroups
+[2026-02-21T21:28:53,875Z] [     172.20.0.1 -> webapi-160] GET   405 1ms    /v2/api/site/default/apgroups/699a2395e26d48c5855c38db
+[2026-02-21T21:28:53,877Z] [     172.20.0.1 -> webapi-157] GET   200 1ms    /v2/api/site/default/apgroups
+[2026-02-21T21:28:54,069Z] [     172.20.0.1 -> webapi-157] DELETE 204 2ms    /v2/api/site/default/apgroups/699a2395e26d48c5855c38db
+[2026-02-21T21:28:54,442Z] [     172.20.0.1 -> webapi-157] POST  200 2ms    /api/s/default/rest/firewallgroup
+[2026-02-21T21:28:54,709Z] [     172.20.0.1 -> webapi-157] GET   200 1ms    /api/s/default/rest/firewallgroup/699a2396e26d48c5855c38dc
+[2026-02-21T21:28:54,902Z] [     172.20.0.1 -> webapi-157] DELETE 200 3ms    /api/s/default/rest/firewallgroup/699a2396e26d48c5855c38dc
+[2026-02-21T21:28:55,270Z] [     172.20.0.1 -> webapi-157] POST  200 2ms    /api/s/default/rest/firewallrule
+[2026-02-21T21:28:55,539Z] [     172.20.0.1 -> webapi-157] GET   200 1ms    /api/s/default/rest/firewallrule/699a2397e26d48c5855c38dd
+[2026-02-21T21:28:55,677Z] [     172.20.0.1 -> webapi-157] GET   200 1ms    /api/s/default/rest/firewallrule/699a2397e26d48c5855c38dd
+[2026-02-21T21:28:55,811Z] [     172.20.0.1 -> webapi-157] PUT   200 3ms    /api/s/default/rest/firewallrule/699a2397e26d48c5855c38dd
+[2026-02-21T21:28:56,086Z] [     172.20.0.1 -> webapi-157] GET   200 1ms    /api/s/default/rest/firewallrule/699a2397e26d48c5855c38dd
+[2026-02-21T21:28:56,280Z] [     172.20.0.1 -> webapi-157] DELETE 200 1ms    /api/s/default/rest/firewallrule/699a2397e26d48c5855c38dd
+[2026-02-21T21:28:56,644Z] [     172.20.0.1 -> webapi-160] POST  400 2ms    /api/s/default/rest/networkconf
+[2026-02-21T21:28:57,115Z] [     172.20.0.1 -> webapi-160] POST  200 55ms   /api/s/default/rest/portforward
+[2026-02-21T21:28:57,393Z] [     172.20.0.1 -> webapi-160] GET   200 1ms    /api/s/default/rest/portforward/699a2399e26d48c5855c38de
+[2026-02-21T21:28:57,583Z] [     172.20.0.1 -> webapi-160] DELETE 200 1ms    /api/s/default/rest/portforward/699a2399e26d48c5855c38de
+[2026-02-21T21:28:57,950Z] [     172.20.0.1 -> webapi-157] POST  200 1ms    /api/s/default/rest/portconf
+[2026-02-21T21:28:58,215Z] [     172.20.0.1 -> webapi-157] GET   200 1ms    /api/s/default/rest/portconf/699a2399e26d48c5855c38df
+[2026-02-21T21:28:58,401Z] [     172.20.0.1 -> webapi-157] DELETE 200 1ms    /api/s/default/rest/portconf/699a2399e26d48c5855c38df
+[2026-02-21T21:28:58,768Z] [     172.20.0.1 -> webapi-160] POST  200 1ms    /api/s/default/rest/radiusprofile
+[2026-02-21T21:28:59,038Z] [     172.20.0.1 -> webapi-160] GET   200 1ms    /api/s/default/rest/radiusprofile/699a239ae26d48c5855c38e0
+[2026-02-21T21:28:59,227Z] [     172.20.0.1 -> webapi-160] DELETE 200 1ms    /api/s/default/rest/radiusprofile/699a239ae26d48c5855c38e0
+[2026-02-21T21:28:59,590Z] [     172.20.0.1 -> webapi-157] POST  200 3ms    /v2/api/site/default/static-dns
+[2026-02-21T21:28:59,852Z] [     172.20.0.1 -> webapi-157] GET   405 1ms    /v2/api/site/default/static-dns/699a239be26d48c5855c38e1
+[2026-02-21T21:28:59,854Z] [     172.20.0.1 -> webapi-160] GET   200 1ms    /v2/api/site/default/static-dns
+[2026-02-21T21:29:00,047Z] [     172.20.0.1 -> webapi-160] DELETE 200 2ms    /v2/api/site/default/static-dns/699a239be26d48c5855c38e1
+[2026-02-21T21:29:00,421Z] [     172.20.0.1 -> webapi-160] POST  200 3ms    /api/s/default/rest/routing
+[2026-02-21T21:29:00,688Z] [     172.20.0.1 -> webapi-160] GET   200 1ms    /api/s/default/rest/routing/699a239ce26d48c5855c38e2
+[2026-02-21T21:29:00,876Z] [     172.20.0.1 -> webapi-160] DELETE 200 1ms    /api/s/default/rest/routing/699a239ce26d48c5855c38e2
+[2026-02-21T21:29:01,243Z] [     172.20.0.1 -> webapi-157] POST  201 9ms    /v2/api/site/default/trafficrules
+[2026-02-21T21:29:01,511Z] [     172.20.0.1 -> webapi-157] GET   405 1ms    /v2/api/site/default/trafficrules/699a239de26d48c5855c38e3
+[2026-02-21T21:29:01,514Z] [     172.20.0.1 -> webapi-160] GET   200 1ms    /v2/api/site/default/trafficrules
+[2026-02-21T21:29:01,708Z] [     172.20.0.1 -> webapi-160] DELETE 200 2ms    /v2/api/site/default/trafficrules/699a239de26d48c5855c38e3
+[2026-02-21T21:29:02,073Z] [     172.20.0.1 -> webapi-160] POST  200 1ms    /api/s/default/rest/usergroup
+[2026-02-21T21:29:02,335Z] [     172.20.0.1 -> webapi-160] GET   200 1ms    /api/s/default/rest/usergroup/699a239ee26d48c5855c38e4
+[2026-02-21T21:29:02,523Z] [     172.20.0.1 -> webapi-160] DELETE 200 1ms    /api/s/default/rest/usergroup/699a239ee26d48c5855c38e4
+[2026-02-21T21:29:02,888Z] [     172.20.0.1 -> webapi-157] POST  200 3ms    /api/s/default/rest/user
+[2026-02-21T21:29:03,151Z] [     172.20.0.1 -> webapi-157] GET   200 1ms    /api/s/default/rest/user/699a239ee26d48c5855c38e5
+[2026-02-21T21:29:03,347Z] [     172.20.0.1 -> webapi-157] POST  200 6ms    /api/s/default/cmd/stamgr
+[2026-02-21T21:29:03,718Z] [     172.20.0.1 -> webapi-160] POST  201 3ms    /v2/api/site/default/apgroups
+[2026-02-21T21:29:03,729Z] [     172.20.0.1 -> webapi-157] POST  200 3ms    /api/s/default/rest/wlanconf
+[2026-02-21T21:29:04,003Z] [     172.20.0.1 -> webapi-160] GET   405 10ms   /v2/api/site/default/apgroups/699a239fe26d48c5855c38e6
+[2026-02-21T21:29:04,006Z] [     172.20.0.1 -> webapi-157] GET   200 2ms    /v2/api/site/default/apgroups
+[2026-02-21T21:29:04,010Z] [     172.20.0.1 -> webapi-160] GET   200 0ms    /api/s/default/rest/wlanconf/699a239fe26d48c5855c38e7
+[2026-02-21T21:29:04,203Z] [     172.20.0.1 -> webapi-160] DELETE 200 1ms    /api/s/default/rest/wlanconf/699a239fe26d48c5855c38e7
+[2026-02-21T21:29:04,221Z] [     172.20.0.1 -> webapi-160] DELETE 204 2ms    /v2/api/site/default/apgroups/699a239fe26d48c5855c38e6
+[2026-02-21T21:29:57,422Z] [     172.20.0.1 -> webapi-168] GET   200 1ms    /api/s/default/rest/networkconf
+[2026-02-21T21:29:57,624Z] [     172.20.0.1 -> webapi-168] GET   200 0ms    /api/s/default/rest/networkconf
+[2026-02-21T21:29:57,767Z] [     172.20.0.1 -> webapi-168] GET   200 1ms    /api/s/default/rest/networkconf
+[2026-02-21T21:29:58,288Z] [     172.20.0.1 -> webapi-168] POST  201 2ms    /v2/api/site/default/apgroups
+[2026-02-21T21:29:58,547Z] [     172.20.0.1 -> webapi-168] GET   405 1ms    /v2/api/site/default/apgroups/699a23d6e26d48c5855c38e8
+[2026-02-21T21:29:58,549Z] [     172.20.0.1 -> webapi-164] GET   200 1ms    /v2/api/site/default/apgroups
+[2026-02-21T21:29:58,737Z] [     172.20.0.1 -> webapi-164] DELETE 204 2ms    /v2/api/site/default/apgroups/699a23d6e26d48c5855c38e8
+[2026-02-21T21:29:59,100Z] [     172.20.0.1 -> webapi-168] POST  200 2ms    /api/s/default/rest/firewallgroup
+[2026-02-21T21:29:59,367Z] [     172.20.0.1 -> webapi-168] GET   200 1ms    /api/s/default/rest/firewallgroup/699a23d7e26d48c5855c38e9
+[2026-02-21T21:29:59,562Z] [     172.20.0.1 -> webapi-168] DELETE 200 4ms    /api/s/default/rest/firewallgroup/699a23d7e26d48c5855c38e9
+[2026-02-21T21:29:59,936Z] [     172.20.0.1 -> webapi-164] POST  200 2ms    /api/s/default/rest/firewallrule
+[2026-02-21T21:30:00,203Z] [     172.20.0.1 -> webapi-164] GET   200 1ms    /api/s/default/rest/firewallrule/699a23d7e26d48c5855c38ea
+[2026-02-21T21:30:00,344Z] [     172.20.0.1 -> webapi-164] GET   200 1ms    /api/s/default/rest/firewallrule/699a23d7e26d48c5855c38ea
+[2026-02-21T21:30:00,477Z] [     172.20.0.1 -> webapi-164] PUT   200 2ms    /api/s/default/rest/firewallrule/699a23d7e26d48c5855c38ea
+[2026-02-21T21:30:00,746Z] [     172.20.0.1 -> webapi-164] GET   200 1ms    /api/s/default/rest/firewallrule/699a23d7e26d48c5855c38ea
+[2026-02-21T21:30:00,937Z] [     172.20.0.1 -> webapi-164] DELETE 200 1ms    /api/s/default/rest/firewallrule/699a23d7e26d48c5855c38ea
+[2026-02-21T21:30:01,304Z] [     172.20.0.1 -> webapi-168] POST  200 5ms    /api/s/default/rest/networkconf
+[2026-02-21T21:30:01,596Z] [     172.20.0.1 -> webapi-168] GET   200 1ms    /api/s/default/rest/networkconf/699a23d9e26d48c5855c38eb
+[2026-02-21T21:30:01,734Z] [     172.20.0.1 -> webapi-168] GET   200 1ms    /api/s/default/rest/networkconf/699a23d9e26d48c5855c38eb
+[2026-02-21T21:30:01,867Z] [     172.20.0.1 -> webapi-168] PUT   200 3ms    /api/s/default/rest/networkconf/699a23d9e26d48c5855c38eb
+[2026-02-21T21:30:02,137Z] [     172.20.0.1 -> webapi-168] GET   200 1ms    /api/s/default/rest/networkconf/699a23d9e26d48c5855c38eb
+[2026-02-21T21:30:02,331Z] [     172.20.0.1 -> webapi-168] DELETE 200 5ms    /api/s/default/rest/networkconf/699a23d9e26d48c5855c38eb
+[2026-02-21T21:30:02,707Z] [     172.20.0.1 -> webapi-164] POST  200 5ms    /api/s/default/rest/portforward
+[2026-02-21T21:30:02,974Z] [     172.20.0.1 -> webapi-164] GET   200 1ms    /api/s/default/rest/portforward/699a23dae26d48c5855c38ec
+[2026-02-21T21:30:03,163Z] [     172.20.0.1 -> webapi-164] DELETE 200 1ms    /api/s/default/rest/portforward/699a23dae26d48c5855c38ec
+[2026-02-21T21:30:03,530Z] [     172.20.0.1 -> webapi-168] POST  200 1ms    /api/s/default/rest/portconf
+[2026-02-21T21:30:03,828Z] [     172.20.0.1 -> webapi-168] GET   200 1ms    /api/s/default/rest/portconf/699a23dbe26d48c5855c38ed
+[2026-02-21T21:30:04,018Z] [     172.20.0.1 -> webapi-168] DELETE 200 1ms    /api/s/default/rest/portconf/699a23dbe26d48c5855c38ed
+[2026-02-21T21:30:04,386Z] [     172.20.0.1 -> webapi-164] POST  200 1ms    /api/s/default/rest/radiusprofile
+[2026-02-21T21:30:04,656Z] [     172.20.0.1 -> webapi-168] GET   200 1ms    /api/s/default/rest/radiusprofile/699a23dce26d48c5855c38ee
+[2026-02-21T21:30:04,847Z] [     172.20.0.1 -> webapi-168] DELETE 200 1ms    /api/s/default/rest/radiusprofile/699a23dce26d48c5855c38ee
+[2026-02-21T21:30:05,218Z] [     172.20.0.1 -> webapi-164] POST  200 5ms    /v2/api/site/default/static-dns
+[2026-02-21T21:30:05,485Z] [     172.20.0.1 -> webapi-164] GET   405 1ms    /v2/api/site/default/static-dns/699a23dde26d48c5855c38ef
+[2026-02-21T21:30:05,487Z] [     172.20.0.1 -> webapi-168] GET   200 1ms    /v2/api/site/default/static-dns
+[2026-02-21T21:30:05,679Z] [     172.20.0.1 -> webapi-168] DELETE 200 2ms    /v2/api/site/default/static-dns/699a23dde26d48c5855c38ef
+[2026-02-21T21:30:06,047Z] [     172.20.0.1 -> webapi-168] POST  200 3ms    /api/s/default/rest/routing
+[2026-02-21T21:30:06,312Z] [     172.20.0.1 -> webapi-168] GET   200 1ms    /api/s/default/rest/routing/699a23dee26d48c5855c38f0
+[2026-02-21T21:30:06,501Z] [     172.20.0.1 -> webapi-168] DELETE 200 1ms    /api/s/default/rest/routing/699a23dee26d48c5855c38f0
+[2026-02-21T21:30:06,870Z] [     172.20.0.1 -> webapi-164] POST  201 3ms    /v2/api/site/default/trafficrules
+[2026-02-21T21:30:07,135Z] [     172.20.0.1 -> webapi-164] GET   405 1ms    /v2/api/site/default/trafficrules/699a23dee26d48c5855c38f1
+[2026-02-21T21:30:07,138Z] [     172.20.0.1 -> webapi-168] GET   200 3ms    /v2/api/site/default/trafficrules
+[2026-02-21T21:30:07,330Z] [     172.20.0.1 -> webapi-168] DELETE 200 2ms    /v2/api/site/default/trafficrules/699a23dee26d48c5855c38f1
+[2026-02-21T21:30:07,693Z] [     172.20.0.1 -> webapi-168] POST  200 1ms    /api/s/default/rest/usergroup
+[2026-02-21T21:30:07,957Z] [     172.20.0.1 -> webapi-168] GET   200 1ms    /api/s/default/rest/usergroup/699a23dfe26d48c5855c38f2
+[2026-02-21T21:30:08,151Z] [     172.20.0.1 -> webapi-168] DELETE 200 1ms    /api/s/default/rest/usergroup/699a23dfe26d48c5855c38f2
+[2026-02-21T21:30:08,508Z] [     172.20.0.1 -> webapi-164] POST  200 3ms    /api/s/default/rest/user
+[2026-02-21T21:30:08,779Z] [     172.20.0.1 -> webapi-164] GET   200 1ms    /api/s/default/rest/user/699a23e0e26d48c5855c38f3
+[2026-02-21T21:30:08,975Z] [     172.20.0.1 -> webapi-164] POST  200 6ms    /api/s/default/cmd/stamgr
+[2026-02-21T21:30:09,354Z] [     172.20.0.1 -> webapi-168] POST  201 4ms    /v2/api/site/default/apgroups
+[2026-02-21T21:30:09,367Z] [     172.20.0.1 -> webapi-164] POST  200 4ms    /api/s/default/rest/wlanconf
+[2026-02-21T21:30:09,637Z] [     172.20.0.1 -> webapi-164] GET   405 1ms    /v2/api/site/default/apgroups/699a23e1e26d48c5855c38f4
+[2026-02-21T21:30:09,639Z] [     172.20.0.1 -> webapi-168] GET   200 1ms    /v2/api/site/default/apgroups
+[2026-02-21T21:30:09,643Z] [     172.20.0.1 -> webapi-164] GET   200 0ms    /api/s/default/rest/wlanconf/699a23e1e26d48c5855c38f5
+[2026-02-21T21:30:09,835Z] [     172.20.0.1 -> webapi-164] DELETE 200 1ms    /api/s/default/rest/wlanconf/699a23e1e26d48c5855c38f5
+[2026-02-21T21:30:09,853Z] [     172.20.0.1 -> webapi-168] DELETE 204 2ms    /v2/api/site/default/apgroups/699a23e1e26d48c5855c38f4
+[2026-02-21T21:30:31,371Z] [     172.20.0.1 -> webapi-171] POST  201 2ms    /v2/api/site/default/apgroups
+[2026-02-21T21:30:31,391Z] [     172.20.0.1 -> webapi-168] GET   200 1ms    /v2/api/site/default/apgroups
+[2026-02-21T21:30:31,534Z] [     172.20.0.1 -> webapi-175] GET   200 2ms    /v2/api/site/default/apgroups
+[2026-02-21T21:30:31,677Z] [     172.20.0.1 -> webapi-169] GET   405 1ms    /v2/api/site/default/apgroups/699a23f7e26d48c5855c38f6
+[2026-02-21T21:30:31,679Z] [     172.20.0.1 -> webapi-171] GET   200 1ms    /v2/api/site/default/apgroups
+[2026-02-21T21:30:31,682Z] [     172.20.0.1 -> webapi-168] GET   200 1ms    /v2/api/site/default/apgroups
+[2026-02-21T21:30:31,876Z] [     172.20.0.1 -> webapi-175] DELETE 204 2ms    /v2/api/site/default/apgroups/699a23f7e26d48c5855c38f6
+[2026-02-21T21:30:32,114Z] [     172.20.0.1 -> webapi-169] GET   200 1ms    /api/s/default/rest/networkconf
+[2026-02-21T21:30:32,319Z] [     172.20.0.1 -> webapi-173] GET   200 1ms    /api/s/default/rest/networkconf
+[2026-02-21T21:30:32,461Z] [     172.20.0.1 -> webapi-172] GET   200 1ms    /api/s/default/rest/networkconf
+[2026-02-21T21:30:32,991Z] [     172.20.0.1 -> webapi-168] POST  201 2ms    /v2/api/site/default/apgroups
+[2026-02-21T21:30:33,254Z] [     172.20.0.1 -> webapi-174] GET   405 1ms    /v2/api/site/default/apgroups/699a23f8e26d48c5855c38f7
+[2026-02-21T21:30:33,256Z] [     172.20.0.1 -> webapi-172] GET   200 1ms    /v2/api/site/default/apgroups
+[2026-02-21T21:30:33,445Z] [     172.20.0.1 -> webapi-168] DELETE 204 2ms    /v2/api/site/default/apgroups/699a23f8e26d48c5855c38f7
+[2026-02-21T21:30:33,821Z] [     172.20.0.1 -> webapi-175] POST  200 2ms    /api/s/default/rest/firewallgroup
+[2026-02-21T21:30:34,088Z] [     172.20.0.1 -> webapi-169] GET   200 1ms    /api/s/default/rest/firewallgroup/699a23f9e26d48c5855c38f8
+[2026-02-21T21:30:34,276Z] [     172.20.0.1 -> webapi-173] DELETE 200 2ms    /api/s/default/rest/firewallgroup/699a23f9e26d48c5855c38f8
+[2026-02-21T21:30:34,648Z] [     172.20.0.1 -> webapi-164] POST  200 1ms    /api/s/default/rest/firewallrule
+[2026-02-21T21:30:34,915Z] [     172.20.0.1 -> webapi-173] GET   200 1ms    /api/s/default/rest/firewallrule/699a23fae26d48c5855c38f9
+[2026-02-21T21:30:35,056Z] [     172.20.0.1 -> webapi-164] GET   200 1ms    /api/s/default/rest/firewallrule/699a23fae26d48c5855c38f9
+[2026-02-21T21:30:35,192Z] [     172.20.0.1 -> webapi-170] PUT   200 2ms    /api/s/default/rest/firewallrule/699a23fae26d48c5855c38f9
+[2026-02-21T21:30:35,463Z] [     172.20.0.1 -> webapi-174] GET   200 1ms    /api/s/default/rest/firewallrule/699a23fae26d48c5855c38f9
+[2026-02-21T21:30:35,659Z] [     172.20.0.1 -> webapi-171] DELETE 200 1ms    /api/s/default/rest/firewallrule/699a23fae26d48c5855c38f9
+[2026-02-21T21:30:36,028Z] [     172.20.0.1 -> webapi-175] POST  200 3ms    /api/s/default/rest/networkconf
+[2026-02-21T21:30:36,301Z] [     172.20.0.1 -> webapi-169] GET   200 1ms    /api/s/default/rest/networkconf/699a23fce26d48c5855c38fa
+[2026-02-21T21:30:36,437Z] [     172.20.0.1 -> webapi-173] GET   200 1ms    /api/s/default/rest/networkconf/699a23fce26d48c5855c38fa
+[2026-02-21T21:30:36,570Z] [     172.20.0.1 -> webapi-172] PUT   200 3ms    /api/s/default/rest/networkconf/699a23fce26d48c5855c38fa
+[2026-02-21T21:30:36,833Z] [     172.20.0.1 -> webapi-168] GET   200 1ms    /api/s/default/rest/networkconf/699a23fce26d48c5855c38fa
+[2026-02-21T21:30:37,026Z] [     172.20.0.1 -> webapi-175] DELETE 200 3ms    /api/s/default/rest/networkconf/699a23fce26d48c5855c38fa
+[2026-02-21T21:30:37,447Z] [     172.20.0.1 -> webapi-171] POST  200 54ms   /api/s/default/rest/portforward
+[2026-02-21T21:30:37,728Z] [     172.20.0.1 -> webapi-176] GET   200 1ms    /api/s/default/rest/portforward/699a23fde26d48c5855c38fb
+[2026-02-21T21:30:37,916Z] [     172.20.0.1 -> webapi-164] DELETE 200 1ms    /api/s/default/rest/portforward/699a23fde26d48c5855c38fb
+[2026-02-21T21:30:38,272Z] [     172.20.0.1 -> webapi-173] POST  200 1ms    /api/s/default/rest/portconf
+[2026-02-21T21:30:38,532Z] [     172.20.0.1 -> webapi-172] GET   200 1ms    /api/s/default/rest/portconf/699a23fee26d48c5855c38fc
+[2026-02-21T21:30:38,723Z] [     172.20.0.1 -> webapi-168] DELETE 200 1ms    /api/s/default/rest/portconf/699a23fee26d48c5855c38fc
+[2026-02-21T21:30:39,082Z] [     172.20.0.1 -> webapi-174] POST  200 1ms    /api/s/default/rest/radiusprofile
+[2026-02-21T21:30:39,350Z] [     172.20.0.1 -> webapi-171] GET   200 1ms    /api/s/default/rest/radiusprofile/699a23ffe26d48c5855c38fd
+[2026-02-21T21:30:39,541Z] [     172.20.0.1 -> webapi-176] DELETE 200 1ms    /api/s/default/rest/radiusprofile/699a23ffe26d48c5855c38fd
+[2026-02-21T21:30:39,909Z] [     172.20.0.1 -> webapi-169] POST  200 4ms    /v2/api/site/default/static-dns
+[2026-02-21T21:30:40,174Z] [     172.20.0.1 -> webapi-173] GET   405 1ms    /v2/api/site/default/static-dns/699a23ffe26d48c5855c38fe
+[2026-02-21T21:30:40,176Z] [     172.20.0.1 -> webapi-176] GET   200 1ms    /v2/api/site/default/static-dns
+[2026-02-21T21:30:40,366Z] [     172.20.0.1 -> webapi-164] DELETE 200 2ms    /v2/api/site/default/static-dns/699a23ffe26d48c5855c38fe
+[2026-02-21T21:30:40,735Z] [     172.20.0.1 -> webapi-170] POST  200 2ms    /api/s/default/rest/routing
+[2026-02-21T21:30:41,000Z] [     172.20.0.1 -> webapi-174] GET   200 1ms    /api/s/default/rest/routing/699a2400e26d48c5855c38ff
+[2026-02-21T21:30:41,193Z] [     172.20.0.1 -> webapi-171] DELETE 200 1ms    /api/s/default/rest/routing/699a2400e26d48c5855c38ff
+[2026-02-21T21:30:41,562Z] [     172.20.0.1 -> webapi-175] POST  201 3ms    /v2/api/site/default/trafficrules
+[2026-02-21T21:30:41,829Z] [     172.20.0.1 -> webapi-169] GET   405 1ms    /v2/api/site/default/trafficrules/699a2401e26d48c5855c3900
+[2026-02-21T21:30:41,832Z] [     172.20.0.1 -> webapi-171] GET   200 2ms    /v2/api/site/default/trafficrules
+[2026-02-21T21:30:42,021Z] [     172.20.0.1 -> webapi-176] DELETE 200 2ms    /v2/api/site/default/trafficrules/699a2401e26d48c5855c3900
+[2026-02-21T21:30:42,383Z] [     172.20.0.1 -> webapi-164] POST  200 1ms    /api/s/default/rest/usergroup
+[2026-02-21T21:30:42,649Z] [     172.20.0.1 -> webapi-170] GET   200 1ms    /api/s/default/rest/usergroup/699a2402e26d48c5855c3901
+[2026-02-21T21:30:42,841Z] [     172.20.0.1 -> webapi-174] DELETE 200 2ms    /api/s/default/rest/usergroup/699a2402e26d48c5855c3901
+[2026-02-21T21:30:43,205Z] [     172.20.0.1 -> webapi-168] POST  200 2ms    /api/s/default/rest/user
+[2026-02-21T21:30:43,466Z] [     172.20.0.1 -> webapi-175] GET   200 1ms    /api/s/default/rest/user/699a2403e26d48c5855c3902
+[2026-02-21T21:30:43,662Z] [     172.20.0.1 -> webapi-169] POST  200 6ms    /api/s/default/cmd/stamgr
+[2026-02-21T21:30:44,031Z] [     172.20.0.1 -> webapi-176] POST  201 2ms    /v2/api/site/default/apgroups
+[2026-02-21T21:30:44,042Z] [     172.20.0.1 -> webapi-175] POST  200 3ms    /api/s/default/rest/wlanconf
+[2026-02-21T21:30:44,360Z] [     172.20.0.1 -> webapi-169] GET   405 1ms    /v2/api/site/default/apgroups/699a2404e26d48c5855c3903
+[2026-02-21T21:30:44,362Z] [     172.20.0.1 -> webapi-171] GET   200 1ms    /v2/api/site/default/apgroups
+[2026-02-21T21:30:44,366Z] [     172.20.0.1 -> webapi-168] GET   200 0ms    /api/s/default/rest/wlanconf/699a2404e26d48c5855c3904
+[2026-02-21T21:30:44,564Z] [     172.20.0.1 -> webapi-175] DELETE 200 1ms    /api/s/default/rest/wlanconf/699a2404e26d48c5855c3904
+[2026-02-21T21:30:44,582Z] [     172.20.0.1 -> webapi-171] DELETE 204 1ms    /v2/api/site/default/apgroups/699a2404e26d48c5855c3903
