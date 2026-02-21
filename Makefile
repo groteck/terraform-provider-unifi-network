@@ -18,7 +18,7 @@ test:
 	go test ./... -v
 
 testacc:
-	TF_ACC=1 ASDF_TERRAFORM_VERSION=1.10.0 go test ./... -v $(TESTARGS) -timeout 120m
+	TF_ACC=1 go test ./... -v $(TESTARGS) -timeout 120m
 
 lint:
 	golangci-lint run
