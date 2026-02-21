@@ -1,8 +1,8 @@
 package provider
 
 import (
-	"github.com/jlopez/terraform-provider-unifi-network/internal/client"
 	"context"
+	client "github.com/jlopez/terraform-provider-unifi-network/internal/client"
 
 	"github.com/hashicorp/terraform-plugin-framework/path"
 	"github.com/hashicorp/terraform-plugin-framework/resource"
@@ -172,20 +172,23 @@ func (r *trafficRuleResource) ImportState(ctx context.Context, req resource.Impo
 
 func (r *trafficRuleResource) syncState(data *trafficRuleResourceModel, rule *client.TrafficRule) {
 	data.ID = types.StringValue(rule.ID)
-	// If the API returns an empty name, keep the one we had in state
+
+	// Handle Name: if API returns empty, keep existing if it exists
 	if rule.Name != "" {
 		data.Name = types.StringValue(rule.Name)
-	} else if data.Name.IsUnknown() {
+	} else if data.Name.IsNull() || data.Name.IsUnknown() {
 		data.Name = types.StringNull()
 	}
+	// Otherwise leave data.Name as is (from plan or state)
 
 	data.Enabled = utils.BoolValue(rule.Enabled)
 	data.Action = types.StringValue(rule.Action)
 	data.MatchingTarget = types.StringValue(rule.MatchingTarget)
 
+	// Handle Description: same logic
 	if rule.Description != "" {
 		data.Description = types.StringValue(rule.Description)
-	} else if data.Description.IsUnknown() {
+	} else if data.Description.IsNull() || data.Description.IsUnknown() {
 		data.Description = types.StringNull()
 	}
 }

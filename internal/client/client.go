@@ -177,16 +177,16 @@ func (c *Client) doRequest(ctx context.Context, method, path string, body any, r
 	}
 
 	if result != nil {
+		bodyContent, err := io.ReadAll(resp.Body)
+		if err != nil {
+			return err
+		}
+
 		var apiResp struct {
 			Meta struct {
 				RC string `json:"rc"`
 			} `json:"meta"`
 			Data json.RawMessage `json:"data"`
-		}
-
-		bodyContent, err := io.ReadAll(resp.Body)
-		if err != nil {
-			return err
 		}
 
 		if err := json.Unmarshal(bodyContent, &apiResp); err == nil && apiResp.Meta.RC != "" {
@@ -215,7 +215,7 @@ func (c *Client) doV2(ctx context.Context, method, endpoint string, body, result
 	return c.doRequest(ctx, method, path, body, result)
 }
 
-// Helpers
+// Generic CRUD Helpers
 
 func createResource[T any](ctx context.Context, c *Client, endpoint string, item *T) (*T, error) {
 	var items []T
@@ -262,7 +262,7 @@ func deleteResource(ctx context.Context, c *Client, endpoint, id string) error {
 	return c.doREST(ctx, "DELETE", endpoint+"/"+id, nil, nil)
 }
 
-// Network CRUD
+// Resource Methods
 
 func (c *Client) CreateNetwork(ctx context.Context, network *Network) (*Network, error) {
 	return createResource(ctx, c, "networkconf", network)
@@ -284,8 +284,6 @@ func (c *Client) DeleteNetwork(ctx context.Context, id string) error {
 	return deleteResource(ctx, c, "networkconf", id)
 }
 
-// FirewallRule CRUD
-
 func (c *Client) CreateFirewallRule(ctx context.Context, rule *FirewallRule) (*FirewallRule, error) {
 	return createResource(ctx, c, "firewallrule", rule)
 }
@@ -301,8 +299,6 @@ func (c *Client) UpdateFirewallRule(ctx context.Context, id string, rule *Firewa
 func (c *Client) DeleteFirewallRule(ctx context.Context, id string) error {
 	return deleteResource(ctx, c, "firewallrule", id)
 }
-
-// PortProfile CRUD
 
 func (c *Client) CreatePortProfile(ctx context.Context, profile *PortConf) (*PortConf, error) {
 	return createResource(ctx, c, "portconf", profile)
@@ -324,8 +320,6 @@ func (c *Client) DeletePortProfile(ctx context.Context, id string) error {
 	return deleteResource(ctx, c, "portconf", id)
 }
 
-// UserGroup CRUD
-
 func (c *Client) CreateUserGroup(ctx context.Context, group *UserGroup) (*UserGroup, error) {
 	return createResource(ctx, c, "usergroup", group)
 }
@@ -345,8 +339,6 @@ func (c *Client) UpdateUserGroup(ctx context.Context, id string, group *UserGrou
 func (c *Client) DeleteUserGroup(ctx context.Context, id string) error {
 	return deleteResource(ctx, c, "usergroup", id)
 }
-
-// APGroup CRUD
 
 type apGroupCreateRequest struct {
 	Name        string   `json:"name"`
@@ -413,8 +405,6 @@ func (c *Client) DeleteAPGroup(ctx context.Context, id string) error {
 	return c.doV2(ctx, "DELETE", "apgroups/"+id, nil, nil)
 }
 
-// WLAN CRUD
-
 func (c *Client) CreateWLAN(ctx context.Context, wlan *WLANConf) (*WLANConf, error) {
 	return createResource(ctx, c, "wlanconf", wlan)
 }
@@ -434,8 +424,6 @@ func (c *Client) UpdateWLAN(ctx context.Context, id string, wlan *WLANConf) (*WL
 func (c *Client) DeleteWLAN(ctx context.Context, id string) error {
 	return deleteResource(ctx, c, "wlanconf", id)
 }
-
-// FirewallGroup CRUD
 
 func (c *Client) CreateFirewallGroup(ctx context.Context, group *FirewallGroup) (*FirewallGroup, error) {
 	return createResource(ctx, c, "firewallgroup", group)
@@ -496,8 +484,6 @@ func (c *Client) DeleteUser(ctx context.Context, mac string) error {
 	return c.doRequest(ctx, "POST", path, payload, nil)
 }
 
-// RADIUSProfile CRUD
-
 func (c *Client) CreateRADIUSProfile(ctx context.Context, profile *RADIUSProfile) (*RADIUSProfile, error) {
 	return createResource(ctx, c, "radiusprofile", profile)
 }
@@ -518,8 +504,6 @@ func (c *Client) DeleteRADIUSProfile(ctx context.Context, id string) error {
 	return deleteResource(ctx, c, "radiusprofile", id)
 }
 
-// PortForward CRUD
-
 func (c *Client) CreatePortForward(ctx context.Context, forward *PortForward) (*PortForward, error) {
 	return createResource(ctx, c, "portforward", forward)
 }
@@ -535,8 +519,6 @@ func (c *Client) UpdatePortForward(ctx context.Context, id string, forward *Port
 func (c *Client) DeletePortForward(ctx context.Context, id string) error {
 	return deleteResource(ctx, c, "portforward", id)
 }
-
-// Routing CRUD
 
 func (c *Client) CreateStaticRoute(ctx context.Context, route *Routing) (*Routing, error) {
 	req := map[string]any{
@@ -599,8 +581,6 @@ func (c *Client) UpdateStaticRoute(ctx context.Context, id string, route *Routin
 func (c *Client) DeleteStaticRoute(ctx context.Context, id string) error {
 	return deleteResource(ctx, c, "routing", id)
 }
-
-// StaticDNS CRUD
 
 func (c *Client) CreateStaticDNS(ctx context.Context, record *StaticDNS) (*StaticDNS, error) {
 	req := map[string]any{
@@ -701,8 +681,6 @@ func (c *Client) UpdateStaticDNS(ctx context.Context, id string, record *StaticD
 func (c *Client) DeleteStaticDNS(ctx context.Context, id string) error {
 	return c.doV2(ctx, "DELETE", "static-dns/"+id, nil, nil)
 }
-
-// TrafficRule CRUD
 
 func (c *Client) CreateTrafficRule(ctx context.Context, rule *TrafficRule) (*TrafficRule, error) {
 	req := map[string]any{

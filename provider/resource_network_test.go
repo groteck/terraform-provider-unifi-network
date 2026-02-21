@@ -14,20 +14,20 @@ func TestAccNetworkResource(t *testing.T) {
 		Steps: []resource.TestStep{
 			// Create and Read
 			{
-				Config: testAccNetworkResourceConfig("Test Network", 100, "192.168.100.1/24"),
+				Config: testAccNetworkResourceConfig("Test Network CI", 200, "192.168.200.1/24"),
 				Check: resource.ComposeTestCheckFunc(
-					resource.TestCheckResourceAttr("unifi_network.test", "name", "Test Network"),
-					resource.TestCheckResourceAttr("unifi_network.test", "vlan_id", "100"),
-					resource.TestCheckResourceAttr("unifi_network.test", "subnet", "192.168.100.1/24"),
+					resource.TestCheckResourceAttr("unifi_network.test", "name", "Test Network CI"),
+					resource.TestCheckResourceAttr("unifi_network.test", "vlan_id", "200"),
+					resource.TestCheckResourceAttr("unifi_network.test", "subnet", "192.168.200.1/24"),
 				),
 			},
 			// Update and Read
 			{
-				Config: testAccNetworkResourceConfig("Updated Network", 101, "192.168.101.1/24"),
+				Config: testAccNetworkResourceConfig("Updated Network CI", 201, "192.168.201.1/24"),
 				Check: resource.ComposeTestCheckFunc(
-					resource.TestCheckResourceAttr("unifi_network.test", "name", "Updated Network"),
-					resource.TestCheckResourceAttr("unifi_network.test", "vlan_id", "101"),
-					resource.TestCheckResourceAttr("unifi_network.test", "subnet", "192.168.101.1/24"),
+					resource.TestCheckResourceAttr("unifi_network.test", "name", "Updated Network CI"),
+					resource.TestCheckResourceAttr("unifi_network.test", "vlan_id", "201"),
+					resource.TestCheckResourceAttr("unifi_network.test", "subnet", "192.168.201.1/24"),
 				),
 			},
 			// Delete testing automatically occurs in TestCase
@@ -47,6 +47,7 @@ resource "unifi_network" "test" {
   name    = %[2]q
   vlan_id = %[3]d
   subnet  = %[4]q
+  purpose = "corporate"
 }
 `, getProviderConfig(), name, vlan, subnet)
 }

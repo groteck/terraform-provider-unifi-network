@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/provider/schema"
 	"github.com/hashicorp/terraform-plugin-framework/resource"
 	"github.com/hashicorp/terraform-plugin-framework/types"
-	"github.com/jlopez/terraform-provider-unifi-network/internal/client"
+	client "github.com/jlopez/terraform-provider-unifi-network/internal/client"
 )
 
 var _ provider.Provider = &unifiProvider{}

@@ -6,7 +6,7 @@ import (
 
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
 	"github.com/hashicorp/terraform-plugin-framework/resource"
-	"github.com/jlopez/terraform-provider-unifi-network/internal/client"
+	client "github.com/jlopez/terraform-provider-unifi-network/internal/client"
 )
 
 // BaseResource implements common methods for all resources.

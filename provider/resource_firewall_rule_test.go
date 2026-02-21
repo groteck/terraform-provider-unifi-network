@@ -37,6 +37,10 @@ func testAccFirewallRuleResourceConfig(name, ruleset, action, protocol string) s
 	return fmt.Sprintf(`
 %s
 
+data "unifi_network" "default" {
+  name = "Default"
+}
+
 resource "unifi_firewall_rule" "test" {
   name     = %[2]q
   ruleset  = %[3]q
@@ -44,8 +48,10 @@ resource "unifi_firewall_rule" "test" {
   protocol = %[5]q
   enabled  = true
   
-  src_network_type = "ADDRv4"
-  dst_network_type = "ADDRv4"
+  src_network_type = "NETv4"
+  src_network_id   = data.unifi_network.default.id
+  dst_network_type = "NETv4"
+  dst_network_id   = data.unifi_network.default.id
 
   state_new         = true
   state_established = true
@@ -55,6 +61,5 @@ resource "unifi_firewall_rule" "test" {
   rule_index        = 2000
   logging           = false
 }
-
 `, getProviderConfig(), name, ruleset, action, protocol)
 }

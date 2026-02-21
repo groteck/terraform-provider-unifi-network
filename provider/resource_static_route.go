@@ -1,7 +1,7 @@
 package provider
 
 import (
-	"github.com/jlopez/terraform-provider-unifi-network/internal/client"
+	client "github.com/jlopez/terraform-provider-unifi-network/internal/client"
 	"context"
 
 	"github.com/hashicorp/terraform-plugin-framework-validators/int64validator"

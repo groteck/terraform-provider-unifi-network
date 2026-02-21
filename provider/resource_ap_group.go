@@ -1,8 +1,8 @@
 package provider
 
 import (
-	"github.com/jlopez/terraform-provider-unifi-network/internal/client"
 	"context"
+	client "github.com/jlopez/terraform-provider-unifi-network/internal/client"
 
 	"github.com/hashicorp/terraform-plugin-framework/path"
 	"github.com/hashicorp/terraform-plugin-framework/resource"
@@ -72,7 +72,7 @@ func (r *apGroupResource) Create(ctx context.Context, req resource.CreateRequest
 		return
 	}
 
-	var deviceMACs []string
+	deviceMACs := []string{}
 	if !data.DeviceMACs.IsNull() && !data.DeviceMACs.IsUnknown() {
 		resp.Diagnostics.Append(data.DeviceMACs.ElementsAs(ctx, &deviceMACs, false)...)
 		if resp.Diagnostics.HasError() {
@@ -120,7 +120,7 @@ func (r *apGroupResource) Update(ctx context.Context, req resource.UpdateRequest
 		return
 	}
 
-	var deviceMACs []string
+	deviceMACs := []string{}
 	if !data.DeviceMACs.IsNull() && !data.DeviceMACs.IsUnknown() {
 		resp.Diagnostics.Append(data.DeviceMACs.ElementsAs(ctx, &deviceMACs, false)...)
 		if resp.Diagnostics.HasError() {

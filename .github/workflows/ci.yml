@@ -28,8 +28,10 @@ jobs:
       - name: Acceptance Test
         run: |
           docker compose up -d
-          # Wait for UniFi to be ready
-          timeout 300s bash -c 'until curl -k -s https://localhost:8443 > /dev/null; do sleep 5; done'
+          # Wait for UniFi to be ready (API should return JSON, not HTML)
+          echo "Waiting for UniFi API to be ready..."
+          timeout 300s bash -c 'until curl -k -s -H "Accept: application/json" https://localhost:8443/api/s/default/self | grep -q "rc"; do echo "Still waiting..."; sleep 10; done'
+          echo "UniFi API is ready!"
           make testacc
         env:
           TF_ACC: "1"
