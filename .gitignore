@@ -31,3 +31,6 @@ terraform-provider-unifi-network
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# UniFi Test Environment Config
+tests/env/config/
