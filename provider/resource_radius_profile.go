@@ -1,6 +1,7 @@
 package provider
 
 import (
+	"github.com/jlopez/terraform-provider-unifi-network/internal/client"
 	"context"
 
 	"github.com/hashicorp/terraform-plugin-framework/attr"
@@ -11,7 +12,6 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/stringplanmodifier"
 	"github.com/hashicorp/terraform-plugin-framework/types"
 	"github.com/jlopez/terraform-provider-unifi-network/internal/provider/utils"
-	"github.com/resnickio/unifi-go-sdk/pkg/unifi"
 )
 
 var _ resource.Resource = &radiusProfileResource{}
@@ -91,20 +91,20 @@ func (r *radiusProfileResource) Create(ctx context.Context, req resource.CreateR
 		return
 	}
 
-	servers := make([]unifi.RADIUSServer, len(authServers))
+	servers := make([]client.RADIUSServer, len(authServers))
 	for i, s := range authServers {
 		port := int(s.Port.ValueInt64())
 		if port == 0 {
 			port = 1812
 		}
-		servers[i] = unifi.RADIUSServer{
+		servers[i] = client.RADIUSServer{
 			IP:      s.IP.ValueString(),
 			Port:    &port,
 			XSecret: s.Secret.ValueString(),
 		}
 	}
 
-	profile := &unifi.RADIUSProfile{
+	profile := &client.RADIUSProfile{
 		Name:        data.Name.ValueString(),
 		AuthServers: servers,
 	}
@@ -149,17 +149,17 @@ func (r *radiusProfileResource) Update(ctx context.Context, req resource.UpdateR
 		return
 	}
 
-	servers := make([]unifi.RADIUSServer, len(authServers))
+	servers := make([]client.RADIUSServer, len(authServers))
 	for i, s := range authServers {
 		port := int(s.Port.ValueInt64())
-		servers[i] = unifi.RADIUSServer{
+		servers[i] = client.RADIUSServer{
 			IP:      s.IP.ValueString(),
 			Port:    &port,
 			XSecret: s.Secret.ValueString(),
 		}
 	}
 
-	profile := &unifi.RADIUSProfile{
+	profile := &client.RADIUSProfile{
 		ID:          data.ID.ValueString(),
 		Name:        data.Name.ValueString(),
 		AuthServers: servers,
@@ -192,7 +192,7 @@ func (r *radiusProfileResource) ImportState(ctx context.Context, req resource.Im
 	resource.ImportStatePassthroughID(ctx, path.Root("id"), req, resp)
 }
 
-func (r *radiusProfileResource) syncState(ctx context.Context, data *radiusProfileResourceModel, profile *unifi.RADIUSProfile) {
+func (r *radiusProfileResource) syncState(ctx context.Context, data *radiusProfileResourceModel, profile *client.RADIUSProfile) {
 	data.ID = types.StringValue(profile.ID)
 	data.Name = types.StringValue(profile.Name)
 

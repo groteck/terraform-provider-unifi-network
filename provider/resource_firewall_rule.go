@@ -1,6 +1,7 @@
 package provider
 
 import (
+	"github.com/jlopez/terraform-provider-unifi-network/internal/client"
 	"context"
 
 	"github.com/hashicorp/terraform-plugin-framework/path"
@@ -13,7 +14,6 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/stringplanmodifier"
 	"github.com/hashicorp/terraform-plugin-framework/types"
 	"github.com/jlopez/terraform-provider-unifi-network/internal/provider/utils"
-	"github.com/resnickio/unifi-go-sdk/pkg/unifi"
 )
 
 var _ resource.Resource = &firewallRuleResource{}
@@ -205,7 +205,7 @@ func (r *firewallRuleResource) Create(ctx context.Context, req resource.CreateRe
 		return
 	}
 
-	rule := &unifi.FirewallRule{
+	rule := &client.FirewallRule{
 		Name:               data.Name.ValueString(),
 		Enabled:            utils.BoolPtr(data.Enabled),
 		Ruleset:            data.Ruleset.ValueString(),
@@ -260,7 +260,7 @@ func (r *firewallRuleResource) Update(ctx context.Context, req resource.UpdateRe
 		return
 	}
 
-	rule := &unifi.FirewallRule{
+	rule := &client.FirewallRule{
 		ID:                 data.ID.ValueString(),
 		Name:               data.Name.ValueString(),
 		Enabled:            utils.BoolPtr(data.Enabled),
@@ -309,7 +309,7 @@ func (r *firewallRuleResource) ImportState(ctx context.Context, req resource.Imp
 	resource.ImportStatePassthroughID(ctx, path.Root("id"), req, resp)
 }
 
-func (r *firewallRuleResource) syncState(data *firewallRuleResourceModel, rule *unifi.FirewallRule) {
+func (r *firewallRuleResource) syncState(data *firewallRuleResourceModel, rule *client.FirewallRule) {
 	data.ID = types.StringValue(rule.ID)
 	data.Name = types.StringValue(rule.Name)
 	data.Enabled = utils.BoolValue(rule.Enabled)

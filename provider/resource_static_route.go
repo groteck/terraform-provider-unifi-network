@@ -1,6 +1,7 @@
 package provider
 
 import (
+	"github.com/jlopez/terraform-provider-unifi-network/internal/client"
 	"context"
 
 	"github.com/hashicorp/terraform-plugin-framework-validators/int64validator"
@@ -13,7 +14,6 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/schema/validator"
 	"github.com/hashicorp/terraform-plugin-framework/types"
 	"github.com/jlopez/terraform-provider-unifi-network/internal/provider/utils"
-	"github.com/resnickio/unifi-go-sdk/pkg/unifi"
 )
 
 var _ resource.Resource = &staticRouteResource{}
@@ -103,7 +103,7 @@ func (r *staticRouteResource) Create(ctx context.Context, req resource.CreateReq
 		return
 	}
 
-	route := &unifi.Routing{
+	route := &client.Routing{
 		Name:                data.Name.ValueString(),
 		Enabled:             utils.BoolPtr(data.Enabled),
 		Type:                data.Type.ValueString(),
@@ -150,7 +150,7 @@ func (r *staticRouteResource) Update(ctx context.Context, req resource.UpdateReq
 		return
 	}
 
-	route := &unifi.Routing{
+	route := &client.Routing{
 		ID:                  data.ID.ValueString(),
 		Name:                data.Name.ValueString(),
 		Enabled:             utils.BoolPtr(data.Enabled),
@@ -187,7 +187,7 @@ func (r *staticRouteResource) ImportState(ctx context.Context, req resource.Impo
 	resource.ImportStatePassthroughID(ctx, path.Root("id"), req, resp)
 }
 
-func (r *staticRouteResource) syncState(data *staticRouteResourceModel, route *unifi.Routing) {
+func (r *staticRouteResource) syncState(data *staticRouteResourceModel, route *client.Routing) {
 	data.ID = types.StringValue(route.ID)
 	data.Name = types.StringValue(route.Name)
 	data.Enabled = utils.BoolValue(route.Enabled)

@@ -1,6 +1,7 @@
 package provider
 
 import (
+	"github.com/jlopez/terraform-provider-unifi-network/internal/client"
 	"context"
 
 	"github.com/hashicorp/terraform-plugin-framework/path"
@@ -10,7 +11,6 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/stringplanmodifier"
 	"github.com/hashicorp/terraform-plugin-framework/types"
 	"github.com/jlopez/terraform-provider-unifi-network/internal/provider/utils"
-	"github.com/resnickio/unifi-go-sdk/pkg/unifi"
 )
 
 var _ resource.Resource = &apGroupResource{}
@@ -80,7 +80,7 @@ func (r *apGroupResource) Create(ctx context.Context, req resource.CreateRequest
 		}
 	}
 
-	group := &unifi.APGroup{
+	group := &client.APGroup{
 		Name:        data.Name.ValueString(),
 		DeviceMACs:  deviceMACs,
 		ForWLANConf: utils.BoolPtr(data.ForWLANConf),
@@ -128,7 +128,7 @@ func (r *apGroupResource) Update(ctx context.Context, req resource.UpdateRequest
 		}
 	}
 
-	group := &unifi.APGroup{
+	group := &client.APGroup{
 		ID:          data.ID.ValueString(),
 		Name:        data.Name.ValueString(),
 		DeviceMACs:  deviceMACs,
@@ -162,7 +162,7 @@ func (r *apGroupResource) ImportState(ctx context.Context, req resource.ImportSt
 	resource.ImportStatePassthroughID(ctx, path.Root("id"), req, resp)
 }
 
-func (r *apGroupResource) syncState(ctx context.Context, data *apGroupResourceModel, group *unifi.APGroup) {
+func (r *apGroupResource) syncState(ctx context.Context, data *apGroupResourceModel, group *client.APGroup) {
 	data.ID = types.StringValue(group.ID)
 	data.Name = types.StringValue(group.Name)
 	data.ForWLANConf = utils.BoolValue(group.ForWLANConf)

@@ -1,6 +1,7 @@
 package provider
 
 import (
+	"github.com/jlopez/terraform-provider-unifi-network/internal/client"
 	"context"
 
 	"github.com/hashicorp/terraform-plugin-framework/path"
@@ -10,7 +11,6 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/stringplanmodifier"
 	"github.com/hashicorp/terraform-plugin-framework/types"
 	"github.com/jlopez/terraform-provider-unifi-network/internal/provider/utils"
-	"github.com/resnickio/unifi-go-sdk/pkg/unifi"
 )
 
 var _ resource.Resource = &userGroupResource{}
@@ -69,7 +69,7 @@ func (r *userGroupResource) Create(ctx context.Context, req resource.CreateReque
 		return
 	}
 
-	group := &unifi.UserGroup{
+	group := &client.UserGroup{
 		Name:           data.Name.ValueString(),
 		QosRateMaxDown: utils.Int64Ptr(data.DownloadLimit),
 		QosRateMaxUp:   utils.Int64Ptr(data.UploadLimit),
@@ -109,7 +109,7 @@ func (r *userGroupResource) Update(ctx context.Context, req resource.UpdateReque
 		return
 	}
 
-	group := &unifi.UserGroup{
+	group := &client.UserGroup{
 		ID:             data.ID.ValueString(),
 		Name:           data.Name.ValueString(),
 		QosRateMaxDown: utils.Int64Ptr(data.DownloadLimit),
@@ -143,7 +143,7 @@ func (r *userGroupResource) ImportState(ctx context.Context, req resource.Import
 	resource.ImportStatePassthroughID(ctx, path.Root("id"), req, resp)
 }
 
-func (r *userGroupResource) syncState(data *userGroupResourceModel, group *unifi.UserGroup) {
+func (r *userGroupResource) syncState(data *userGroupResourceModel, group *client.UserGroup) {
 	data.ID = types.StringValue(group.ID)
 	data.Name = types.StringValue(group.Name)
 	data.DownloadLimit = utils.Int64Value(group.QosRateMaxDown)

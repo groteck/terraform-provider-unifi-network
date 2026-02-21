@@ -1,6 +1,7 @@
 package provider
 
 import (
+	"github.com/jlopez/terraform-provider-unifi-network/internal/client"
 	"context"
 
 	"github.com/hashicorp/terraform-plugin-framework/path"
@@ -9,7 +10,6 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/planmodifier"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/stringplanmodifier"
 	"github.com/hashicorp/terraform-plugin-framework/types"
-	"github.com/resnickio/unifi-go-sdk/pkg/unifi"
 )
 
 var _ resource.Resource = &firewallGroupResource{}
@@ -75,7 +75,7 @@ func (r *firewallGroupResource) Create(ctx context.Context, req resource.CreateR
 		return
 	}
 
-	group := &unifi.FirewallGroup{
+	group := &client.FirewallGroup{
 		Name:         data.Name.ValueString(),
 		GroupType:    data.GroupType.ValueString(),
 		GroupMembers: members,
@@ -121,7 +121,7 @@ func (r *firewallGroupResource) Update(ctx context.Context, req resource.UpdateR
 		return
 	}
 
-	group := &unifi.FirewallGroup{
+	group := &client.FirewallGroup{
 		ID:           data.ID.ValueString(),
 		Name:         data.Name.ValueString(),
 		GroupType:    data.GroupType.ValueString(),
@@ -155,7 +155,7 @@ func (r *firewallGroupResource) ImportState(ctx context.Context, req resource.Im
 	resource.ImportStatePassthroughID(ctx, path.Root("id"), req, resp)
 }
 
-func (r *firewallGroupResource) syncState(ctx context.Context, data *firewallGroupResourceModel, group *unifi.FirewallGroup) {
+func (r *firewallGroupResource) syncState(ctx context.Context, data *firewallGroupResourceModel, group *client.FirewallGroup) {
 	data.ID = types.StringValue(group.ID)
 	data.Name = types.StringValue(group.Name)
 	data.GroupType = types.StringValue(group.GroupType)

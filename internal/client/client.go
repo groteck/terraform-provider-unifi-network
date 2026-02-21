@@ -7,25 +7,36 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"net/http/cookiejar"
 	"net/url"
+	"sync"
 	"time"
 
 	"github.com/hashicorp/go-retryablehttp"
-	"github.com/resnickio/unifi-go-sdk/pkg/unifi"
 )
 
 type Client struct {
-	Network      *unifi.NetworkClient
 	Site         string
 	BaseURL      string
 	APIKey       string
 	IsStandalone bool
 	HTTPClient   *retryablehttp.Client
+
+	username  string
+	password  string
+	mu        sync.RWMutex
+	csrfToken string
+	loggedIn  bool
 }
 
 func NewClient(host, username, password, apiKey, site string, insecure, isStandalone bool) (*Client, error) {
 	if site == "" {
 		site = "default"
+	}
+
+	jar, err := cookiejar.New(nil)
+	if err != nil {
+		return nil, fmt.Errorf("creating cookie jar: %w", err)
 	}
 
 	retryClient := retryablehttp.NewClient()
@@ -39,28 +50,16 @@ func NewClient(host, username, password, apiKey, site string, insecure, isStanda
 		tr.TLSClientConfig = &tls.Config{InsecureSkipVerify: true}
 	}
 	retryClient.HTTPClient.Transport = tr
-
-	cfg := unifi.NetworkClientConfig{
-		BaseURL:            host,
-		Site:               site,
-		Username:           username,
-		Password:           password,
-		APIKey:             apiKey,
-		InsecureSkipVerify: insecure,
-	}
-
-	networkClient, err := unifi.NewNetworkClient(cfg)
-	if err != nil {
-		return nil, fmt.Errorf("failed to initialize unifi network client: %w", err)
-	}
+	retryClient.HTTPClient.Jar = jar
 
 	c := &Client{
-		Network:      networkClient,
 		Site:         site,
 		BaseURL:      host,
 		APIKey:       apiKey,
 		IsStandalone: isStandalone,
 		HTTPClient:   retryClient,
+		username:     username,
+		password:     password,
 	}
 
 	if apiKey == "" {
@@ -73,7 +72,64 @@ func NewClient(host, username, password, apiKey, site string, insecure, isStanda
 }
 
 func (c *Client) Login(ctx context.Context) error {
-	return c.Network.Login(ctx)
+	if c.APIKey != "" {
+		return nil
+	}
+
+	payload := map[string]string{
+		"username": c.username,
+		"password": c.password,
+	}
+	body, err := json.Marshal(payload)
+	if err != nil {
+		return fmt.Errorf("marshaling login payload: %w", err)
+	}
+
+	loginURL := c.BaseURL + "/api/auth/login"
+	req, err := retryablehttp.NewRequestWithContext(ctx, "POST", loginURL, body)
+	if err != nil {
+		return fmt.Errorf("creating login request: %w", err)
+	}
+	req.Header.Set("Content-Type", "application/json")
+
+	resp, err := c.HTTPClient.Do(req)
+	if err != nil {
+		return fmt.Errorf("executing login request: %w", err)
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		return fmt.Errorf("login failed with status: %d", resp.StatusCode)
+	}
+
+	token, _ := c.fetchCSRFToken(ctx)
+
+	c.mu.Lock()
+	c.loggedIn = true
+	c.csrfToken = token
+	c.mu.Unlock()
+
+	return nil
+}
+
+func (c *Client) fetchCSRFToken(ctx context.Context) (string, error) {
+	path := "/api/s/" + url.PathEscape(c.Site) + "/self"
+	if !c.IsStandalone {
+		path = "/proxy/network" + path
+	}
+	csrfURL := c.BaseURL + path
+	req, err := http.NewRequestWithContext(ctx, "GET", csrfURL, nil)
+	if err != nil {
+		return "", err
+	}
+
+	resp, err := c.HTTPClient.HTTPClient.Do(req)
+	if err != nil {
+		return "", err
+	}
+	defer resp.Body.Close()
+
+	return resp.Header.Get("X-Csrf-Token"), nil
 }
 
 func (c *Client) doRequest(ctx context.Context, method, path string, body any, result any) error {
@@ -100,6 +156,13 @@ func (c *Client) doRequest(ctx context.Context, method, path string, body any, r
 
 	if c.APIKey != "" {
 		req.Header.Set("X-API-KEY", c.APIKey)
+	} else {
+		c.mu.RLock()
+		csrfToken := c.csrfToken
+		c.mu.RUnlock()
+		if csrfToken != "" && (method == "POST" || method == "PUT" || method == "DELETE") {
+			req.Header.Set("X-Csrf-Token", csrfToken)
+		}
 	}
 
 	resp, err := c.HTTPClient.Do(req)
@@ -201,19 +264,19 @@ func deleteResource(ctx context.Context, c *Client, endpoint, id string) error {
 
 // Network CRUD
 
-func (c *Client) CreateNetwork(ctx context.Context, network *unifi.Network) (*unifi.Network, error) {
+func (c *Client) CreateNetwork(ctx context.Context, network *Network) (*Network, error) {
 	return createResource(ctx, c, "networkconf", network)
 }
 
-func (c *Client) GetNetwork(ctx context.Context, id string) (*unifi.Network, error) {
-	return getResource[unifi.Network](ctx, c, "networkconf", id)
+func (c *Client) GetNetwork(ctx context.Context, id string) (*Network, error) {
+	return getResource[Network](ctx, c, "networkconf", id)
 }
 
-func (c *Client) ListNetworks(ctx context.Context) ([]unifi.Network, error) {
-	return listResources[unifi.Network](ctx, c, "networkconf")
+func (c *Client) ListNetworks(ctx context.Context) ([]Network, error) {
+	return listResources[Network](ctx, c, "networkconf")
 }
 
-func (c *Client) UpdateNetwork(ctx context.Context, id string, network *unifi.Network) (*unifi.Network, error) {
+func (c *Client) UpdateNetwork(ctx context.Context, id string, network *Network) (*Network, error) {
 	return updateResource(ctx, c, "networkconf", id, network)
 }
 
@@ -223,15 +286,15 @@ func (c *Client) DeleteNetwork(ctx context.Context, id string) error {
 
 // FirewallRule CRUD
 
-func (c *Client) CreateFirewallRule(ctx context.Context, rule *unifi.FirewallRule) (*unifi.FirewallRule, error) {
+func (c *Client) CreateFirewallRule(ctx context.Context, rule *FirewallRule) (*FirewallRule, error) {
 	return createResource(ctx, c, "firewallrule", rule)
 }
 
-func (c *Client) GetFirewallRule(ctx context.Context, id string) (*unifi.FirewallRule, error) {
-	return getResource[unifi.FirewallRule](ctx, c, "firewallrule", id)
+func (c *Client) GetFirewallRule(ctx context.Context, id string) (*FirewallRule, error) {
+	return getResource[FirewallRule](ctx, c, "firewallrule", id)
 }
 
-func (c *Client) UpdateFirewallRule(ctx context.Context, id string, rule *unifi.FirewallRule) (*unifi.FirewallRule, error) {
+func (c *Client) UpdateFirewallRule(ctx context.Context, id string, rule *FirewallRule) (*FirewallRule, error) {
 	return updateResource(ctx, c, "firewallrule", id, rule)
 }
 
@@ -241,19 +304,19 @@ func (c *Client) DeleteFirewallRule(ctx context.Context, id string) error {
 
 // PortProfile CRUD
 
-func (c *Client) CreatePortProfile(ctx context.Context, profile *unifi.PortConf) (*unifi.PortConf, error) {
+func (c *Client) CreatePortProfile(ctx context.Context, profile *PortConf) (*PortConf, error) {
 	return createResource(ctx, c, "portconf", profile)
 }
 
-func (c *Client) GetPortProfile(ctx context.Context, id string) (*unifi.PortConf, error) {
-	return getResource[unifi.PortConf](ctx, c, "portconf", id)
+func (c *Client) GetPortProfile(ctx context.Context, id string) (*PortConf, error) {
+	return getResource[PortConf](ctx, c, "portconf", id)
 }
 
-func (c *Client) ListPortProfiles(ctx context.Context) ([]unifi.PortConf, error) {
-	return listResources[unifi.PortConf](ctx, c, "portconf")
+func (c *Client) ListPortProfiles(ctx context.Context) ([]PortConf, error) {
+	return listResources[PortConf](ctx, c, "portconf")
 }
 
-func (c *Client) UpdatePortProfile(ctx context.Context, id string, profile *unifi.PortConf) (*unifi.PortConf, error) {
+func (c *Client) UpdatePortProfile(ctx context.Context, id string, profile *PortConf) (*PortConf, error) {
 	return updateResource(ctx, c, "portconf", id, profile)
 }
 
@@ -263,19 +326,19 @@ func (c *Client) DeletePortProfile(ctx context.Context, id string) error {
 
 // UserGroup CRUD
 
-func (c *Client) CreateUserGroup(ctx context.Context, group *unifi.UserGroup) (*unifi.UserGroup, error) {
+func (c *Client) CreateUserGroup(ctx context.Context, group *UserGroup) (*UserGroup, error) {
 	return createResource(ctx, c, "usergroup", group)
 }
 
-func (c *Client) GetUserGroup(ctx context.Context, id string) (*unifi.UserGroup, error) {
-	return getResource[unifi.UserGroup](ctx, c, "usergroup", id)
+func (c *Client) GetUserGroup(ctx context.Context, id string) (*UserGroup, error) {
+	return getResource[UserGroup](ctx, c, "usergroup", id)
 }
 
-func (c *Client) ListUserGroups(ctx context.Context) ([]unifi.UserGroup, error) {
-	return listResources[unifi.UserGroup](ctx, c, "usergroup")
+func (c *Client) ListUserGroups(ctx context.Context) ([]UserGroup, error) {
+	return listResources[UserGroup](ctx, c, "usergroup")
 }
 
-func (c *Client) UpdateUserGroup(ctx context.Context, id string, group *unifi.UserGroup) (*unifi.UserGroup, error) {
+func (c *Client) UpdateUserGroup(ctx context.Context, id string, group *UserGroup) (*UserGroup, error) {
 	return updateResource(ctx, c, "usergroup", id, group)
 }
 
@@ -291,7 +354,7 @@ type apGroupCreateRequest struct {
 	ForWLANConf bool     `json:"for_wlanconf"`
 }
 
-func (c *Client) CreateAPGroup(ctx context.Context, group *unifi.APGroup) (*unifi.APGroup, error) {
+func (c *Client) CreateAPGroup(ctx context.Context, group *APGroup) (*APGroup, error) {
 	req := apGroupCreateRequest{
 		Name:       group.Name,
 		DeviceMACs: group.DeviceMACs,
@@ -303,13 +366,13 @@ func (c *Client) CreateAPGroup(ctx context.Context, group *unifi.APGroup) (*unif
 		req.DeviceMACs = []string{}
 	}
 
-	var created unifi.APGroup
+	var created APGroup
 	err := c.doV2(ctx, "POST", "apgroups", req, &created)
 	return &created, err
 }
 
-func (c *Client) GetAPGroup(ctx context.Context, id string) (*unifi.APGroup, error) {
-	var group unifi.APGroup
+func (c *Client) GetAPGroup(ctx context.Context, id string) (*APGroup, error) {
+	var group APGroup
 	err := c.doV2(ctx, "GET", "apgroups/"+id, nil, &group)
 	if err != nil {
 		groups, _ := c.ListAPGroups(ctx)
@@ -323,13 +386,13 @@ func (c *Client) GetAPGroup(ctx context.Context, id string) (*unifi.APGroup, err
 	return &group, nil
 }
 
-func (c *Client) ListAPGroups(ctx context.Context) ([]unifi.APGroup, error) {
-	var groups []unifi.APGroup
+func (c *Client) ListAPGroups(ctx context.Context) ([]APGroup, error) {
+	var groups []APGroup
 	err := c.doV2(ctx, "GET", "apgroups", nil, &groups)
 	return groups, err
 }
 
-func (c *Client) UpdateAPGroup(ctx context.Context, id string, group *unifi.APGroup) (*unifi.APGroup, error) {
+func (c *Client) UpdateAPGroup(ctx context.Context, id string, group *APGroup) (*APGroup, error) {
 	req := apGroupCreateRequest{
 		Name:       group.Name,
 		DeviceMACs: group.DeviceMACs,
@@ -341,7 +404,7 @@ func (c *Client) UpdateAPGroup(ctx context.Context, id string, group *unifi.APGr
 		req.DeviceMACs = []string{}
 	}
 
-	var updated unifi.APGroup
+	var updated APGroup
 	err := c.doV2(ctx, "PUT", "apgroups/"+id, req, &updated)
 	return &updated, err
 }
@@ -352,19 +415,19 @@ func (c *Client) DeleteAPGroup(ctx context.Context, id string) error {
 
 // WLAN CRUD
 
-func (c *Client) CreateWLAN(ctx context.Context, wlan *unifi.WLANConf) (*unifi.WLANConf, error) {
+func (c *Client) CreateWLAN(ctx context.Context, wlan *WLANConf) (*WLANConf, error) {
 	return createResource(ctx, c, "wlanconf", wlan)
 }
 
-func (c *Client) GetWLAN(ctx context.Context, id string) (*unifi.WLANConf, error) {
-	return getResource[unifi.WLANConf](ctx, c, "wlanconf", id)
+func (c *Client) GetWLAN(ctx context.Context, id string) (*WLANConf, error) {
+	return getResource[WLANConf](ctx, c, "wlanconf", id)
 }
 
-func (c *Client) ListWLANs(ctx context.Context) ([]unifi.WLANConf, error) {
-	return listResources[unifi.WLANConf](ctx, c, "wlanconf")
+func (c *Client) ListWLANs(ctx context.Context) ([]WLANConf, error) {
+	return listResources[WLANConf](ctx, c, "wlanconf")
 }
 
-func (c *Client) UpdateWLAN(ctx context.Context, id string, wlan *unifi.WLANConf) (*unifi.WLANConf, error) {
+func (c *Client) UpdateWLAN(ctx context.Context, id string, wlan *WLANConf) (*WLANConf, error) {
 	return updateResource(ctx, c, "wlanconf", id, wlan)
 }
 
@@ -374,41 +437,24 @@ func (c *Client) DeleteWLAN(ctx context.Context, id string) error {
 
 // FirewallGroup CRUD
 
-func (c *Client) CreateFirewallGroup(ctx context.Context, group *unifi.FirewallGroup) (*unifi.FirewallGroup, error) {
+func (c *Client) CreateFirewallGroup(ctx context.Context, group *FirewallGroup) (*FirewallGroup, error) {
 	return createResource(ctx, c, "firewallgroup", group)
 }
 
-func (c *Client) GetFirewallGroup(ctx context.Context, id string) (*unifi.FirewallGroup, error) {
-	return getResource[unifi.FirewallGroup](ctx, c, "firewallgroup", id)
+func (c *Client) GetFirewallGroup(ctx context.Context, id string) (*FirewallGroup, error) {
+	return getResource[FirewallGroup](ctx, c, "firewallgroup", id)
 }
 
-func (c *Client) ListFirewallGroups(ctx context.Context) ([]unifi.FirewallGroup, error) {
-	return listResources[unifi.FirewallGroup](ctx, c, "firewallgroup")
+func (c *Client) ListFirewallGroups(ctx context.Context) ([]FirewallGroup, error) {
+	return listResources[FirewallGroup](ctx, c, "firewallgroup")
 }
 
-func (c *Client) UpdateFirewallGroup(ctx context.Context, id string, group *unifi.FirewallGroup) (*unifi.FirewallGroup, error) {
+func (c *Client) UpdateFirewallGroup(ctx context.Context, id string, group *FirewallGroup) (*FirewallGroup, error) {
 	return updateResource(ctx, c, "firewallgroup", id, group)
 }
 
 func (c *Client) DeleteFirewallGroup(ctx context.Context, id string) error {
 	return deleteResource(ctx, c, "firewallgroup", id)
-}
-
-type User struct {
-	ID          string `json:"_id,omitempty"`
-	MAC         string `json:"mac"`
-	Name        string `json:"name,omitempty"`
-	Note        string `json:"note,omitempty"`
-	UseFixedIP  *bool  `json:"use_fixedip,omitempty"`
-	FixedIP     string `json:"fixed_ip,omitempty"`
-	NetworkID   string `json:"network_id,omitempty"`
-	UsergroupID string `json:"usergroup_id,omitempty"`
-	Blocked     *bool  `json:"blocked,omitempty"`
-	IsWired     *bool  `json:"is_wired,omitempty"`
-	IsGuest     *bool  `json:"is_guest,omitempty"`
-	OUI         string `json:"oui,omitempty"`
-	Noted       *bool  `json:"noted,omitempty"`
-	SiteID      string `json:"site_id,omitempty"`
 }
 
 func (c *Client) CreateUser(ctx context.Context, user *User) (*User, error) {
@@ -452,19 +498,19 @@ func (c *Client) DeleteUser(ctx context.Context, mac string) error {
 
 // RADIUSProfile CRUD
 
-func (c *Client) CreateRADIUSProfile(ctx context.Context, profile *unifi.RADIUSProfile) (*unifi.RADIUSProfile, error) {
+func (c *Client) CreateRADIUSProfile(ctx context.Context, profile *RADIUSProfile) (*RADIUSProfile, error) {
 	return createResource(ctx, c, "radiusprofile", profile)
 }
 
-func (c *Client) GetRADIUSProfile(ctx context.Context, id string) (*unifi.RADIUSProfile, error) {
-	return getResource[unifi.RADIUSProfile](ctx, c, "radiusprofile", id)
+func (c *Client) GetRADIUSProfile(ctx context.Context, id string) (*RADIUSProfile, error) {
+	return getResource[RADIUSProfile](ctx, c, "radiusprofile", id)
 }
 
-func (c *Client) ListRADIUSProfiles(ctx context.Context) ([]unifi.RADIUSProfile, error) {
-	return listResources[unifi.RADIUSProfile](ctx, c, "radiusprofile")
+func (c *Client) ListRADIUSProfiles(ctx context.Context) ([]RADIUSProfile, error) {
+	return listResources[RADIUSProfile](ctx, c, "radiusprofile")
 }
 
-func (c *Client) UpdateRADIUSProfile(ctx context.Context, id string, profile *unifi.RADIUSProfile) (*unifi.RADIUSProfile, error) {
+func (c *Client) UpdateRADIUSProfile(ctx context.Context, id string, profile *RADIUSProfile) (*RADIUSProfile, error) {
 	return updateResource(ctx, c, "radiusprofile", id, profile)
 }
 
@@ -474,15 +520,15 @@ func (c *Client) DeleteRADIUSProfile(ctx context.Context, id string) error {
 
 // PortForward CRUD
 
-func (c *Client) CreatePortForward(ctx context.Context, forward *unifi.PortForward) (*unifi.PortForward, error) {
+func (c *Client) CreatePortForward(ctx context.Context, forward *PortForward) (*PortForward, error) {
 	return createResource(ctx, c, "portforward", forward)
 }
 
-func (c *Client) GetPortForward(ctx context.Context, id string) (*unifi.PortForward, error) {
-	return getResource[unifi.PortForward](ctx, c, "portforward", id)
+func (c *Client) GetPortForward(ctx context.Context, id string) (*PortForward, error) {
+	return getResource[PortForward](ctx, c, "portforward", id)
 }
 
-func (c *Client) UpdatePortForward(ctx context.Context, id string, forward *unifi.PortForward) (*unifi.PortForward, error) {
+func (c *Client) UpdatePortForward(ctx context.Context, id string, forward *PortForward) (*PortForward, error) {
 	return updateResource(ctx, c, "portforward", id, forward)
 }
 
@@ -492,7 +538,7 @@ func (c *Client) DeletePortForward(ctx context.Context, id string) error {
 
 // Routing CRUD
 
-func (c *Client) CreateStaticRoute(ctx context.Context, route *unifi.Routing) (*unifi.Routing, error) {
+func (c *Client) CreateStaticRoute(ctx context.Context, route *Routing) (*Routing, error) {
 	req := map[string]any{
 		"name":                  route.Name,
 		"type":                  "static-route",
@@ -509,7 +555,7 @@ func (c *Client) CreateStaticRoute(ctx context.Context, route *unifi.Routing) (*
 		req["static-route_distance"] = *route.StaticRouteDistance
 	}
 
-	var routes []unifi.Routing
+	var routes []Routing
 	err := c.doREST(ctx, "POST", "routing", req, &routes)
 	if err != nil {
 		return nil, err
@@ -517,11 +563,11 @@ func (c *Client) CreateStaticRoute(ctx context.Context, route *unifi.Routing) (*
 	return &routes[0], nil
 }
 
-func (c *Client) GetStaticRoute(ctx context.Context, id string) (*unifi.Routing, error) {
-	return getResource[unifi.Routing](ctx, c, "routing", id)
+func (c *Client) GetStaticRoute(ctx context.Context, id string) (*Routing, error) {
+	return getResource[Routing](ctx, c, "routing", id)
 }
 
-func (c *Client) UpdateStaticRoute(ctx context.Context, id string, route *unifi.Routing) (*unifi.Routing, error) {
+func (c *Client) UpdateStaticRoute(ctx context.Context, id string, route *Routing) (*Routing, error) {
 	req := map[string]any{
 		"_id":                   id,
 		"name":                  route.Name,
@@ -539,7 +585,7 @@ func (c *Client) UpdateStaticRoute(ctx context.Context, id string, route *unifi.
 		req["static-route_distance"] = *route.StaticRouteDistance
 	}
 
-	var routes []unifi.Routing
+	var routes []Routing
 	err := c.doREST(ctx, "PUT", "routing/"+id, req, &routes)
 	if err != nil {
 		return nil, err
@@ -556,7 +602,7 @@ func (c *Client) DeleteStaticRoute(ctx context.Context, id string) error {
 
 // StaticDNS CRUD
 
-func (c *Client) CreateStaticDNS(ctx context.Context, record *unifi.StaticDNS) (*unifi.StaticDNS, error) {
+func (c *Client) CreateStaticDNS(ctx context.Context, record *StaticDNS) (*StaticDNS, error) {
 	req := map[string]any{
 		"key":         record.Key,
 		"value":       record.Value,
@@ -588,13 +634,13 @@ func (c *Client) CreateStaticDNS(ctx context.Context, record *unifi.StaticDNS) (
 		}
 	}
 
-	var created unifi.StaticDNS
+	var created StaticDNS
 	err := c.doV2(ctx, "POST", "static-dns", req, &created)
 	return &created, err
 }
 
-func (c *Client) GetStaticDNS(ctx context.Context, id string) (*unifi.StaticDNS, error) {
-	var record unifi.StaticDNS
+func (c *Client) GetStaticDNS(ctx context.Context, id string) (*StaticDNS, error) {
+	var record StaticDNS
 	err := c.doV2(ctx, "GET", "static-dns/"+id, nil, &record)
 	if err != nil {
 		records, _ := c.ListStaticDNS(ctx)
@@ -608,13 +654,13 @@ func (c *Client) GetStaticDNS(ctx context.Context, id string) (*unifi.StaticDNS,
 	return &record, nil
 }
 
-func (c *Client) ListStaticDNS(ctx context.Context) ([]unifi.StaticDNS, error) {
-	var records []unifi.StaticDNS
+func (c *Client) ListStaticDNS(ctx context.Context) ([]StaticDNS, error) {
+	var records []StaticDNS
 	err := c.doV2(ctx, "GET", "static-dns", nil, &records)
 	return records, err
 }
 
-func (c *Client) UpdateStaticDNS(ctx context.Context, id string, record *unifi.StaticDNS) (*unifi.StaticDNS, error) {
+func (c *Client) UpdateStaticDNS(ctx context.Context, id string, record *StaticDNS) (*StaticDNS, error) {
 	req := map[string]any{
 		"_id":         id,
 		"key":         record.Key,
@@ -647,7 +693,7 @@ func (c *Client) UpdateStaticDNS(ctx context.Context, id string, record *unifi.S
 		}
 	}
 
-	var updated unifi.StaticDNS
+	var updated StaticDNS
 	err := c.doV2(ctx, "PUT", "static-dns/"+id, req, &updated)
 	return &updated, err
 }
@@ -658,7 +704,7 @@ func (c *Client) DeleteStaticDNS(ctx context.Context, id string) error {
 
 // TrafficRule CRUD
 
-func (c *Client) CreateTrafficRule(ctx context.Context, rule *unifi.TrafficRule) (*unifi.TrafficRule, error) {
+func (c *Client) CreateTrafficRule(ctx context.Context, rule *TrafficRule) (*TrafficRule, error) {
 	req := map[string]any{
 		"name":            rule.Name,
 		"action":          rule.Action,
@@ -671,16 +717,16 @@ func (c *Client) CreateTrafficRule(ctx context.Context, rule *unifi.TrafficRule)
 		req["enabled"] = *rule.Enabled
 	}
 	if len(rule.TargetDevices) == 0 {
-		req["target_devices"] = []unifi.TrafficRuleTarget{{Type: "ALL_CLIENTS"}}
+		req["target_devices"] = []TrafficRuleTarget{{Type: "ALL_CLIENTS"}}
 	}
 
-	var created unifi.TrafficRule
+	var created TrafficRule
 	err := c.doV2(ctx, "POST", "trafficrules", req, &created)
 	return &created, err
 }
 
-func (c *Client) GetTrafficRule(ctx context.Context, id string) (*unifi.TrafficRule, error) {
-	var rule unifi.TrafficRule
+func (c *Client) GetTrafficRule(ctx context.Context, id string) (*TrafficRule, error) {
+	var rule TrafficRule
 	err := c.doV2(ctx, "GET", "trafficrules/"+id, nil, &rule)
 	if err != nil {
 		rules, _ := c.ListTrafficRules(ctx)
@@ -694,13 +740,13 @@ func (c *Client) GetTrafficRule(ctx context.Context, id string) (*unifi.TrafficR
 	return &rule, nil
 }
 
-func (c *Client) ListTrafficRules(ctx context.Context) ([]unifi.TrafficRule, error) {
-	var rules []unifi.TrafficRule
+func (c *Client) ListTrafficRules(ctx context.Context) ([]TrafficRule, error) {
+	var rules []TrafficRule
 	err := c.doV2(ctx, "GET", "trafficrules", nil, &rules)
 	return rules, err
 }
 
-func (c *Client) UpdateTrafficRule(ctx context.Context, id string, rule *unifi.TrafficRule) (*unifi.TrafficRule, error) {
+func (c *Client) UpdateTrafficRule(ctx context.Context, id string, rule *TrafficRule) (*TrafficRule, error) {
 	req := map[string]any{
 		"name":            rule.Name,
 		"action":          rule.Action,
@@ -713,10 +759,10 @@ func (c *Client) UpdateTrafficRule(ctx context.Context, id string, rule *unifi.T
 		req["enabled"] = *rule.Enabled
 	}
 	if len(rule.TargetDevices) == 0 {
-		req["target_devices"] = []unifi.TrafficRuleTarget{{Type: "ALL_CLIENTS"}}
+		req["target_devices"] = []TrafficRuleTarget{{Type: "ALL_CLIENTS"}}
 	}
 
-	var updated unifi.TrafficRule
+	var updated TrafficRule
 	err := c.doV2(ctx, "PUT", "trafficrules/"+id, req, &updated)
 	return &updated, err
 }

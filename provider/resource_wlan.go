@@ -1,6 +1,7 @@
 package provider
 
 import (
+	"github.com/jlopez/terraform-provider-unifi-network/internal/client"
 	"context"
 
 	"github.com/hashicorp/terraform-plugin-framework/path"
@@ -11,7 +12,6 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/stringplanmodifier"
 	"github.com/hashicorp/terraform-plugin-framework/types"
 	"github.com/jlopez/terraform-provider-unifi-network/internal/provider/utils"
-	"github.com/resnickio/unifi-go-sdk/pkg/unifi"
 )
 
 var _ resource.Resource = &wlanResource{}
@@ -117,7 +117,7 @@ func (r *wlanResource) Create(ctx context.Context, req resource.CreateRequest, r
 		}
 	}
 
-	wlan := &unifi.WLANConf{
+	wlan := &client.WLANConf{
 		Name:          data.Name.ValueString(),
 		Enabled:       utils.BoolPtr(data.Enabled),
 		XPassphrase:   data.Passphrase.ValueString(),
@@ -173,7 +173,7 @@ func (r *wlanResource) Update(ctx context.Context, req resource.UpdateRequest, r
 		}
 	}
 
-	wlan := &unifi.WLANConf{
+	wlan := &client.WLANConf{
 		ID:            data.ID.ValueString(),
 		Name:          data.Name.ValueString(),
 		Enabled:       utils.BoolPtr(data.Enabled),
@@ -211,7 +211,7 @@ func (r *wlanResource) ImportState(ctx context.Context, req resource.ImportState
 	resource.ImportStatePassthroughID(ctx, path.Root("id"), req, resp)
 }
 
-func (r *wlanResource) syncState(ctx context.Context, data *wlanResourceModel, wlan *unifi.WLANConf) {
+func (r *wlanResource) syncState(ctx context.Context, data *wlanResourceModel, wlan *client.WLANConf) {
 	data.ID = types.StringValue(wlan.ID)
 	data.Name = types.StringValue(wlan.Name)
 	data.Enabled = utils.BoolValue(wlan.Enabled)

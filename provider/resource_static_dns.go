@@ -1,6 +1,7 @@
 package provider
 
 import (
+	"github.com/jlopez/terraform-provider-unifi-network/internal/client"
 	"context"
 
 	"github.com/hashicorp/terraform-plugin-framework/path"
@@ -12,7 +13,6 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/stringplanmodifier"
 	"github.com/hashicorp/terraform-plugin-framework/types"
 	"github.com/jlopez/terraform-provider-unifi-network/internal/provider/utils"
-	"github.com/resnickio/unifi-go-sdk/pkg/unifi"
 )
 
 var _ resource.Resource = &staticDNSResource{}
@@ -93,7 +93,7 @@ func (r *staticDNSResource) Create(ctx context.Context, req resource.CreateReque
 		return
 	}
 
-	record := &unifi.StaticDNS{
+	record := &client.StaticDNS{
 		Key:        data.Key.ValueString(),
 		Value:      data.Value.ValueString(),
 		RecordType: utils.StringOrEmpty(data.RecordType),
@@ -139,7 +139,7 @@ func (r *staticDNSResource) Update(ctx context.Context, req resource.UpdateReque
 		return
 	}
 
-	record := &unifi.StaticDNS{
+	record := &client.StaticDNS{
 		ID:         data.ID.ValueString(),
 		Key:        data.Key.ValueString(),
 		Value:      data.Value.ValueString(),
@@ -175,7 +175,7 @@ func (r *staticDNSResource) ImportState(ctx context.Context, req resource.Import
 	resource.ImportStatePassthroughID(ctx, path.Root("id"), req, resp)
 }
 
-func (r *staticDNSResource) syncState(data *staticDNSResourceModel, record *unifi.StaticDNS) {
+func (r *staticDNSResource) syncState(data *staticDNSResourceModel, record *client.StaticDNS) {
 	data.ID = types.StringValue(record.ID)
 	data.Key = types.StringValue(record.Key)
 	data.Value = types.StringValue(record.Value)

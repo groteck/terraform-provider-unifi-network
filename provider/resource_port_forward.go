@@ -1,6 +1,7 @@
 package provider
 
 import (
+	"github.com/jlopez/terraform-provider-unifi-network/internal/client"
 	"context"
 
 	"github.com/hashicorp/terraform-plugin-framework/path"
@@ -11,7 +12,6 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/stringplanmodifier"
 	"github.com/hashicorp/terraform-plugin-framework/types"
 	"github.com/jlopez/terraform-provider-unifi-network/internal/provider/utils"
-	"github.com/resnickio/unifi-go-sdk/pkg/unifi"
 )
 
 var _ resource.Resource = &portForwardResource{}
@@ -107,7 +107,7 @@ func (r *portForwardResource) Create(ctx context.Context, req resource.CreateReq
 		return
 	}
 
-	forward := &unifi.PortForward{
+	forward := &client.PortForward{
 		Name:          data.Name.ValueString(),
 		Enabled:       utils.BoolPtr(data.Enabled),
 		Proto:         data.Protocol.ValueString(),
@@ -159,7 +159,7 @@ func (r *portForwardResource) Update(ctx context.Context, req resource.UpdateReq
 		return
 	}
 
-	forward := &unifi.PortForward{
+	forward := &client.PortForward{
 		ID:            data.ID.ValueString(),
 		Name:          data.Name.ValueString(),
 		Enabled:       utils.BoolPtr(data.Enabled),
@@ -198,7 +198,7 @@ func (r *portForwardResource) ImportState(ctx context.Context, req resource.Impo
 	resource.ImportStatePassthroughID(ctx, path.Root("id"), req, resp)
 }
 
-func (r *portForwardResource) syncState(data *portForwardResourceModel, forward *unifi.PortForward) {
+func (r *portForwardResource) syncState(data *portForwardResourceModel, forward *client.PortForward) {
 	data.ID = types.StringValue(forward.ID)
 	data.Name = types.StringValue(forward.Name)
 	data.Enabled = utils.BoolValue(forward.Enabled)

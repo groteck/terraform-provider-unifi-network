@@ -1,6 +1,7 @@
 package provider
 
 import (
+	"github.com/jlopez/terraform-provider-unifi-network/internal/client"
 	"context"
 
 	"github.com/hashicorp/terraform-plugin-framework/path"
@@ -10,7 +11,6 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/stringplanmodifier"
 	"github.com/hashicorp/terraform-plugin-framework/types"
 	"github.com/jlopez/terraform-provider-unifi-network/internal/provider/utils"
-	"github.com/resnickio/unifi-go-sdk/pkg/unifi"
 )
 
 var _ resource.Resource = &networkResource{}
@@ -79,10 +79,10 @@ func (r *networkResource) Create(ctx context.Context, req resource.CreateRequest
 	}
 
 	vlanEnabled := true
-	network := &unifi.Network{
+	network := &client.Network{
 		Name:    data.Name.ValueString(),
 		Purpose: utils.StringOrEmpty(data.Purpose),
-		NetworkVLAN: unifi.NetworkVLAN{
+		NetworkVLAN: client.NetworkVLAN{
 			VLAN:        utils.Int64Ptr(data.VlanID),
 			VLANEnabled: &vlanEnabled,
 			IPSubnet:    data.Subnet.ValueString(),
@@ -134,11 +134,11 @@ func (r *networkResource) Update(ctx context.Context, req resource.UpdateRequest
 	}
 
 	vlanEnabled := true
-	network := &unifi.Network{
+	network := &client.Network{
 		ID:      data.ID.ValueString(),
 		Name:    data.Name.ValueString(),
 		Purpose: data.Purpose.ValueString(),
-		NetworkVLAN: unifi.NetworkVLAN{
+		NetworkVLAN: client.NetworkVLAN{
 			VLAN:        utils.Int64Ptr(data.VlanID),
 			VLANEnabled: &vlanEnabled,
 			IPSubnet:    data.Subnet.ValueString(),

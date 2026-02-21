@@ -1,6 +1,7 @@
 package provider
 
 import (
+	"github.com/jlopez/terraform-provider-unifi-network/internal/client"
 	"context"
 
 	"github.com/hashicorp/terraform-plugin-framework/path"
@@ -9,7 +10,6 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/planmodifier"
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/stringplanmodifier"
 	"github.com/hashicorp/terraform-plugin-framework/types"
-	"github.com/resnickio/unifi-go-sdk/pkg/unifi"
 )
 
 var _ resource.Resource = &portProfileResource{}
@@ -96,7 +96,7 @@ func (r *portProfileResource) Create(ctx context.Context, req resource.CreateReq
 		forward = data.Forward.ValueString()
 	}
 
-	profile := &unifi.PortConf{
+	profile := &client.PortConf{
 		Name:                 data.Name.ValueString(),
 		NativeNetworkconfID:  data.NativeNetworkID.ValueString(),
 		TaggedNetworkconfIDs: taggedNetworkIDs,
@@ -145,7 +145,7 @@ func (r *portProfileResource) Update(ctx context.Context, req resource.UpdateReq
 		}
 	}
 
-	profile := &unifi.PortConf{
+	profile := &client.PortConf{
 		ID:                   data.ID.ValueString(),
 		Name:                 data.Name.ValueString(),
 		NativeNetworkconfID:  data.NativeNetworkID.ValueString(),
@@ -180,7 +180,7 @@ func (r *portProfileResource) ImportState(ctx context.Context, req resource.Impo
 	resource.ImportStatePassthroughID(ctx, path.Root("id"), req, resp)
 }
 
-func (r *portProfileResource) syncState(ctx context.Context, data *portProfileResourceModel, profile *unifi.PortConf) {
+func (r *portProfileResource) syncState(ctx context.Context, data *portProfileResourceModel, profile *client.PortConf) {
 	data.ID = types.StringValue(profile.ID)
 	data.Name = types.StringValue(profile.Name)
 	data.NativeNetworkID = types.StringValue(profile.NativeNetworkconfID)

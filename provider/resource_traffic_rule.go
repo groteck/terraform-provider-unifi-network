@@ -1,6 +1,7 @@
 package provider
 
 import (
+	"github.com/jlopez/terraform-provider-unifi-network/internal/client"
 	"context"
 
 	"github.com/hashicorp/terraform-plugin-framework/path"
@@ -11,7 +12,6 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/resource/schema/stringplanmodifier"
 	"github.com/hashicorp/terraform-plugin-framework/types"
 	"github.com/jlopez/terraform-provider-unifi-network/internal/provider/utils"
-	"github.com/resnickio/unifi-go-sdk/pkg/unifi"
 )
 
 var _ resource.Resource = &trafficRuleResource{}
@@ -92,7 +92,7 @@ func (r *trafficRuleResource) Create(ctx context.Context, req resource.CreateReq
 		return
 	}
 
-	rule := &unifi.TrafficRule{
+	rule := &client.TrafficRule{
 		Name:           data.Name.ValueString(),
 		Enabled:        utils.BoolPtr(data.Enabled),
 		Action:         data.Action.ValueString(),
@@ -134,7 +134,7 @@ func (r *trafficRuleResource) Update(ctx context.Context, req resource.UpdateReq
 		return
 	}
 
-	rule := &unifi.TrafficRule{
+	rule := &client.TrafficRule{
 		ID:             data.ID.ValueString(),
 		Name:           data.Name.ValueString(),
 		Enabled:        utils.BoolPtr(data.Enabled),
@@ -170,7 +170,7 @@ func (r *trafficRuleResource) ImportState(ctx context.Context, req resource.Impo
 	resource.ImportStatePassthroughID(ctx, path.Root("id"), req, resp)
 }
 
-func (r *trafficRuleResource) syncState(data *trafficRuleResourceModel, rule *unifi.TrafficRule) {
+func (r *trafficRuleResource) syncState(data *trafficRuleResourceModel, rule *client.TrafficRule) {
 	data.ID = types.StringValue(rule.ID)
 	// If the API returns an empty name, keep the one we had in state
 	if rule.Name != "" {
