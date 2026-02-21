@@ -26,9 +26,13 @@ func testAccPortProfileResourceConfig(name string) string {
 	return fmt.Sprintf(`
 %s
 
+data "unifi_network" "default" {
+  name = "Default"
+}
+
 resource "unifi_port_profile" "test" {
   name              = %[2]q
-  native_network_id = "6998b557e26d48c5855c3794"
+  native_network_id = data.unifi_network.default.id
   forward           = "all"
 }
 `, getProviderConfig(), name)
