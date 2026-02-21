@@ -27,7 +27,7 @@ jobs:
         run: go test -v ./...
       - name: Acceptance Test
         run: |
-          docker-compose up -d
+          docker compose up -d
           # Wait for UniFi to be ready
           timeout 300s bash -c 'until curl -k -s https://localhost:8443 > /dev/null; do sleep 5; done'
           make testacc

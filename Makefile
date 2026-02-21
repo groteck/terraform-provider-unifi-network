@@ -30,9 +30,9 @@ fmt:
 pre-commit: fmt lint test
 
 docker-up:
-	docker-compose up -d
+	docker compose up -d
 
 docker-down:
-	docker-compose down
+	docker compose down
 
 .PHONY: build install test testacc lint fmt pre-commit docker-up docker-down
