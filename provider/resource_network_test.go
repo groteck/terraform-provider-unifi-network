@@ -1,7 +1,6 @@
 package provider
 
 import (
-	"github.com/jlopez/terraform-provider-unifi-network/internal/client"
 	"fmt"
 	"testing"
 

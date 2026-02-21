@@ -1,7 +1,6 @@
 package provider
 
 import (
-	"github.com/jlopez/terraform-provider-unifi-network/internal/client"
 	"github.com/hashicorp/terraform-plugin-framework/providerserver"
 	"github.com/hashicorp/terraform-plugin-go/tfprotov6"
 )
